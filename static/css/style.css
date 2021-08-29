@@ -1,9 +1,33 @@
 body {
-    background-color: rgb(220, 220, 220);
+    background-color: rgb(232, 247, 223);
 }
 
 nav {
     min-height: 80px;
+}
+
+li {
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+u {
+    border-bottom: 3px dotted;
+    text-decoration: none;
+}
+
+.brand-logo-h4 {
+    margin-left: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .brand-logo-h4 {
+        font-size: 21px;
+    }
+}
+
+.home-heading {
+    padding-top: 5px;
 }
 
 .text-shadow {

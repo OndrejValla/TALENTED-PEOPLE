@@ -23,19 +23,20 @@
     <header>
         <!-- Main Navbar -->
         <nav class="nav-extended text-shadow light-green darken-3">
-            <div class="nav-wrapper">
-                <a href="#" class="brand-logo">TALENTED PEOPLE
+            <div class="col s12 m6 nav-wrapper">
+                <a href="#" class="brand-logo">
+                    <h4 class="brand-logo-h4">TALENTED PEOPLE</h4>
                 </a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Profile</a></li>
+                    <li><a href="{{ url_for('get_home') }}">Home</a></li>
+                    <li><a href="{{ url_for('get_home') }}">Profile</a></li>
                     <li><a href="{{ url_for('get_photographers') }}">Photographers</a></li>
-                    <li><a href="#"></a>Models</li>
-                    <li><a href="#"></a>Categories</li>
-                    <li><a href="#"></a>Log In</li>
-                    <li><a href="#"></a>Log Out</li>
-                    <li><a href="#"></a>Register</li>
+                    <li><a href="{{ url_for('get_home') }}">Models</a></li>
+                    <li><a href="{{ url_for('get_home') }}">Categories</a></li>
+                    <li><a href="{{ url_for('register') }}">Register</a></li>
+                    <li><a href="{{ url_for('get_home') }}">Log In</a></li>
+                    <li><a href="{{ url_for('get_home') }}">Log Out</a></li>
                 </ul>
             </div>
         </nav>
@@ -43,21 +44,22 @@
         <!-- Mobile Navbar -->
         <ul class="sidenav" id="mobile-demo">
             <li>
-                <h4 class="center-align light-green-text text-darken-3">TALENTED PEOPLE</h4>
+                <h5 class="light-green-text text-darken-3">TALENTED PEOPLE</h5>
             </li>
-            <li><a href="#" class="center-align light-green-text text-darken-3">Home</a></li>
-            <li><a href="#" class="center-align light-green-text text-darken-3">Profile</a></li>
-            <li><a href="{{ url_for('get_photographers') }}"
-                    class="center-align light-green-text text-darken-3">Photographers</a></li>
-            <li><a href="#" class="center-align light-green-text text-darken-3">Models</a></li>
-            <li><a href="#" class="center-align light-green-text text-darken-3">Categories</a></li>
-            <li><a href="#" class="center-align light-green-text text-darken-3">Log In</a></li>
-            <li><a href="#" class="center-align light-green-text text-darken-3">Log Out</a></li>
-            <li><a href="#" class="center-align light-green-text text-darken-3">Register</a></li>
+            <li><a href="{{ url_for('get_home') }}" class="light-green-text text-darken-3">Home</a></li>
+            <li><a href="#" class="light-green-text text-darken-3">Profile</a></li>
+            <li><a href="{{ url_for('get_photographers') }}" class="light-green-text text-darken-3">Photographers</a>
+            </li>
+            <li><a href="#" class="light-green-text text-darken-3">Models</a></li>
+            <li><a href="#" class="light-green-text text-darken-3">Categories</a></li>
+            <li><a href="{{ url_for('register') }}" class="light-green-text text-darken-3">Register</a></li>
+            <li><a href="#" class="light-green-text text-darken-3">Log In</a></li>
+            <li><a href="#" class="light-green-text text-darken-3">Log Out</a></li>
+
         </ul>
 
     </header>
-    <h1>TALENTED PEOPLE</h1>
+
     {% block main_content %}
     {% endblock %}
 
