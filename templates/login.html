@@ -1,36 +1,36 @@
 {% extends "base.html" %}
 {% block main_content %}
-<!-- REGISTER FORM -->
-<h4 class="center-align light-green-text text-darken-3 text-shadow">REGISTER</h4>
+<!-- LOGIN FORM -->
+<h4 class="center-align light-green-text text-darken-3 text-shadow">LOG IN</h4>
 
 <div class="row">
-    <form class="col s12 m6 offset-m3" method="POST" action="{{ url_for('register') }}">
+    <form class="col s12 m6 offset-m3" method="POST" action="{{ url_for('login') }}">
         <div class="card-panel">
             <!-- USERNAME -->
             <div class="row">
                 <div class="input-field col s9 offset-s1">
-                    <i class="fas fa-user-plus prefix light-green-text text-darken-3"></i>
+                    <i class="fas fa-user-tie prefix light-green-text text-darken-3"></i>
                     <input id="username" name="username" type="text" minlength="5" maxlength="15"
                         pattern="^[a-zA-Z0-9]{5,15}$" class="validate"
-                        title="Please use 5 to 15 alpha-numeric characters only" required>
+                        title="Enter your Username (5 to 15 alpha-numeric characters)" required>
                     <label for="username">Your Username</label>
                 </div>
             </div>
             <!-- PASSWORD -->
             <div class="row">
                 <div class="input-field col s9 offset-s1">
-                    <i class="fas fa-lock prefix light-green-text text-darken-3"></i>
+                    <i class="fas fa-key prefix light-green-text text-darken-3"></i>
                     <input id="password" name="password" type="password" minlength="5" maxlength="15"
                         pattern="^[a-zA-Z0-9]{5,15}$" class="validate"
-                        title="Please use 5 to 15 alpha-numeric characters only" required>
+                        title="Enter your Password (5 to 15 alpha-numeric characters)" required>
                     <label for="password">Password</label>
                 </div>
             </div>
-            <!-- REGISTER -->
+            <!-- LOGIN -->
             <div class="row">
                 <button type="submit" class="col s8 offset-s2 btn-large light-green darken-4 text-shadow"
-                    title="Click to register">
-                    Register
+                    title="Click to Log In">
+                    Log In
                 </button>
             </div>
         </div>
@@ -40,8 +40,7 @@
 <div class="row">
     <div class="col s8 offset-s2">
         <h6 class="center-align">
-            Login <a href="{{ url_for('login') }}" class="green-text">Here
-            </a>
+            Register <a href="{{ url_for('register') }}" class="green-text">Here</a>
         </h6>
     </div>
 </div>

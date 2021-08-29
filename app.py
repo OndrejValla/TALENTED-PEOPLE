@@ -34,7 +34,7 @@ def get_photographers():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
-        # check if username is already registred in our database
+        # Check if username is already registred in our database
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
@@ -48,10 +48,36 @@ def register():
         }
         mongo.db.users.insert_one(register)
 
-        # put the new user into "session" cookie
+        # Put the new user into "session" cookie
         session["user"] = request.form.get("username").lower()
         flash("You have been successfully registred!")
     return render_template("register.html")
+
+# LOG IN FUNCTION
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    if request.method == "POST":
+        # Check if login detals match the database
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+        if existing_user:
+            # Checks hash password against user input
+            if check_password_hash(
+                existing_user["password"], request.form.get("password")):
+                    session["user"] = request.form.get("username").lower()
+                    flash("Welcome, {}".format(request.form.get("username")))
+            else:
+                # Not valid password
+                flash("Incorrect Username and/or Password")
+                return redirect(url_for("login"))
+
+        else:
+            # Not existing username
+            flash("Incorrect Username and/or Password")
+            return redirect(url_for("login"))
+
+    return render_template("login.html")
 
 
 if __name__ == "__main__":
