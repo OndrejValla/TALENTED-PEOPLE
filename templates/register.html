@@ -8,25 +8,27 @@
         <div class="card-panel">
             <!-- USERNAME -->
             <div class="row">
-                <div class="input-field col s11">
+                <div class="input-field col s9 offset-s1">
                     <i class="fas fa-user-plus prefix light-green-text text-darken-3"></i>
-                    <input id="username" name="username" type="text" class="validate"
-                        title="Please use minimum of 5 characters">
+                    <input id="username" name="username" type="text" minlength="5" maxlength="15"
+                        pattern="^[a-zA-Z0-9]{5,15}$" class="validate"
+                        title="Please use 5 to 15 alpha-numeric characters only" required>
                     <label for="username">Your Username</label>
                 </div>
             </div>
             <!-- PASSWORD -->
             <div class="row">
-                <div class="input-field col s11">
+                <div class="input-field col s9 offset-s1">
                     <i class="fas fa-lock prefix light-green-text text-darken-3"></i>
-                    <input id="password" name="password" type="password" class="validate"
-                        title="Please use minimum of 5 characters">
+                    <input id="password" name="password" type="password" minlength="5" maxlength="15"
+                        pattern="^[a-zA-Z0-9]{5,15}$" class="validate"
+                        title="Please use 5 to 15 alpha-numeric characters only" required>
                     <label for="password">Password</label>
                 </div>
             </div>
             <!-- REGISTER -->
             <div class="row">
-                <button type="submit" class="col s12 btn-large light-green darken-4 text-shadow"
+                <button type="submit" class="col s8 offset-s2 btn-large light-green darken-4 text-shadow"
                     title="Click to register">
                     Register
                 </button>

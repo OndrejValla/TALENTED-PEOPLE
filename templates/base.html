@@ -60,8 +60,25 @@
 
     </header>
 
-    {% block main_content %}
-    {% endblock %}
+    <main class="col s12">
+        {% block main_content %}
+        {% endblock %}
+    </main>
+
+    <section>
+        <!-- FLASH MESSAGES -->
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="row flash-message">
+            <h5 class="green lighten-3 center-align">
+                {{ message }}
+            </h5>
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+    </section>
 
     <!-- jQuery minified version -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
