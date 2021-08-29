@@ -1,3 +1,11 @@
 body {
-    background-color: rgb(44, 228, 212);
+    background-color: rgb(220, 220, 220);
+}
+
+nav {
+    min-height: 80px;
+}
+
+.text-shadow {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
