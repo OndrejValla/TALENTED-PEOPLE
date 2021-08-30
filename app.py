@@ -43,6 +43,7 @@ def register():
             return redirect(url_for("register"))
 
         register = {
+            "firstname": request.form.get("firstname"),
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password"))
         }
@@ -51,6 +52,7 @@ def register():
         # Put the new user into "session" cookie
         session["user"] = request.form.get("username").lower()
         flash("You have been successfully registred!")
+        return redirect(url_for("profile", username=session["user"]))
     return render_template("register.html")
 
 # LOG IN FUNCTION
@@ -64,9 +66,14 @@ def login():
         if existing_user:
             # Checks hash password against user input
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
-                    flash("Welcome, {}".format(request.form.get("username")))
+                existing_user["password"], request.form.get(
+                    "password")):
+                session["user"] = request.form.get("username").lower()
+                flash("Welcome, {}".format(
+                    existing_user["firstname"]), "default")
+                return redirect(url_for(
+                    "profile", username=session["user"]))
+
             else:
                 # Not valid password
                 flash("Incorrect Username and/or Password")
@@ -78,6 +85,26 @@ def login():
             return redirect(url_for("login"))
 
     return render_template("login.html")
+
+
+@app.route("/profile/<username>", methods=["GET", "POST"])
+def profile(username):
+    if "user" in session:
+        users = list(mongo.db.users.find().sort("username"))
+        user_profile = []
+        for user in users:
+            # Check if user is logged in and matches user logged in.
+            if "user" in session and (user["username"] == session["user"]):
+                user_profile.append(user)
+    #the session user's username from the database
+        username= mongo.db.users.find_one(
+            {"username": session["user"]})["username"]
+        if session["user"]:
+            return render_template("profile.html", username=username,
+                                    user_profile=user_profile)
+    else:
+        flash("Please log in for access")
+        return redirect(url_for("login", ))
 
 
 if __name__ == "__main__":

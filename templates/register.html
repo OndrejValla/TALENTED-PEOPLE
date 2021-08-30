@@ -6,6 +6,15 @@
 <div class="row">
     <form class="col s12 m6 offset-m3" method="POST" action="{{ url_for('register') }}">
         <div class="card-panel">
+            <!-- FIRST NAME -->
+            <div class="row">
+                <div class="input-field col s9 offset-s1">
+                    <i class="fas fa-user-plus prefix light-green-text text-darken-3"></i>
+                    <input id="firstname" name="firstname" type="text" minlength="1" maxlength="15"
+                        pattern="^[a-zA-Z]{1,15}$" class="validate" title="1 to 15 characters only" required>
+                    <label for="firstname">Your First Name</label>
+                </div>
+            </div>
             <!-- USERNAME -->
             <div class="row">
                 <div class="input-field col s9 offset-s1">
