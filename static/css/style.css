@@ -1,3 +1,4 @@
+/* BASE.HTML */
 body {
     background-color: rgb(232, 247, 223);
 }
@@ -48,4 +49,11 @@ u {
     .flash-message h5 {
         font-size: 16px;
     }
+}
+
+/* ADD_PHOTOGRAPHER.HTML */
+
+.add-photographer-container {
+    background-color: rgb(243, 247, 241);
+    border: 3px solid rgb(108, 143, 88);
 }

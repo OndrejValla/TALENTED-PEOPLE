@@ -4,67 +4,66 @@
 <h4 class="center-align light-green-text text-darken-3 text-shadow">ADD PHOTOGRAPHER
 </h4><br>
 
-<div class="container">
+<div class="container add-photographer-container"><br>
     <form class="col s12" method="POST" action="">
         <div class="row">
             <div class="input-field col s8 offset-s2 light-green-text
-            text-darken-1">
+            text-darken-2">
                 <i class="fas fa-user-circle prefix"></i>
-                <input id="photographer_name" type="text" class="validate
-                light-green-text text-darken-4" required>
+                <input id="photographer_name" name="photographer_name" minlength="4" type="text"
+                    class="validate light-green-text text-darken-4" required>
                 <label for="photographer_name">Photographer Name:</label>
             </div>
+        </div>
 
-
-
+        <div class="row">
             <div class="input-field col s8 offset-s2 light-green-text
-            text-darken-1">
+            text-darken-2">
                 <i class="fas fa-history prefix"></i>
-                <input id="experience" type="text" class="validate
-                light-green-text text-darken-4">
-                <label for="experience">Experience:</label>
+                <input id="photographer_experience" name="photographer_experience" minlength="4" type="text"
+                    class="validate light-green-text text-darken-4">
+                <label for="photographer_experience">Experience:</label>
             </div>
+        </div>
 
-
-
+        <div class="row">
             <div class="input-field col s8 offset-s2 light-green-text
-            text-darken-1">
+            text-darken-2">
                 <i class="fas fa-globe-africa prefix"></i>
-                <input id="country" type="text" class="validate
-                light-green-text text-darken-4">
-                <label for="country">Country:</label>
+                <input id="photographer_country" name="photographer_country" minlength="3" type="text"
+                    class="validate light-green-text text-darken-4">
+                <label for="photographer_country">Country:</label>
             </div>
+        </div>
 
-
-
+        <div class="row">
             <div class="input-field col s8 offset-s2 light-green-text
-            text-darken-1">
+            text-darken-2">
                 <i class="fas fa-camera-retro prefix"></i>
-                <input id="equipment" type="text" class="validate
+                <input id="equipment" name="equipment" type="text" class="validate
                 light-green-text text-darken-4">
                 <label for="equipment">Equipment:</label>
             </div>
+        </div>
 
-
-
+        <div class="row">
             <div class="input-field col s8 offset-s2 light-green-text
-            text-darken-1">
+            text-darken-2">
                 <i class="fab fa-instagram-square prefix"></i>
-                <input id="instagram" type="text" class="validate
-                light-green-text text-darken-4" required>
-                <label for="instagram">Instagram:</label>
+                <input id="photographer_instagram" name="photographer_instagram" type="text"
+                    class="validate light-green-text text-darken-4" required>
+                <label for="photographer_instagram">Instagram:</label>
             </div>
+        </div>
 
-
-
+        <div class="row">
             <div class="input-field col s8 offset-s2 light-green-text
-            text-darken-1">
+            text-darken-2">
                 <i class="fas fa-portrait prefix"></i>
-                <input id="profile_picture" type="text" class="validate
-                light-green-text text-darken-4" required>
-                <label for="profile_picture">Profile picture URL:</label>
+                <input id="photographer_image_URL" name="photographer_image_URL" type="text"
+                    class="validate light-green-text text-darken-4" required>
+                <label for="photographer_image_URL">Profile picture URL:</label>
             </div>
-
         </div>
     </form>
 </div>
