@@ -5,4 +5,6 @@ $(document).ready(function () {
     });
     // Dropdown Navbar
     $(".dropdown-trigger").dropdown();
+    // Category Select
+    $('select').formSelect();
 });
