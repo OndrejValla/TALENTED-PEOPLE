@@ -27,7 +27,7 @@ def get_home():
 @app.route("/")
 @app.route("/get_photographers")
 def get_photographers():
-    photographers = mongo.db.photographers.find()
+    photographers = list(mongo.db.photographers.find())
     return render_template("photographers.html", photographers=photographers)
 
 # REGISTER FUNCTION
@@ -113,6 +113,11 @@ def logout():
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("login"))
+
+
+@app.route("/add_photographer")
+def add_photographer():
+    return render_template("add_photographer.html")
 
 
 if __name__ == "__main__":

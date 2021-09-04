@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block main_content %}
+
+<h4 class="center-align light-green-text text-darken-3 text-shadow">ADD PHOTOGRAPHER
+</h4><br>
+
+<div class="container">
+    <form class="col s12" method="POST" action="">
+        <div class="row">
+            <div class="input-field col s8 offset-s2 light-green-text
+            text-darken-1">
+                <i class="fas fa-user-circle prefix"></i>
+                <input id="photographer_name" type="text" class="validate
+                light-green-text text-darken-4" required>
+                <label for="photographer_name">Photographer Name:</label>
+            </div>
+
+
+
+            <div class="input-field col s8 offset-s2 light-green-text
+            text-darken-1">
+                <i class="fas fa-history prefix"></i>
+                <input id="experience" type="text" class="validate
+                light-green-text text-darken-4">
+                <label for="experience">Experience:</label>
+            </div>
+
+
+
+            <div class="input-field col s8 offset-s2 light-green-text
+            text-darken-1">
+                <i class="fas fa-globe-africa prefix"></i>
+                <input id="country" type="text" class="validate
+                light-green-text text-darken-4">
+                <label for="country">Country:</label>
+            </div>
+
+
+
+            <div class="input-field col s8 offset-s2 light-green-text
+            text-darken-1">
+                <i class="fas fa-camera-retro prefix"></i>
+                <input id="equipment" type="text" class="validate
+                light-green-text text-darken-4">
+                <label for="equipment">Equipment:</label>
+            </div>
+
+
+
+            <div class="input-field col s8 offset-s2 light-green-text
+            text-darken-1">
+                <i class="fab fa-instagram-square prefix"></i>
+                <input id="instagram" type="text" class="validate
+                light-green-text text-darken-4" required>
+                <label for="instagram">Instagram:</label>
+            </div>
+
+
+
+            <div class="input-field col s8 offset-s2 light-green-text
+            text-darken-1">
+                <i class="fas fa-portrait prefix"></i>
+                <input id="profile_picture" type="text" class="validate
+                light-green-text text-darken-4" required>
+                <label for="profile_picture">Profile picture URL:</label>
+            </div>
+
+        </div>
+    </form>
+</div>
+
+{% endblock %}
