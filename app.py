@@ -86,7 +86,7 @@ def login():
 
     return render_template("login.html")
 
-
+# PROFILE FUNCTION
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     if "user" in session:
@@ -106,7 +106,7 @@ def profile(username):
         flash("Please log in for access")
         return redirect(url_for("login", ))
 
-
+# LOG OUT FUNCTION
 @app.route("/logout")
 def logout():
     # remove user's session cookies
@@ -114,10 +114,24 @@ def logout():
     session.pop("user")
     return redirect(url_for("login"))
 
-
-@app.route("/add_photographer")
+# ADD PHOTOGRAPHER FUNCTION
+@app.route("/add_photographer", methods=["GET", "POST"])
 def add_photographer():
-    categories = mongo.db.categories.find().sort("category_name",1)
+    if request.method == "POST":
+        photographer = {
+            "category_name": request.form.get("category_name"),
+            "photographer_name": request.form.get("photographer_name"),
+            "photographer_experience": request.form.get("photographer_experience"),
+            "photographer_country": request.form.get("photographer_country"),
+            "equipment": request.form.get("equipment"),
+            "photographer_instagram": request.form.get("photographer_instagram"),
+            "photographer_image_URL": request.form.get("photographer_image_URL")
+        }
+        mongo.db.photographers.insert_one(photographer)
+        flash("Profile Successfully Created!")
+        return redirect(url_for("get_photographers"))
+
+    categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_photographer.html", categories=categories)
 
 

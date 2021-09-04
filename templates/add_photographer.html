@@ -5,12 +5,13 @@
 </h4><br>
 
 <div class="container add-photographer-container"><br>
-    <form class="col s12" method="POST" action="">
+    <form class="col s12" method="POST" action="{{ url_for('add_photographer') }}">
+        <!-- SELECT PHOTOGRAPHY STYLE -->
         <div class="row">
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
                 <i class="fas fa-camera-retro prefix"></i>
-                <select multiple id="category_name" name="category_name" class="validate" required>
+                <select id="category_name" name="category_name" class="validate" required>
                     <option value="" disabled selected>Style</option>
                     {% for category in categories %}
                     <option value="{{ category.category_name }}">{{ category.category_name }}</option>
@@ -18,6 +19,7 @@
                 </select>
             </div>
         </div>
+        <!-- PHOTOGRAPHER NAME -->
         <div class="row">
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
@@ -27,7 +29,7 @@
                 <label for="photographer_name">Photographer Name:</label>
             </div>
         </div>
-
+        <!-- EXPERIENCE -->
         <div class="row">
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
@@ -37,7 +39,7 @@
                 <label for="photographer_experience">Experience:</label>
             </div>
         </div>
-
+        <!-- COUNTRY -->
         <div class="row">
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
@@ -47,7 +49,7 @@
                 <label for="photographer_country">Country:</label>
             </div>
         </div>
-
+        <!-- EQUIPMENT -->
         <div class="row">
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
@@ -57,7 +59,7 @@
                 <label for="equipment">Equipment:</label>
             </div>
         </div>
-
+        <!-- INSTAGRAM -->
         <div class="row">
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
@@ -67,17 +69,26 @@
                 <label for="photographer_instagram">Instagram:</label>
             </div>
         </div>
-
+        <!-- PROFILE PHOTO -->
         <div class="row">
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
                 <i class="fas fa-portrait prefix"></i>
                 <input id="photographer_image_URL" name="photographer_image_URL" type="text"
-                    class="validate light-green-text text-darken-4" required>
+                    class="validate light-green-text text-darken-4" title="Portrait style image PREFERRED" required>
                 <label for="photographer_image_URL">Profile picture URL:</label>
+            </div>
+        </div>
+        <!-- ADD PROFILE BUTTON -->
+        <div class="row">
+            <div class="col s8 offset-s2 center-align light-green-text
+            text-darken-2">
+                <button class="btn waves-effect" type="submit">Add Profile
+                </button>
             </div>
         </div>
     </form>
 </div>
+<br>
 
 {% endblock %}
