@@ -16,9 +16,13 @@
             text-darken-2">
                 <i class="fas fa-camera-retro prefix"></i>
                 <select id="category_name" name="category_name" class="validate" required>
-                    <option value="" disabled selected>Style</option>
+                    <option value="" disabled>Style</option>
                     {% for category in categories %}
+                    {% if category.category_name == category.category_name %}
+                    <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                    {% else %}
                     <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                    {% endif %}
                     {% endfor %}
                 </select>
             </div>
@@ -28,7 +32,8 @@
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
                 <i class="fas fa-user-circle prefix"></i>
-                <input id="photographer_name" name="photographer_name" minlength="4" maxlength="20" type="text"
+                <input id="photographer_name" name="photographer_name" minlength="4" maxlength="50"
+                    value="{{ photographer.photographer_name }}" type="text"
                     class="validate light-green-text text-darken-4" required>
                 <label for="photographer_name">Photographer Name:</label>
             </div>
@@ -38,7 +43,8 @@
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
                 <i class="fas fa-globe-africa prefix"></i>
-                <input id="photographer_country" name="photographer_country" minlength="3" maxlength="20" type="text"
+                <input id="photographer_country" name="photographer_country" minlength="3" maxlength="100"
+                    value="{{ photographer.photographer_country }}" type="text"
                     class="validate light-green-text text-darken-4" title="Optional">
                 <label for="photographer_country">Country:</label>
             </div>
@@ -48,8 +54,9 @@
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
                 <i class="fas fa-history prefix"></i>
-                <input id="photographer_experience" name="photographer_experience" minlength="4" maxlength="70"
-                    type="text" class="validate light-green-text text-darken-4" title="Optional">
+                <input id="photographer_experience" name="photographer_experience" minlength="4" maxlength="300"
+                    value="{{ photographer.photographer_experience }}" type="text"
+                    class="validate light-green-text text-darken-4" title="Optional">
                 <label for="photographer_experience">Experience:</label>
             </div>
         </div>
@@ -58,7 +65,8 @@
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
                 <i class="fas fa-camera prefix"></i>
-                <input id="photographer_equipment" name="photographer_equipment" maxlength="50" type="text" class="validate
+                <input id="photographer_equipment" name="photographer_equipment" maxlength="150"
+                    value="{{ photographer.photographer_equipment }}" type="text" class="validate
                 light-green-text text-darken-4" title="Optional">
                 <label for="photographer_equipment">Camera:</label>
             </div>
@@ -68,7 +76,8 @@
             <div class="input-field col s8 offset-s2 light-green-text
                     text-darken-2">
                 <i class="fas fa-address-card prefix"></i>
-                <input id="photographer_about" name="photographer_about" maxlength="150" type="text"
+                <input id="photographer_about" name="photographer_about" maxlength="500"
+                    value="{{ photographer.photographer_about }}" type="text"
                     class="validate light-green-text text-darken-4" title="Optional">
                 <label for="photographer_about">Something about you:</label>
             </div>
@@ -78,8 +87,9 @@
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
                 <i class="fab fa-instagram-square prefix"></i>
-                <input id="photographer_instagram" name="photographer_instagram" minlength="4" maxlength="20"
-                    type="text" class="validate light-green-text text-darken-4" required>
+                <input id="photographer_instagram" name="photographer_instagram" minlength="4" maxlength="50"
+                    value="{{ photographer.photographer_instagram }}" type="text"
+                    class="validate light-green-text text-darken-4" required>
                 <label for="photographer_instagram">Instagram:</label>
             </div>
         </div>
@@ -88,7 +98,8 @@
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
                 <i class="fas fa-globe prefix"></i>
-                <input id="photographer_website" name="photographer_website" minlength="5" maxlength="30" type="text"
+                <input id="photographer_website" name="photographer_website" minlength="5" maxlength="50"
+                    value="{{ photographer.photographer_website }}" type="text"
                     class="validate light-green-text text-darken-4" title="Optional">
                 <label for="photographer_website">Website:</label>
             </div>
@@ -98,7 +109,8 @@
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
                 <i class="fas fa-portrait prefix"></i>
-                <input id="photographer_profile_image_URL" name="photographer_profile_image_URL" type="text"
+                <input id="photographer_profile_image_URL" name="photographer_profile_image_URL"
+                    value="{{ photographer.photographer_profile_image_URL }}" type="text"
                     class="validate light-green-text text-darken-4" title="Portrait style image PREFERRED" required>
                 <label for="photographer_profile_image_URL">Profile picture URL:</label>
             </div>
@@ -108,7 +120,8 @@
             <div class="input-field col s8 offset-s2 light-green-text
                     text-darken-2">
                 <i class="fas fa-image prefix"></i>
-                <input id="photographer_image_URL2" name="photographer_image_URL2" type="text"
+                <input id="photographer_image_URL2" name="photographer_image_URL2"
+                    value="{{ photographer.photographer_image_URL2 }}" type="text"
                     class="validate light-green-text text-darken-4" title="Optional">
                 <label for="photographer_image_URL2">Your favourite image URL:</label>
             </div>
@@ -117,7 +130,8 @@
             <div class="input-field col s8 offset-s2 light-green-text
                     text-darken-2">
                 <i class="fas fa-image prefix"></i>
-                <input id="photographer_image_URL3" name="photographer_image_URL3" type="text"
+                <input id="photographer_image_URL3" name="photographer_image_URL3"
+                    value="{{ photographer.photographer_image_URL3 }}" type="text"
                     class="validate light-green-text text-darken-4" title="Optional">
                 <label for="photographer_image_URL3">Your favourite image URL:</label>
             </div>
@@ -126,17 +140,21 @@
             <div class="input-field col s8 offset-s2 light-green-text
                     text-darken-2">
                 <i class="fas fa-image prefix"></i>
-                <input id="photographer_image_URL4" name="photographer_image_URL4" type="text"
+                <input id="photographer_image_URL4" name="photographer_image_URL4"
+                    value="{{ photographer.photographer_image_URL4 }}" type="text"
                     class="validate light-green-text text-darken-4" title="Optional">
                 <label for="photographer_image_URL4">Your favourite image URL:</label>
             </div>
         </div>
-        <!-- ADD PROFILE BUTTON -->
+        <!--CANCEL / SAVE PROFILE BUTTONS -->
         <div class="row">
-            <div class="col s8 offset-s2 center-align light-green-text
+            <div class="col s12 center-align light-green-text
             text-darken-2">
+                <a href="{{ url_for('photographerprofile', photographer_id=photographer._id) }}" class="red darken-3 waves-effect waves-light
+                btn-small add-profile-btn-2" type="submit"><i class="fas fa-times-circle"></i> Cancel
+                </a>
                 <button class="light-green darken-3 waves-effect waves-light
-                btn-large add-profile-btn-2" type="submit">Save Profile
+                btn-small add-profile-btn-2" type="submit"><i class="fas fa-check-circle"></i> Save Profile
                 </button>
             </div>
         </div>
