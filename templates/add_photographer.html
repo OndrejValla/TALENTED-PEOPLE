@@ -6,7 +6,7 @@
 
 <div class="container add-photographer-container"><br>
     <form class="col s12" method="POST" action="{{ url_for('add_photographer') }}">
-        <!-- SELECT PHOTOGRAPHY STYLE -->
+        <!-- SELECT STYLE -->
         <div class="row">
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
@@ -24,19 +24,9 @@
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
                 <i class="fas fa-user-circle prefix"></i>
-                <input id="photographer_name" name="photographer_name" minlength="4" type="text"
+                <input id="photographer_name" name="photographer_name" minlength="4" maxlength="20" type="text"
                     class="validate light-green-text text-darken-4" required>
                 <label for="photographer_name">Photographer Name:</label>
-            </div>
-        </div>
-        <!-- EXPERIENCE -->
-        <div class="row">
-            <div class="input-field col s8 offset-s2 light-green-text
-            text-darken-2">
-                <i class="fas fa-history prefix"></i>
-                <input id="photographer_experience" name="photographer_experience" minlength="4" type="text"
-                    class="validate light-green-text text-darken-4">
-                <label for="photographer_experience">Experience:</label>
             </div>
         </div>
         <!-- COUNTRY -->
@@ -44,9 +34,19 @@
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
                 <i class="fas fa-globe-africa prefix"></i>
-                <input id="photographer_country" name="photographer_country" minlength="3" type="text"
-                    class="validate light-green-text text-darken-4">
+                <input id="photographer_country" name="photographer_country" minlength="3" maxlength="20" type="text"
+                    class="validate light-green-text text-darken-4" title="Optional">
                 <label for="photographer_country">Country:</label>
+            </div>
+        </div>
+        <!-- EXPERIENCE -->
+        <div class="row">
+            <div class="input-field col s8 offset-s2 light-green-text
+            text-darken-2">
+                <i class="fas fa-history prefix"></i>
+                <input id="photographer_experience" name="photographer_experience" minlength="4" maxlength="70"
+                    type="text" class="validate light-green-text text-darken-4" title="Optional">
+                <label for="photographer_experience">Experience:</label>
             </div>
         </div>
         <!-- EQUIPMENT -->
@@ -54,9 +54,19 @@
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
                 <i class="fas fa-camera prefix"></i>
-                <input id="equipment" name="equipment" type="text" class="validate
-                light-green-text text-darken-4">
-                <label for="equipment">Equipment:</label>
+                <input id="photographer_equipment" name="photographer_equipment" maxlength="50" type="text" class="validate
+                light-green-text text-darken-4" title="Optional">
+                <label for="photographer_equipment">Camera:</label>
+            </div>
+        </div>
+        <!-- ABOUT -->
+        <div class="row">
+            <div class="input-field col s8 offset-s2 light-green-text
+                    text-darken-2">
+                <i class="fas fa-address-card prefix"></i>
+                <input id="photographer_about" name="photographer_about" maxlength="150" type="text"
+                    class="validate light-green-text text-darken-4" title="Optional">
+                <label for="photographer_about">Something about you:</label>
             </div>
         </div>
         <!-- INSTAGRAM -->
@@ -64,9 +74,19 @@
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
                 <i class="fab fa-instagram-square prefix"></i>
-                <input id="photographer_instagram" name="photographer_instagram" type="text"
-                    class="validate light-green-text text-darken-4" required>
+                <input id="photographer_instagram" name="photographer_instagram" minlength="4" maxlength="20"
+                    type="text" class="validate light-green-text text-darken-4" required>
                 <label for="photographer_instagram">Instagram:</label>
+            </div>
+        </div>
+        <!-- WEBSITE -->
+        <div class="row">
+            <div class="input-field col s8 offset-s2 light-green-text
+            text-darken-2">
+                <i class="fas fa-globe prefix"></i>
+                <input id="photographer_website" name="photographer_website" minlength="5" maxlength="30" type="text"
+                    class="validate light-green-text text-darken-4" title="Optional">
+                <label for="photographer_website">Website:</label>
             </div>
         </div>
         <!-- PROFILE PHOTO -->
@@ -74,16 +94,45 @@
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
                 <i class="fas fa-portrait prefix"></i>
-                <input id="photographer_image_URL" name="photographer_image_URL" type="text"
+                <input id="photographer_profile_image_URL" name="photographer_profile_image_URL" type="text"
                     class="validate light-green-text text-darken-4" title="Portrait style image PREFERRED" required>
-                <label for="photographer_image_URL">Profile picture URL:</label>
+                <label for="photographer_profile_image_URL">Profile picture URL:</label>
+            </div>
+        </div>
+        <!-- ADDITIONAL PHOTOS -->
+        <div class="row">
+            <div class="input-field col s8 offset-s2 light-green-text
+                    text-darken-2">
+                <i class="fas fa-image prefix"></i>
+                <input id="photographer_image_URL2" name="photographer_image_URL2" type="text"
+                    class="validate light-green-text text-darken-4" title="Optional">
+                <label for="photographer_image_URL2">Your favourite image URL:</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s8 offset-s2 light-green-text
+                    text-darken-2">
+                <i class="fas fa-image prefix"></i>
+                <input id="photographer_image_URL3" name="photographer_image_URL3" type="text"
+                    class="validate light-green-text text-darken-4" title="Optional">
+                <label for="photographer_image_URL3">Your favourite image URL:</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s8 offset-s2 light-green-text
+                    text-darken-2">
+                <i class="fas fa-image prefix"></i>
+                <input id="photographer_image_URL4" name="photographer_image_URL4" type="text"
+                    class="validate light-green-text text-darken-4" title="Optional">
+                <label for="photographer_image_URL4">Your favourite image URL:</label>
             </div>
         </div>
         <!-- ADD PROFILE BUTTON -->
         <div class="row">
             <div class="col s8 offset-s2 center-align light-green-text
             text-darken-2">
-                <button class="btn waves-effect" type="submit">Add Profile
+                <button class="light-green darken-3 waves-effect waves-light
+                btn-large add-profile-btn-2" type="submit">Add Profile
                 </button>
             </div>
         </div>

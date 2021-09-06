@@ -4,10 +4,14 @@
 <div class="row center-align">
     <div>
         <a href="{{ url_for('add_photographer') }}" class="light-green darken-3
-        waves-effect waves-light btn-large">Add Profile</a>
+        waves-effect waves-light btn-small add-profile-btn-1">
+            <i class="fas fa-plus-square left"></i>
+            Add Photographer
+        </a>
     </div>
-    <br>
-    <h4 class="center-align light-green-text text-darken-3 text-shadow">PHOTOGRAPHERS
+
+    <h4 class="center-align light-green-text text-darken-3 text-shadow">
+        PHOTOGRAPHERS
     </h4><br>
 
 </div>
@@ -18,7 +22,7 @@
         <div class="col s10 m4 offset-s1 photographers-card">
             <div class="card large">
                 <div class="card-image">
-                    <img src="{{ photographer.photographer_image_URL }}">
+                    <img src="{{ photographer.photographer_profile_image_URL }}">
                 </div>
                 <div class="card-content">
                     <p>{{ photographer.category_name }}</p>
@@ -27,7 +31,8 @@
 
                 </div>
                 <div class="card-action">
-                    <a href="#">This is a link</a>
+                    <a href="{{ url_for('photographerprofile', photographer_id=photographer._id) }}"
+                        class="light-green-text text-darken-3"><strong>View Profile</strong></a>
                 </div>
             </div>
         </div>

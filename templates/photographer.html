@@ -14,7 +14,8 @@
 <div class="container">
     <div class="row">
         <div class="col s12 l6">
-            <img src="{{ photographer.photographer_image_URL }}" class="photographer-image" alt="photographer image">
+            <img src="{{ photographer.photographer_profile_image_URL }}" class="photographer-image"
+                alt="photographer image">
         </div>
 
         <div class="col s12 l6">
@@ -23,19 +24,14 @@
                     <h6><strong>Style:</strong> {{ photographer.category_name }}</h6>
                 </li>
             </ul>
+            <br>
             {% if photographer.photographer_country %}
             <ul>
                 <li>
                     <h6><strong>Country:</strong> {{ photographer.photographer_country }}</h6>
                 </li>
             </ul>
-            {% endif %}
-            {% if photographer.equipment %}
-            <ul>
-                <li>
-                    <h6><strong>Favourite camera(s):</strong> {{ photographer.equipment }}</h6>
-                </li>
-            </ul>
+            <br>
             {% endif %}
             {% if photographer.photographer_experience %}
             <ul>
@@ -43,23 +39,49 @@
                     <h6><strong>Experience:</strong> {{ photographer.photographer_experience }}</h6>
                 </li>
             </ul>
+            <br>
+            {% endif %}
+            {% if photographer.photographer_equipment %}
+            <ul>
+                <li>
+                    <h6><strong>Favourite camera(s):</strong> {{ photographer.photographer_equipment }}</h6>
+                </li>
+            </ul>
+            <br>
+            {% endif %}
+            {% if photographer.photographer_about %}
+            <ul>
+                <li>
+                    <h6><strong>About:</strong> {{ photographer.photographer_about }}</h6>
+                </li>
+            </ul>
+            <br>
             {% endif %}
             <ul>
                 <li>
                     <h6><strong>Instagram:</strong> {{ photographer.photographer_instagram }}</h6>
                 </li>
             </ul>
+            <br>
+            {% if photographer.photographer_website %}
+            <ul>
+                <li>
+                    <h6><strong>Website:</strong> {{ photographer.photographer_website }}</h6>
+                </li>
+            </ul>
+            <br>
+            {% endif %}
         </div>
     </div>
     <div class="row">
         <div class="col s4 m2 l2">
-            <img class="materialboxed img-thumbnails" width="100" src="{{ photographer.photographer_image_URL }}">
+            <img class="materialboxed img-thumbnails" width="110" src="{{ photographer.photographer_image_URL2 }}">
         </div>
         <div class="col s4 m2 l2">
-            <img class="materialboxed img-thumbnails" width="100" src="{{ photographer.photographer_image_URL }}">
+            <img class="materialboxed img-thumbnails" width="110" src="{{ photographer.photographer_image_URL3 }}">
         </div>
         <div class="col s4 m2 l2">
-            <img class="materialboxed img-thumbnails" width="100" src="{{ photographer.photographer_image_URL }}">
+            <img class="materialboxed img-thumbnails" width="110" src="{{ photographer.photographer_image_URL4 }}">
         </div>
     </div>
 </div>
