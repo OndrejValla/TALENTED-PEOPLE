@@ -1,27 +1,34 @@
 {% extends "base.html" %}
 {% block main_content %}
 
-<!-- Back Button -->
-<a href="{{ url_for('get_photographers') }}"
-    class=" light-green darken-3 waves-effect waves-light btn-small back-btn-1">
-    <i class="fas fa-angle-double-left"></i>
-</a>
-<!-- Delete Button -->
-<a href="#delete-modal-{{ photographer._id }}"
-    class="red darken-3 waves-effect waves-light btn-small back-btn-1 right modal-trigger" title="Delete">
-    <i class="fas fa-trash"></i>
-</a>
-<!-- Edit Button -->
-<a href="{{ url_for('edit_photographer', photographer_id=photographer._id) }}"
-    class="light-green darken-3 waves-effect waves-light btn-small back-btn-1 right" title="Edit">
-    <i class="fas fa-edit"></i>
-</a>
-<!-- Delete Modal -->
+<div class="row">
+    <div class="col s12">
+        <!-- Back Button -->
+        <a href="{{ url_for('get_photographers') }}"
+            class=" light-green darken-3 waves-effect waves-light btn-small back-btn-1">
+            <i class="fas fa-angle-double-left"></i>
+        </a>
+        {% if session.user|lower == photographer.created_by|lower %}
+        <!-- Delete Button -->
+        <a href="#delete-modal-{{ photographer._id }}"
+            class="red darken-3 waves-effect waves-light btn-small back-btn-1 right modal-trigger" title="Delete">
+            <i class="fas fa-trash"></i>
+        </a>
+        <!-- Edit Button -->
+        <a href="{{ url_for('edit_photographer', photographer_id=photographer._id) }}"
+            class="light-green darken-3 waves-effect waves-light btn-small back-btn-1 right" title="Edit">
+            <i class="fas fa-edit"></i>
+        </a>
 
+        <!-- Delete Modal -->
+        {% endif %}
 
-<h4 class="center-align light-green-text text-darken-3 text-shadow">
-    {{ photographer["photographer_name"] }}
-</h4>
+        <h4 class="center-align light-green-text text-darken-3 text-shadow">
+            {{ photographer["photographer_name"] }}'s Profile
+        </h4>
+    </div>
+</div>
+
 <br>
 <br>
 <!-- Photographer Profile -->

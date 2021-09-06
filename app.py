@@ -146,6 +146,35 @@ def photographerprofile(photographer_id):
 # EDIT PHOTOGRAPHER FUNCTION
 @app.route("/edit_photographer/<photographer_id>", methods=["GET", "POST"])
 def edit_photographer(photographer_id):
+    if request.method == "POST":
+        submit = {
+            "category_name": request.form.get("category_name"),
+            "photographer_name": request.form.get("photographer_name"),
+            "photographer_experience": request.form.get(
+                "photographer_experience"),
+            "photographer_country": request.form.get(
+                "photographer_country"),
+            "photographer_equipment": request.form.get(
+                "photographer_equipment"),
+            "photographer_about": request.form.get("photographer_about"),
+            "photographer_instagram": request.form.get(
+                "photographer_instagram"),
+            "photographer_website": request.form.get(
+                "photographer_website"),
+            "photographer_profile_image_URL": request.form.get(
+                "photographer_profile_image_URL"),
+            "photographer_image_URL2": request.form.get(
+                "photographer_image_URL2"),
+            "photographer_image_URL3": request.form.get(
+                "photographer_image_URL3"),
+            "photographer_image_URL4": request.form.get(
+                "photographer_image_URL4"),
+            "created_by": session["user"]
+        }
+        mongo.db.photographers.update({"_id": ObjectId(photographer_id)}, submit)
+        flash("Profile Successfully Updated!")
+        return redirect(url_for("get_photographers"))
+
     photographer = mongo.db.photographers.find_one({"_id": ObjectId(photographer_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_photographer.html", photographer=photographer, categories=categories)

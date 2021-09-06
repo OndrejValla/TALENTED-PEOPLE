@@ -56,6 +56,7 @@ u {
     border: 2px solid rgb(232, 247, 223);
     border-radius: 3%;
     margin-top: 10px;
+    line-height: 30px;
 }
 
 /* ADD_PHOTOGRAPHER.HTML */
@@ -68,6 +69,7 @@ u {
     border: 1px solid rgb(232, 247, 223);
     margin: 10px;
     text-align: center;
+    line-height: 28px;
 }
 
 /* PHOTOGRAPHER.HTML */
@@ -75,6 +77,8 @@ u {
 .back-btn-1 {
     border: 1px solid rgb(232, 247, 223);
     margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
 }
 
 .photographer-image {
