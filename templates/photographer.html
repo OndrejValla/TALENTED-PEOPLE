@@ -12,9 +12,12 @@
     <i class="fas fa-trash"></i>
 </a>
 <!-- Edit Button -->
-<a href="" class="light-green darken-3 waves-effect waves-light btn-small back-btn-1 right" title="Edit">
+<a href="{{ url_for('edit_photographer', photographer_id=photographer._id) }}"
+    class="light-green darken-3 waves-effect waves-light btn-small back-btn-1 right" title="Edit">
     <i class="fas fa-edit"></i>
 </a>
+<!-- Delete Modal -->
+
 
 <h4 class="center-align light-green-text text-darken-3 text-shadow">
     {{ photographer["photographer_name"] }}

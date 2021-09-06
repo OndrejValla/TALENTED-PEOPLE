@@ -143,6 +143,14 @@ def photographerprofile(photographer_id):
     return render_template("photographer.html", photographer=photographer)
 
 
+# EDIT PHOTOGRAPHER FUNCTION
+@app.route("/edit_photographer/<photographer_id>", methods=["GET", "POST"])
+def edit_photographer(photographer_id):
+    photographer = mongo.db.photographers.find_one({"_id": ObjectId(photographer_id)})
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("edit_photographer.html", photographer=photographer, categories=categories)
+
+
 # PROFILE FUNCTION
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):

@@ -24,7 +24,7 @@
         <!-- Main Navbar -->
         <nav class="nav-extended text-shadow light-green darken-3">
             <div class="col s12 m6 nav-wrapper">
-                <a href="#" class="brand-logo">
+                <a href="{{ url_for('get_home') }}" class="brand-logo">
                     <h4 class="brand-logo-h4">TALENTED PEOPLE</h4>
                 </a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
@@ -67,7 +67,7 @@
     </header>
 
     <section>
-        <!-- FLASH MESSAGES -->
+        <!-- Flash Messages -->
         {% with messages = get_flashed_messages() %}
         {% if messages %}
         {% for message in messages %}
