@@ -21,6 +21,18 @@
         </a>
 
         <!-- Delete Modal -->
+        <div id="delete-modal-{{ photographer._id }}" class="modal light-green-text text-darken-3">
+            <div class="modal-content center-align">
+                <h4></h4>
+                <h5>Profile will be <strong>permanently</strong> deleted!!</h5>
+                <h5>Click <strong>YES</strong> to Delete</h5>
+            </div>
+            <div class="modal-footer">
+                <a href="{{ url_for('delete_photographer', photographer_id=photographer._id) }}"
+                    class="modal-close waves-effect waves-green btn-flat">Yes</a>
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">No</a>
+            </div>
+        </div>
         {% endif %}
 
         <h4 class="center-align light-green-text text-darken-3 text-shadow">

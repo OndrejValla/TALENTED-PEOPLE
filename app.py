@@ -180,6 +180,14 @@ def edit_photographer(photographer_id):
     return render_template("edit_photographer.html", photographer=photographer, categories=categories)
 
 
+# DELETE PHOTOGRAPHER FUNCTION
+@app.route("/delete_photographer/<photographer_id>")
+def delete_photographer(photographer_id):
+    mongo.db.photographers.remove({"_id": ObjectId(photographer_id)})
+    flash("Profile Deleted!")
+    return redirect(url_for("get_photographers"))
+
+
 # PROFILE FUNCTION
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):

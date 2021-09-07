@@ -2,26 +2,26 @@
 {% block main_content %}
 <!-- PROFILE -->
 {% for user in user_profile %}
+
+<div class="row">
+    <div class="col s12">
+        <!-- Back Button -->
+        <a href="{{ url_for('get_home') }}" class=" light-green darken-3 waves-effect waves-light btn-small back-btn-1">
+            <i class="fas fa-angle-double-left"></i>
+        </a>
+        <!-- Delete Button -->
+        <a href="" class="red darken-3 waves-effect waves-light btn-small back-btn-1 right modal-trigger"
+            title="Delete">
+            <i class="fas fa-trash"></i>
+        </a>
+        <!-- Edit Button -->
+        <a href="" class="light-green darken-3 waves-effect waves-light btn-small back-btn-1 right" title="Edit">
+            <i class="fas fa-edit"></i>
+        </a>
+    </div>
+</div>
 <h4 class="center-align light-green-text text-darken-3 text-shadow">
     {{ user["firstname"] }}'s Profile</h4>
-
-<div class="row">
-    <div class="col s12 m6 offset-m3">
-        <div class="card-panel">
-            <h3 class="center-align light-green-text text-darken-3">
-                {{ user["firstname"] }}'s Profile
-            </h3>
-        </div>
-    </div>
-</div>
 {% endfor %}
-
-<div class="row">
-    <div class="col s8 offset-s2">
-        <h6 class="center-align">
-            Register <a href="{{ url_for('register') }}" class="green-text">Here</a>
-        </h6>
-    </div>
-</div>
 
 {% endblock %}

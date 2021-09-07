@@ -5,6 +5,8 @@ $(document).ready(function () {
     });
     // Images in Photographers profile
     $('.materialboxed').materialbox();
+    // Modal for Delete Profile
+    $('.modal').modal();
     // Dropdown Navbar
     $(".dropdown-trigger").dropdown();
     // Category Select
