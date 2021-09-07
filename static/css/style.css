@@ -3,6 +3,11 @@ body {
     background-color: rgb(232, 247, 223);
 }
 
+.col .row {
+    margin-left: -0.75rem;
+    margin-right: 0.25rem;
+}
+
 nav {
     min-height: 80px;
 }
@@ -73,7 +78,6 @@ u {
 }
 
 /* PHOTOGRAPHER.HTML */
-
 .back-btn-1 {
     border: 1px solid rgb(232, 247, 223);
     margin-top: 10px;
