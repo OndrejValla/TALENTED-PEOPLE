@@ -3,6 +3,10 @@ body {
     background-color: rgb(232, 247, 223);
 }
 
+header {
+    border-bottom: 5px solid white;
+}
+
 .col .row {
     margin-left: -0.75rem;
     margin-right: 0.25rem;
@@ -30,10 +34,6 @@ u {
     .brand-logo-h4 {
         font-size: 21px;
     }
-}
-
-.home-heading {
-    padding-top: 5px;
 }
 
 .text-shadow {
@@ -66,9 +66,11 @@ u {
     }
 }
 
-.page-underline {
-    height: 10px;
+.page-underline-top {
+    height: 20px;
     margin-top: 30px;
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
 }
 
 /* PHOTOGRAPHERS.HTML */
@@ -95,7 +97,7 @@ u {
 /* PHOTOGRAPHER.HTML */
 .back-btn-1 {
     border: 1px solid rgb(232, 247, 223);
-    margin-top: 10px;
+    margin-top: 5px;
     margin-left: 3px;
     margin-right: 3px;
 }
@@ -109,6 +111,13 @@ u {
     display: inline-flex;
 }
 
+/* CATEGORIES.HTML */
+.page-underline {
+    height: 6px;
+    border-top: 1px solid white;
+    border-bottom: 2px solid white;
+}
+
 /* FOOTER BASE.HTML */
 .page-footer {
     font-size: 24px;
@@ -116,6 +125,9 @@ u {
     max-height: 70px;
     display: flex;
     justify-content: space-between;
+    margin-top: 15px;
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
 }
 
 .copyright {
@@ -130,4 +142,20 @@ u {
 
 .social-footer li {
     display: inline;
+}
+
+@media only screen and (max-width: 600px) {
+    .page-footer {
+        font-size: 11px;
+    }
+
+    .copyright {
+        font-size: 11px;
+    }
+
+    .social-footer {
+        list-style: none;
+        line-height: 10px;
+        margin: 0 20px;
+    }
 }
