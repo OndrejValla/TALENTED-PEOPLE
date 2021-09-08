@@ -2,10 +2,19 @@
 {% block main_content %}
 
 <!--- materializecss.com-cards -->
-<h3 class="center-align light-green-text text-darken-3 text-shadow">
-    Manage Categories
-</h3>
-<br>
+<div class="row center-align">
+    <div>
+        <a href="{{ url_for('add_category') }}" class="light-green darken-3
+        waves-effect waves-light btn-small add-profile-btn-1">
+            <i class="fas fa-plus-square left"></i>
+            Add Category
+        </a>
+    </div>
+
+    <h4 class="center-align light-green-text text-darken-3 text-shadow">
+        Manage Categories
+    </h4>
+</div><br>
 
 <div class="container center-align">
     <div class="row">

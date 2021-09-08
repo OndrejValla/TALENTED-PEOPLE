@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block main_content %}
+
+<a href="{{ url_for('get_categories') }}" class=" light-green darken-3 waves-effect waves-light btn-small back-btn-1">
+    <i class="fas fa-angle-double-left"></i>
+</a>
+<h4 class="center-align light-green-text text-darken-3 text-shadow">ADD CATEGORY
+</h4><br>
+
+<div class="container add-photographer-container"><br>
+    <form class="col s12" method="POST" action="{{ url_for('add_category') }}">
+        <!-- CATEGORY NAME -->
+        <div class="row">
+            <div class="input-field col s8 offset-s2 light-green-text
+            text-darken-2">
+                <i class="fas fa-camera-retro prefix"></i>
+                <input id="category_name" name="category_name" minlength="3" maxlength="20" type="text"
+                    class="validate light-green-text text-darken-4" required>
+                <label for="category_name">Category Name:</label>
+            </div>
+        </div>
+
+        <!-- ADD CATEGORY BUTTON -->
+        <div class="row">
+            <div class="col s8 offset-s2 center-align light-green-text
+            text-darken-2">
+                <button class="light-green darken-3 waves-effect waves-light
+                btn-large add-profile-btn-2" type="submit">Add Category
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+<br>
+
+{% endblock %}

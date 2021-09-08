@@ -24,7 +24,7 @@
     <div class="wrapper">
         <header>
             <!-- Main Navbar -->
-            <nav class="nav-extended text-shadow light-green darken-3">
+            <nav class="nav-extended text-shadow light-green darken-4">
                 <div class="col s12 m6 nav-wrapper">
                     <a href="{{ url_for('get_home') }}" class="brand-logo">
                         <h4 class="brand-logo-h4">TALENTED PEOPLE</h4>
@@ -35,7 +35,9 @@
                         {% if session.user %}
                         <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                         <li><a href="{{ url_for('get_photographers') }}">Photographers</a></li>
-                        <li><a href="{{ url_for('get_home') }}">Categories</a></li>
+                        {% if session.user|lower == "admin"|lower %}
+                        <li><a href="{{ url_for('get_categories') }}">Categories</a></li>
+                        {% endif %}
                         <li><a href="{{ url_for('get_home') }}">Models</a></li>
                         <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                         {% else %}
@@ -56,9 +58,10 @@
                 <li><a href="{{ url_for('profile', username=session['user']) }}"
                         class="light-green-text text-darken-3">Profile</a></li>
                 <li><a href="{{ url_for('get_photographers') }}"
-                        class="light-green-text text-darken-3">Photographers</a>
-                </li>
-                <li><a href="#" class="light-green-text text-darken-3">Categories</a></li>
+                        class="light-green-text text-darken-3">Photographers</a></li>
+                {% if session.user|lower == "admin"|lower %}
+                <li><a href="{{ url_for('get_categories') }}" class="light-green-text text-darken-3">Categories</a></li>
+                {% endif %}
                 <li><a href="#" class="light-green-text text-darken-3">Models</a></li>
                 <li><a href="{{ url_for('logout') }}" class="light-green-text text-darken-3">Log Out</a></li>
                 {% else %}
@@ -89,9 +92,10 @@
         </main>
     </div>
     <br>
-    <p class="light-green page-underline s8 m8 l8"></p>
+    <p class="light-green darken-1 text-shadow page-underline-top s8 m8 l8"></p>
 
     <!-- Slider Section -->
+    <!-- materializecss.com slider -->
     <div class="slider main-slider">
         <ul class="slides main-slides">
             <li>
