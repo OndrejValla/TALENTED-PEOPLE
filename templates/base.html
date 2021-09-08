@@ -66,7 +66,6 @@
                 <li><a href="{{ url_for('register') }}" class="light-green-text text-darken-3">Register</a></li>
                 {% endif %}
             </ul>
-
         </header>
 
         <section>
@@ -88,10 +87,29 @@
             {% block main_content %}
             {% endblock %}
         </main>
+    </div>
+    <br>
+    <p class="light-green page-underline s8 m8 l8"></p>
 
+    <!-- Slider Section -->
+    <div class="slider main-slider">
+        <ul class="slides main-slides">
+            <li>
+                <img src="{{url_for('static', filename='images/model-faces-page.jpg')}}" alt="Models">
+                <div class="caption center-align white-text slider-text-shadow">
+                    <h3>Photographers</h3>
+                </div>
+            </li>
+            <li>
+                <img src="{{url_for('static', filename='images/model-faces-page.jpg')}}" alt="Models">
+                <div class="caption center-align white-text slider-text-shadow">
+                    <h3>Models</h3>
+                </div>
+            </li>
+        </ul>
     </div>
 
-    <!-- footer section -->
+    <!-- Footer Section -->
     <footer class="page-footer light-green darken-3">
         <div class="container">
             <div class="row center-align">

@@ -3,6 +3,11 @@ $(document).ready(function () {
     $('.sidenav').sidenav({
         edge: "right"
     });
+    // Main photo slides
+    $('.slider').slider({
+        indicators: false,
+        full_width: false,
+    });
     // Images in Photographers profile
     $('.materialboxed').materialbox();
     // Modal for Delete Profile

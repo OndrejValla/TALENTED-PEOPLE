@@ -40,6 +40,16 @@ u {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
+.slider-text-shadow {
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.7);
+}
+
+@media only screen and (max-width: 700px) {
+    .element.style {
+        height: 180px;
+    }
+}
+
 .flash-message h5 {
     line-height: 2;
 }
@@ -54,6 +64,11 @@ u {
     .flash-message h5 {
         font-size: 16px;
     }
+}
+
+.page-underline {
+    height: 10px;
+    margin-top: 30px;
 }
 
 /* PHOTOGRAPHERS.HTML */
