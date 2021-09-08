@@ -26,9 +26,10 @@
                 </div>
                 <p class="light-green darken-1 text-shadow page-underline"></p>
                 <div class="card-action">
+                    {% if session.user|lower == "admin"|lower %}
                     <!-- Delete Button -->
-                    <a href="" class="red darken-3 waves-effect waves-light btn-small back-btn-1 modal-trigger"
-                        title="Delete">
+                    <a href="#delete-modal-{{ category._id }}"
+                        class="red darken-3 waves-effect waves-light btn-small back-btn-1 modal-trigger" title="Delete">
                         <i class="fas fa-trash"></i>
                     </a>
                     <!-- Edit Button -->
@@ -36,6 +37,20 @@
                         class="light-green darken-3 waves-effect waves-light btn-small back-btn-1" title="Edit">
                         <i class="fas fa-edit"></i>
                     </a>
+                    <!-- Delete Modal -->
+                    <div id="delete-modal-{{ category._id }}" class="modal light-green-text text-darken-3">
+                        <div class="modal-content center-align">
+                            <h4></h4>
+                            <h5>Category will be <strong>permanently</strong> deleted!!</h5>
+                            <h5>Click <strong>YES</strong> to Delete</h5>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="{{ url_for('delete_category', category_id=category._id) }}"
+                                class="modal-close waves-effect waves-green btn-flat">Yes</a>
+                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">No</a>
+                        </div>
+                    </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
