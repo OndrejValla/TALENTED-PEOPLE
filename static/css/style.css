@@ -86,10 +86,33 @@ u {
 }
 
 .photographer-image {
-    width: 50vh;
+    width: 42vh;
     height: auto;
 }
 
 .img-thumbnails {
     display: inline-flex;
+}
+
+/* FOOTER BASE.HTML */
+.page-footer {
+    font-size: 24px;
+    overflow: hidden;
+    max-height: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyright {
+    font-size: 14px;
+}
+
+.social-footer {
+    list-style: none;
+    line-height: 28px;
+    margin: 0 20px;
+}
+
+.social-footer li {
+    display: inline;
 }
