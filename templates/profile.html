@@ -1,27 +1,83 @@
 {% extends "base.html" %}
 {% block main_content %}
 <!-- PROFILE -->
-{% for user in user_profile %}
+<div class="row center-align">
+    <h3 class="center-align light-green-text text-darken-3 text-shadow">
+        My Profile
+    </h3>
+    <div class="col s6">
+        <a href="{{ url_for('add_photographer') }}" class="light-green darken-3
+        waves-effect waves-light btn-small add-profile-btn-1">
+            <i class="fas fa-plus-square left"></i>
+            Add Photographer
+        </a>
+    </div class="col s6">
 
-<div class="row">
-    <div class="col s12">
-        <!-- Back Button -->
-        <a href="{{ url_for('get_home') }}" class=" light-green darken-3 waves-effect waves-light btn-small back-btn-1">
-            <i class="fas fa-angle-double-left"></i>
-        </a>
-        <!-- Delete Button -->
-        <a href="" class="red darken-3 waves-effect waves-light btn-small back-btn-1 right modal-trigger"
-            title="Delete">
-            <i class="fas fa-trash"></i>
-        </a>
-        <!-- Edit Button -->
-        <a href="" class="light-green darken-3 waves-effect waves-light btn-small back-btn-1 right" title="Edit">
-            <i class="fas fa-edit"></i>
+    <div>
+        <a href="{{ url_for('add_photographer') }}" class="light-green darken-3
+        waves-effect waves-light btn-small add-profile-btn-1">
+            <i class="fas fa-plus-square left"></i>
+            Add Model
         </a>
     </div>
+    <br>
+
 </div>
-<h4 class="center-align light-green-text text-darken-3 text-shadow">
-    {{ user["firstname"] }}'s Profile</h4>
-{% endfor %}
+<br>
+<!--- materializecss.com-cards -->
+<div class="container">
+    <div class="row center-align">
+        {% for photographer in photographers %}
+        <div class="col s10 m4 offset-s1">
+            <div class="card large">
+                <div class="card-image">
+                    <img src="{{ photographer.photographer_profile_image_URL }}">
+                </div>
+                <div class="card-content">
+                    <p>{{ photographer.category_name }}</p>
+                    <h5><strong>{{ photographer.photographer_name }}</strong></h5>
+                    <p><strong>Instagram:</strong> {{ photographer.photographer_instagram }}</p><br>
+
+                </div>
+                <div class="card-action center">
+                    {% if session.user|lower == photographer.created_by|lower %}
+                    <!-- Delete Button -->
+                    <a href="#delete-modal-{{ photographer._id }}"
+                        class="red darken-3 waves-effect waves-light btn-small back-btn-1 center modal-trigger"
+                        title="Delete">
+                        <i class="fas fa-trash"></i>
+                    </a>
+                    <!-- Edit Button -->
+                    <a href="{{ url_for('edit_photographer', photographer_id=photographer._id) }}"
+                        class="light-green darken-3 waves-effect waves-light btn-small back-btn-1 center" title="Edit">
+                        <i class="fas fa-edit"></i>
+                    </a>
+
+                    <!-- Delete Modal -->
+                    <div id="delete-modal-{{ photographer._id }}" class="modal light-green-text text-darken-3">
+                        <div class="modal-content center-align">
+                            <h5>Profile will be <strong>permanently</strong> deleted!!</h5>
+                            <h5>Click <strong>YES</strong> to Delete</h5>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="{{ url_for('delete_photographer', photographer_id=photographer._id) }}"
+                                class="modal-close waves-effect waves-green btn-flat">Yes</a>
+                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">No</a>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% if photographers|length == 0 %}
+<h5 class="center-align light-green-text text-darken-3">
+    <i class="fas fa-frown">
+        No Photographers or Models found
+    </i>
+</h5>
+{% endif %}
 
 {% endblock %}
