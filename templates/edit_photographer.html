@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block main_content %}
 
-<a href="{{ url_for('photographerprofile', photographer_id=photographer._id) }}"
+<a href="{{ url_for('profile', username=session['user']) }}"
     class=" light-green darken-3 waves-effect waves-light btn-small back-btn-1">
     <i class="fas fa-angle-double-left"></i>
 </a>
@@ -150,7 +150,7 @@
         <div class="row">
             <div class="col s12 center-align light-green-text
             text-darken-2">
-                <a href="{{ url_for('photographerprofile', photographer_id=photographer._id) }}" class="red darken-3 waves-effect waves-light
+                <a href="{{ url_for('profile', username=session['user']) }}" class="red darken-3 waves-effect waves-light
                 btn-small add-profile-btn-2" type="submit"><i class="fas fa-times-circle"></i> Cancel
                 </a>
                 <button class="light-green darken-3 waves-effect waves-light

@@ -201,6 +201,11 @@ def profile(username):
     # the session user's username from the database
         username= mongo.db.users.find_one(
             {"username": session["user"]})["username"]
+        photographers = list(mongo.db.photographers.find(
+                            {"created_by": session["user"]}))
+        return render_template("profile.html", username=username,
+                                photographers=photographers)
+
         if session["user"]:
             return render_template("profile.html", username=username,
                                     user_profile=user_profile)
