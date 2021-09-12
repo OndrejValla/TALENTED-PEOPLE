@@ -6,19 +6,26 @@
     <h3 class="center-align light-green-text text-darken-4 text-shadow">
         My Profile
     </h3>
-    <div class="col s6">
+    {% if photographers|length >= 1 %}
+    <div class="col s10 l4 offset-s1 offset-l4">
         <a href="{{ url_for('add_photographer') }}" class="light-green darken-3
         waves-effect waves-light btn-small add-profile-btn-1">
-            <i class="fas fa-plus-square left"></i>Photographer
+            <i class="fas fa-plus-square left"></i>Another Model
         </a>
+    </div>
+    {% endif %}
+
+    <div class="col l4">
     </div>
 
-    <div class="col s6">
+    {% if photographers|length >= 1 %}
+    <div class="col s10 l4 offset-s1 offset-l4">
         <a href="{{ url_for('add_photographer') }}" class="light-green darken-3
         waves-effect waves-light btn-small add-profile-btn-1">
-            <i class="fas fa-plus-square left"></i>Model
+            <i class="fas fa-plus-square left"></i>Another Photographer
         </a>
     </div>
+    {% endif %}
     <br>
 </div>
 <br>
@@ -69,13 +76,47 @@
         </div>
         {% endfor %}
 
-        {% if photographers|length == 0 %}
-        <h5 class="center-align light-green-text text-darken-3">
-            <i class="fas fa-frown">
-                No Photographers or Models found
-            </i>
-        </h5>
-        {% endif %}
+        <div class="row">
+            <div class="col s10 offset-s1 m6 offset-m3">
+                {% if photographers|length == 0 %}
+                <b>
+                    <p class="center-align light-green-text text-darken-3">
+                        You don't have any Photographer's Profile created yet!
+                    </p>
+                </b>
+                <strong>
+                    <h6 class="light-green-text text-darken-3"><strong>Create one here</strong></h6>
+                    <a href="{{ url_for('add_photographer') }}" class="light-green darken-3
+        waves-effect waves-light btn-small add-profile-btn-1">
+                        <i class="fas fa-plus-square left"></i>Add Photographer
+                    </a>
+                    {% endif %}
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="row">
+            <div class="col s10 offset-s1 m6 offset-m3">
+                {% if photographers|length == 0 %}
+                <b>
+                    <p class="center-align light-green-text text-darken-3">
+                        You don't have any Model's Profile created yet!
+                    </p>
+                </b>
+                <h6 class="light-green-text text-darken-3"><strong>Create one here</h6></strong></h6>
+                <a href="{{ url_for('add_photographer') }}" class="light-green darken-3
+        waves-effect waves-light btn-small add-profile-btn-1">
+                    <i class="fas fa-plus-square left"></i>Add Model
+                </a>
+                {% endif %}
+            </div>
+        </div>
+
+        <br>
+        <br>
+
     </div>
 </div>
 
