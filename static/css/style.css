@@ -1,5 +1,6 @@
 /* BASE.HTML */
 body {
+    min-height: 100%;
     background-color: rgb(232, 247, 223);
     /* IMG from www.teahub.io */
     background: url(../images/talented-people-background-colour.jpg);
@@ -38,6 +39,22 @@ u {
     .brand-logo-h4 {
         font-size: 21px;
         margin-left: 1px;
+    }
+
+    .mobile-navbar {
+        margin-left: 30px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .brand-logo-h4 {
+        font-size: 19px;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .brand-logo-h4 {
+        font-size: 16px;
     }
 }
 
@@ -107,10 +124,23 @@ u {
 
 /* PHOTOGRAPHERS.HTML */
 .add-profile-btn-1 {
+    width: 70%;
     border: 2px solid rgb(232, 247, 223);
     border-radius: 3%;
     margin-top: 10px;
     line-height: 30px;
+    vertical-align: text-bottom;
+}
+
+@media only screen and (max-width: 600px) {
+    .add-profile-btn-1 {
+        width: 100%;
+        border: 2px solid rgb(232, 247, 223);
+        border-radius: 3%;
+        margin-top: 10px;
+        line-height: 30px;
+        vertical-align: text-bottom;
+    }
 }
 
 /* ADD_PHOTOGRAPHER.HTML */
@@ -146,18 +176,21 @@ u {
 /* CATEGORIES.HTML */
 
 /* FOOTER BASE.HTML */
+
 .page-footer {
+    clear: both;
+    position: relative;
+    height: 100px;
     font-size: 24px;
     overflow: hidden;
-    max-height: 70px;
     display: flex;
     justify-content: space-between;
-    margin-top: 15px;
+    margin-top: 25px;
     border-top: 5px solid white;
     border-bottom: 5px solid white;
 }
 
-.copyright {
+.copyright-left {
     font-size: 14px;
 }
 
@@ -173,7 +206,7 @@ u {
 
 @media only screen and (max-width: 600px) {
     .page-footer {
-        font-size: 11px;
+        font-size: 18px;
     }
 
     .copyright {
@@ -182,7 +215,7 @@ u {
 
     .social-footer {
         list-style: none;
-        line-height: 10px;
-        margin: 0 20px;
+        line-height: 35px;
+        margin: 0;
     }
 }
