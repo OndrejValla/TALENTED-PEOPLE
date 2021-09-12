@@ -1,6 +1,10 @@
 /* BASE.HTML */
 body {
     background-color: rgb(232, 247, 223);
+    /* IMG from www.teahub.io */
+    background: url(../images/talented-people-background-colour.jpg);
+    background-repeat: repeat;
+    background-position: 50% 50%;
 }
 
 header {
