@@ -188,6 +188,99 @@ def delete_photographer(photographer_id):
     return redirect(url_for("get_photographers"))
 
 
+# GET MODELS FUNCTION
+@app.route("/")
+@app.route("/models")
+def get_models():
+    models = list(mongo.db.models.find())
+    return render_template("models.html", models=models)
+
+
+# ADD MODEL FUNCTION
+@app.route("/add_model", methods=["GET", "POST"])
+def add_model():
+    if request.method == "POST":
+        model = {
+            "category_name": request.form.get("category_name"),
+            "model_name": request.form.get("model_name"),
+            "model_experience": request.form.get(
+                "model_experience"),
+            "model_country": request.form.get(
+                "model_country"),
+            "model_about": request.form.get("model_about"),
+            "model_instagram": request.form.get(
+                "model_instagram"),
+            "model_website": request.form.get(
+                "model_website"),
+            "model_profile_image_URL": request.form.get(
+                "model_profile_image_URL"),
+            "model_image_URL2": request.form.get(
+                "model_image_URL2"),
+            "model_image_URL3": request.form.get(
+                "model_image_URL3"),
+            "model_image_URL4": request.form.get(
+                "model_image_URL4"),
+            "created_by": session["user"]
+        }
+        mongo.db.models.insert_one(model)
+        flash("Profile Successfully Created!")
+        return redirect(url_for("get_models"))
+
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("add_model.html", categories=categories)
+
+
+# VIEW MODEL FUNCTION
+@app.route("/model/<model_id>")
+def modelprofile(model_id):
+    model = mongo.db.models.find_one({"_id": ObjectId(
+        model_id)})
+    return render_template("model.html", model=model)
+
+
+# EDIT MODEL FUNCTION
+@app.route("/edit_model/<model_id>", methods=["GET", "POST"])
+def edit_model(model_id):
+    if request.method == "POST":
+        submit = {
+            "category_name": request.form.get("category_name"),
+            "model_name": request.form.get("model_name"),
+            "model_experience": request.form.get(
+                "model_experience"),
+            "model_country": request.form.get(
+                "model_country"),
+            "model_about": request.form.get("model_about"),
+            "model_instagram": request.form.get(
+                "model_instagram"),
+            "model_website": request.form.get(
+                "model_website"),
+            "model_profile_image_URL": request.form.get(
+                "model_profile_image_URL"),
+            "model_image_URL2": request.form.get(
+                "model_image_URL2"),
+            "model_image_URL3": request.form.get(
+                "model_image_URL3"),
+            "model_image_URL4": request.form.get(
+                "model_image_URL4"),
+            "created_by": session["user"]
+        }
+        mongo.db.models.update({"_id": ObjectId(model_id)}, submit)
+        flash("Profile Successfully Updated!")
+        return redirect(url_for("get_models"))
+
+    model = mongo.db.models.find_one({"_id": ObjectId(model_id)})
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("edit_model.html", model=model, categories=categories)
+
+
+# DELETE MODEL FUNCTION
+@app.route("/delete_model/<model_id>")
+def delete_model(model_id):
+    mongo.db.model.remove({"_id": ObjectId(model_id)})
+    flash("Profile Deleted!")
+    return redirect(url_for("get_models"))
+
+
 # PROFILE FUNCTION
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
@@ -203,8 +296,11 @@ def profile(username):
             {"username": session["user"]})["username"]
         photographers = list(mongo.db.photographers.find(
                             {"created_by": session["user"]}))
+        models = list(mongo.db.models.find(
+                            {"created_by": session["user"]}))
         return render_template("profile.html", username=username,
-                                photographers=photographers)
+                                photographers=photographers,
+                                models=models)
 
         if session["user"]:
             return render_template("profile.html", username=username,

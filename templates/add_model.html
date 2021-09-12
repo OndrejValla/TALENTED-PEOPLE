@@ -1,15 +1,14 @@
 {% extends "base.html" %}
 {% block main_content %}
 
-<a href="{{ url_for('get_photographers') }}"
-    class=" light-green darken-4 waves-effect waves-light btn-small back-btn-1">
+<a href="{{ url_for('get_models') }}" class=" light-green darken-4 waves-effect waves-light btn-small back-btn-1">
     <i class="fas fa-angle-double-left"></i>
 </a>
-<h4 class="center-align light-green-text text-darken-4 text-shadow">ADD PHOTOGRAPHER
+<h4 class="center-align light-green-text text-darken-4 text-shadow">ADD MODEL
 </h4><br>
 
 <div class="container add-photographer-container"><br>
-    <form class="col s12" method="POST" action="{{ url_for('add_photographer') }}">
+    <form class="col s12" method="POST" action="{{ url_for('add_model') }}">
         <!-- SELECT STYLE -->
         <div class="row">
             <div class="input-field col s8 offset-s2 light-green-text
@@ -28,9 +27,9 @@
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
                 <i class="fas fa-user-circle prefix"></i>
-                <input id="photographer_name" name="photographer_name" minlength="4" maxlength="50" type="text"
+                <input id="model_name" name="model_name" minlength="4" maxlength="50" type="text"
                     class="validate light-green-text text-darken-4" required>
-                <label for="photographer_name">Photographer Name:</label>
+                <label for="model_name">Model Name:</label>
             </div>
         </div>
         <!-- COUNTRY -->
@@ -38,9 +37,9 @@
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
                 <i class="fas fa-globe-africa prefix"></i>
-                <input id="photographer_country" name="photographer_country" minlength="3" maxlength="100" type="text"
+                <input id="model_country" name="model_country" minlength="3" maxlength="100" type="text"
                     class="validate light-green-text text-darken-4" title="Optional">
-                <label for="photographer_country">Country:</label>
+                <label for="model_country">Country:</label>
             </div>
         </div>
         <!-- EXPERIENCE -->
@@ -48,19 +47,9 @@
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
                 <i class="fas fa-history prefix"></i>
-                <input id="photographer_experience" name="photographer_experience" minlength="4" maxlength="300"
-                    type="text" class="validate light-green-text text-darken-4" title="Optional">
-                <label for="photographer_experience">Experience:</label>
-            </div>
-        </div>
-        <!-- EQUIPMENT -->
-        <div class="row">
-            <div class="input-field col s8 offset-s2 light-green-text
-            text-darken-2">
-                <i class="fas fa-camera prefix"></i>
-                <input id="photographer_equipment" name="photographer_equipment" maxlength="150" type="text" class="validate
-                light-green-text text-darken-4" title="Optional">
-                <label for="photographer_equipment">Camera:</label>
+                <input id="model_experience" name="model_experience" minlength="4" maxlength="300" type="text"
+                    class="validate light-green-text text-darken-4" title="Optional">
+                <label for="model_experience">Experience:</label>
             </div>
         </div>
         <!-- ABOUT -->
@@ -68,9 +57,9 @@
             <div class="input-field col s8 offset-s2 light-green-text
                     text-darken-2">
                 <i class="fas fa-address-card prefix"></i>
-                <input id="photographer_about" name="photographer_about" maxlength="500" type="text"
+                <input id="model_about" name="model_about" maxlength="500" type="text"
                     class="validate light-green-text text-darken-4" title="Optional">
-                <label for="photographer_about">Something about you:</label>
+                <label for="model_about">Something about you:</label>
             </div>
         </div>
         <!-- INSTAGRAM -->
@@ -78,9 +67,9 @@
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
                 <i class="fab fa-instagram-square prefix"></i>
-                <input id="photographer_instagram" name="photographer_instagram" minlength="4" maxlength="50"
-                    type="text" class="validate light-green-text text-darken-4" required>
-                <label for="photographer_instagram">Instagram:</label>
+                <input id="model_instagram" name="model_instagram" minlength="4" maxlength="50" type="text"
+                    class="validate light-green-text text-darken-4" required>
+                <label for="model_instagram">Instagram:</label>
             </div>
         </div>
         <!-- WEBSITE -->
@@ -88,9 +77,9 @@
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
                 <i class="fas fa-globe prefix"></i>
-                <input id="photographer_website" name="photographer_website" minlength="5" maxlength="50" type="text"
+                <input id="model_website" name="model_website" minlength="5" maxlength="50" type="text"
                     class="validate light-green-text text-darken-4" title="Optional">
-                <label for="photographer_website">Website:</label>
+                <label for="model_website">Website:</label>
             </div>
         </div>
         <!-- PROFILE PHOTO -->
@@ -98,9 +87,9 @@
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
                 <i class="fas fa-portrait prefix"></i>
-                <input id="photographer_profile_image_URL" name="photographer_profile_image_URL" type="text"
+                <input id="model_profile_image_URL" name="model_profile_image_URL" type="text"
                     class="validate light-green-text text-darken-4" title="Portrait style image PREFERRED" required>
-                <label for="photographer_profile_image_URL">Profile picture URL:</label>
+                <label for="model_profile_image_URL">Profile picture URL:</label>
             </div>
         </div>
         <!-- ADDITIONAL PHOTOS -->
@@ -108,27 +97,27 @@
             <div class="input-field col s8 offset-s2 light-green-text
                     text-darken-2">
                 <i class="fas fa-image prefix"></i>
-                <input id="photographer_image_URL2" name="photographer_image_URL2" type="text"
+                <input id="model_image_URL2" name="model_image_URL2" type="text"
                     class="validate light-green-text text-darken-4" title="Optional">
-                <label for="photographer_image_URL2">Your favourite image URL:</label>
+                <label for="model_image_URL2">Your favourite image URL:</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s8 offset-s2 light-green-text
                     text-darken-2">
                 <i class="fas fa-image prefix"></i>
-                <input id="photographer_image_URL3" name="photographer_image_URL3" type="text"
+                <input id="model_image_URL3" name="model_image_URL3" type="text"
                     class="validate light-green-text text-darken-4" title="Optional">
-                <label for="photographer_image_URL3">Your favourite image URL:</label>
+                <label for="model_image_URL3">Your favourite image URL:</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s8 offset-s2 light-green-text
                     text-darken-2">
                 <i class="fas fa-image prefix"></i>
-                <input id="photographer_image_URL4" name="photographer_image_URL4" type="text"
+                <input id="model_image_URL4" name="model_image_URL4" type="text"
                     class="validate light-green-text text-darken-4" title="Optional">
-                <label for="photographer_image_URL4">Your favourite image URL:</label>
+                <label for="model_image_URL4">Your favourite image URL:</label>
             </div>
         </div>
         <!-- ADD PROFILE BUTTON -->

@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+{% block main_content %}
+
+<div class="row">
+    <div class="col s12">
+        <!-- Back Button -->
+        <a href="{{ url_for('get_models') }}"
+            class="light-green darken-4 waves-effect waves-light btn-small back-btn-1">
+            <i class="fas fa-angle-double-left"></i>
+        </a>
+        {% if session.user|lower == model.created_by|lower %}
+        <!-- Delete Button -->
+        <a href="#delete-modal-{{ model._id }}"
+            class="red darken-3 waves-effect waves-light btn-small back-btn-1 right modal-trigger" title="Delete">
+            <i class="fas fa-trash"></i>
+        </a>
+        <!-- Edit Button -->
+        <a href="{{ url_for('edit_model', model_id=model._id) }}"
+            class="light-green darken-4 waves-effect waves-light btn-small back-btn-1 right" title="Edit">
+            <i class="fas fa-edit"></i>
+        </a>
+
+        <!-- Delete Modal -->
+        <div id="delete-modal-{{ model._id }}" class="modal light-green-text text-darken-3">
+            <div class="modal-content center-align">
+                <h4>Profile will be <strong>permanently</strong> deleted!!</h4>
+                <h5>Click <strong>YES</strong> to Delete</h5>
+            </div>
+            <div class="modal-footer">
+                <a href="{{ url_for('delete_model', model_id=model._id) }}"
+                    class="modal-close waves-effect waves-green btn-flat">Yes</a>
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">No</a>
+            </div>
+        </div>
+        {% endif %}
+
+        <h4 class="center-align light-green-text text-darken-4 text-shadow">
+            {{ model["model_name"] }}'s Profile
+        </h4>
+    </div>
+</div>
+
+<br>
+<br>
+<!-- Photographer Profile -->
+<div class="container">
+    <div class="row">
+        <!-- Photographer Profile Images -->
+        <div class="col s12 m12 l6 center-align">
+            <img src="{{ model.model_profile_image_URL }}" class="photographer-image" alt="photographer image">
+        </div>
+        <!-- Photographer Info -->
+        <div class="col s12 m12 l5">
+            <ul>
+                <li>
+                    <h6><b>Style:</b> <strong>{{ model.category_name }}</strong></h6>
+                </li>
+            </ul>
+            <br>
+            {% if model.model_country %}
+            <ul>
+                <li>
+                    <h6><b>Country:</b> <strong>{{ model.model_country }}</strong></h6>
+                </li>
+            </ul>
+            <br>
+            {% endif %}
+            {% if model.model_experience %}
+            <ul>
+                <li>
+                    <h6><b>Experience:</b> <strong>{{ model.model_experience }}</strong></h6>
+                </li>
+            </ul>
+            <br>
+            {% endif %}
+            {% if model.model_about %}
+            <ul>
+                <li>
+                    <h6><b>About:</b> <strong>{{ model.model_about }}</strong></h6>
+                </li>
+            </ul>
+            <br>
+            {% endif %}
+            <ul>
+                <li>
+                    <h6><b>Instagram:</b> <strong>{{ model.model_instagram }}</strong></h6>
+                </li>
+            </ul>
+            <br>
+            {% if model.model_website %}
+            <ul>
+                <li>
+                    <h6><b>Website:</b> <strong>{{ model.model_website }}</strong></h6>
+                </li>
+            </ul>
+            <br>
+            {% endif %}
+        </div>
+    </div>
+    <!-- Photographer extra Images -->
+    <div class="row">
+        <div class="col s4 m2 l2">
+            <img class="materialboxed img-thumbnails" width="110" src="{{ model.model_image_URL2 }}">
+        </div>
+        <div class="col s4 m2 l2">
+            <img class="materialboxed img-thumbnails" width="110" src="{{ model.model_image_URL3 }}">
+        </div>
+        <div class="col s4 m2 l2">
+            <img class="materialboxed img-thumbnails" width="110" src="{{ model.model_image_URL4 }}">
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block main_content %}
+
+<div class="row center-align">
+    <h3 class="center-align light-green-text text-darken-4 text-shadow">
+        Models
+    </h3><br>
+    <div class="col s10 l4 offset-s1 offset-l4">
+        {% if session.user %}
+        <a href="{{ url_for('add_model') }}" class="light-green darken-3
+        waves-effect waves-light btn-small add-profile-btn-1">
+            <i class="fas fa-plus-square left"></i>
+            Add Model
+        </a>
+        {% endif %}
+    </div>
+</div>
+<!--- materializecss.com-cards -->
+<div class="container">
+    <div class="row center-align">
+        {% for model in models %}
+        <div class="col s10 m4 offset-s1">
+            <div class="card large">
+                <div class="card-image">
+                    <img src="{{ model.model_profile_image_URL }}">
+                </div>
+                <div class="card-content">
+                    <p>{{ model.category_name }}</p>
+                    <h5><strong>{{ model.model_name }}</strong></h5>
+                    <p><strong>Instagram:</strong> {{ model.model_instagram }}</p><br>
+
+                </div>
+                <div class="card-action">
+                    <a href="{{ url_for('modelprofile', model_id=model._id) }}"
+                        class="light-green-text text-darken-3"><strong>View Profile</strong></a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

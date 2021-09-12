@@ -158,7 +158,10 @@
         {% if session.user %}
         <h5 class="center-align text-shadow home-page-headers-h5">AND YOU!</h5>
         {% else %}
-        <h5 class="center-align text-shadow home-page-headers-h5">JOIN NOW!</h5>
+        <a href="{{ url_for('register') }}" class="center-align text-shadow home-page-headers">
+            <h5>JOIN NOW!
+            </h5>
+        </a>
         {% endif %}
     </div>
 </div>

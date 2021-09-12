@@ -38,7 +38,7 @@
                         {% if session.user|lower == "admin"|lower %}
                         <li><a href="{{ url_for('get_categories') }}">Categories</a></li>
                         {% endif %}
-                        <li><a href="{{ url_for('get_home') }}">Models</a></li>
+                        <li><a href="{{ url_for('get_models') }}">Models</a></li>
                         <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                         {% else %}
                         <li><a href="{{ url_for('login') }}">Log In</a></li>
@@ -62,7 +62,7 @@
                 {% if session.user|lower == "admin"|lower %}
                 <li><a href="{{ url_for('get_categories') }}" class="light-green-text text-darken-3">Categories</a></li>
                 {% endif %}
-                <li><a href="#" class="light-green-text text-darken-3">Models</a></li>
+                <li><a href="{{ url_for('get_models') }}" class="light-green-text text-darken-3">Models</a></li>
                 <li><a href="{{ url_for('logout') }}" class="light-green-text text-darken-3">Log Out</a></li>
                 {% else %}
                 <li><a href="{{ url_for('login') }}" class="light-green-text text-darken-3">Log In</a></li>
