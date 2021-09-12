@@ -5,6 +5,8 @@ $(document).ready(function () {
     });
     // Main photo slides
     $('.slider').slider({
+        duration: 1000,
+        interval: 3500,
         indicators: false,
         full_width: false,
     });

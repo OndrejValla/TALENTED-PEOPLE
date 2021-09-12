@@ -33,6 +33,7 @@ u {
 @media only screen and (max-width: 600px) {
     .brand-logo-h4 {
         font-size: 21px;
+        margin-left: 1px;
     }
 }
 
@@ -66,19 +67,38 @@ u {
     }
 }
 
+/* HOME.HTML */
+.home-page-headers {
+    color: white;
+}
+
+.home-page-headers-h5 {
+    margin: 0.52rem;
+}
+
+.main-slider {
+    border-top: 4px solid #7cb342;
+}
+
 .page-underline {
-    height: 2px;
+    border-bottom: 4px solid #7cb342;
     border-radius: 30%;
 }
 
 .page-underline-middle {
-    height: 4px;
+    height: 5px;
+    border-bottom: 4px solid #7cb342;
     border-radius: 40%;
 }
 
 .page-underline-bottom {
     height: 6px;
+    border-bottom: 4px solid #7cb342;
     border-radius: 50%;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0px;
 }
 
 /* PHOTOGRAPHERS.HTML */
