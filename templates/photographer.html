@@ -5,7 +5,7 @@
     <div class="col s12">
         <!-- Back Button -->
         <a href="{{ url_for('get_photographers') }}"
-            class=" light-green darken-4 waves-effect waves-light btn-small back-btn-1">
+            class="light-green darken-4 waves-effect waves-light btn-small back-btn-1">
             <i class="fas fa-angle-double-left"></i>
         </a>
         {% if session.user|lower == photographer.created_by|lower %}
