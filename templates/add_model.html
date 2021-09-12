@@ -6,7 +6,7 @@
 </a>
 <h4 class="center-align light-green-text text-darken-4 text-shadow">ADD MODEL
 </h4><br>
-
+{% if session.user %}
 <div class="container add-photographer-container"><br>
     <form class="col s12" method="POST" action="{{ url_for('add_model') }}">
         <!-- SELECT STYLE -->
@@ -131,6 +131,7 @@
         </div>
     </form>
 </div>
+{% endif %}
 <br>
 
 {% endblock %}

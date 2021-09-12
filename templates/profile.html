@@ -7,10 +7,10 @@
         My Profile
     </h3>
     {% if models|length >= 1 %}
-    <div class="col s10 l4 offset-s1 offset-l4">
+    <div class="col s10 offset-s1 m6 offset-m3">
         <a href="{{ url_for('add_model') }}" class="light-green darken-3
         waves-effect waves-light btn-small add-profile-btn-1">
-            <i class="fas fa-plus-square left"></i>Another Model
+            <i class="fas fa-plus-square left"></i>Add Model
         </a>
     </div>
     {% endif %}
@@ -19,10 +19,10 @@
     </div>
 
     {% if photographers|length >= 1 %}
-    <div class="col s10 l4 offset-s1 offset-l4">
+    <div class="col s10 offset-s1 m6 offset-m3">
         <a href="{{ url_for('add_photographer') }}" class="light-green darken-3
         waves-effect waves-light btn-small add-profile-btn-1">
-            <i class="fas fa-plus-square left"></i>Another Photographer
+            <i class="fas fa-plus-square left"></i>Add Photographer
         </a>
     </div>
     {% endif %}
@@ -75,6 +75,52 @@
             </div>
         </div>
         {% endfor %}
+    </div>
+
+    <div class="row center-align">
+        {% for model in models %}
+        <div class="col s10 m4 offset-s1">
+            <div class="card large">
+                <div class="card-image">
+                    <img src="{{ model.model_profile_image_URL }}">
+                </div>
+                <div class="card-content">
+                    <p>{{ model.category_name }}</p>
+                    <h5><strong>{{ model.model_name }}</strong></h5>
+                    <p><strong>Instagram:</strong> {{ model.model_instagram }}</p><br>
+
+                </div>
+                <div class="card-action center">
+                    {% if session.user|lower == model.created_by|lower %}
+                    <!-- Delete Button -->
+                    <a href="#delete-modal-{{ model._id }}"
+                        class="red darken-3 waves-effect waves-light btn-small back-btn-1 center modal-trigger"
+                        title="Delete">
+                        <i class="fas fa-trash"></i>
+                    </a>
+                    <!-- Edit Button -->
+                    <a href="{{ url_for('edit_model', model_id=model._id) }}"
+                        class="light-green darken-3 waves-effect waves-light btn-small back-btn-1 center" title="Edit">
+                        <i class="fas fa-edit"></i>
+                    </a>
+
+                    <!-- Delete Modal -->
+                    <div id="delete-modal-{{ model._id }}" class="modal light-green-text text-darken-3">
+                        <div class="modal-content center-align">
+                            <h5>Profile will be <strong>permanently</strong> deleted!!</h5>
+                            <h5>Click <strong>YES</strong> to Delete</h5>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="{{ url_for('delete_model', model_id=model._id) }}"
+                                class="modal-close waves-effect waves-green btn-flat">Yes</a>
+                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">No</a>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
 
         <div class="row">
             <div class="col s10 offset-s1 m6 offset-m3">
@@ -85,9 +131,10 @@
                     </p>
                 </b>
                 <strong>
-                    <h6 class="light-green-text text-darken-3"><strong>If You wish, <b>create one</b> here</strong></h6>
+                    <h6 class="light-green-text text-darken-3"><strong>If You wish, <b>create one</b> here</strong>
+                    </h6>
                     <a href="{{ url_for('add_photographer') }}" class="light-green darken-3
-        waves-effect waves-light btn-small add-profile-btn-1">
+                    waves-effect waves-light btn-small add-profile-btn-1">
                         <i class="fas fa-plus-square left"></i>Add Photographer
                     </a>
                     {% endif %}
@@ -108,7 +155,7 @@
                 <h6 class="light-green-text text-darken-3"><strong>If You wish, <b>create one</b> here</h6></strong>
                 </h6>
                 <a href="{{ url_for('add_model') }}" class="light-green darken-3
-        waves-effect waves-light btn-small add-profile-btn-1">
+                waves-effect waves-light btn-small add-profile-btn-1">
                     <i class="fas fa-plus-square left"></i>Add Model
                 </a>
                 {% endif %}

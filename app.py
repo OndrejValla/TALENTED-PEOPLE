@@ -276,7 +276,7 @@ def edit_model(model_id):
 # DELETE MODEL FUNCTION
 @app.route("/delete_model/<model_id>")
 def delete_model(model_id):
-    mongo.db.model.remove({"_id": ObjectId(model_id)})
+    mongo.db.models.remove({"_id": ObjectId(model_id)})
     flash("Profile Deleted!")
     return redirect(url_for("get_models"))
 

@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block main_content %}
 
+{% if session.user|lower == model.created_by|lower %}
 <a href="{{ url_for('profile', username=session['user']) }}"
     class=" light-green darken-4 waves-effect waves-light btn-small back-btn-1">
     <i class="fas fa-angle-double-left"></i>
@@ -144,6 +145,7 @@
         </div>
     </form>
 </div>
+{% endif %}
 <br>
 
 {% endblock %}

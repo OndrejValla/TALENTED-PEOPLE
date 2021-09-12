@@ -32,13 +32,13 @@
                     <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
                     <ul class="right hide-on-med-and-down">
                         <li><a href="{{ url_for('get_home') }}">Home</a></li>
-                        {% if session.user %}
-                        <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                         <li><a href="{{ url_for('get_photographers') }}">Photographers</a></li>
+                        <li><a href="{{ url_for('get_models') }}">Models</a></li>
+                        {% if session.user %}
+                        <li><a href="{{ url_for('profile', username=session['user']) }}">My Profile</a></li>
                         {% if session.user|lower == "admin"|lower %}
                         <li><a href="{{ url_for('get_categories') }}">Categories</a></li>
                         {% endif %}
-                        <li><a href="{{ url_for('get_models') }}">Models</a></li>
                         <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                         {% else %}
                         <li><a href="{{ url_for('login') }}">Log In</a></li>
@@ -54,15 +54,15 @@
                     <h5 class="light-green-text text-darken-3 mobile-navbar">TALENTED PEOPLE</h5>
                 </li>
                 <li><a href="{{ url_for('get_home') }}" class="light-green-text text-darken-3">Home</a></li>
-                {% if session.user %}
-                <li><a href="{{ url_for('profile', username=session['user']) }}"
-                        class="light-green-text text-darken-3">Profile</a></li>
                 <li><a href="{{ url_for('get_photographers') }}"
                         class="light-green-text text-darken-3">Photographers</a></li>
+                <li><a href="{{ url_for('get_models') }}" class="light-green-text text-darken-3">Models</a></li>
+                {% if session.user %}
+                <li><a href="{{ url_for('profile', username=session['user']) }}"
+                        class="light-green-text text-darken-3">My Profile</a></li>
                 {% if session.user|lower == "admin"|lower %}
                 <li><a href="{{ url_for('get_categories') }}" class="light-green-text text-darken-3">Categories</a></li>
                 {% endif %}
-                <li><a href="{{ url_for('get_models') }}" class="light-green-text text-darken-3">Models</a></li>
                 <li><a href="{{ url_for('logout') }}" class="light-green-text text-darken-3">Log Out</a></li>
                 {% else %}
                 <li><a href="{{ url_for('login') }}" class="light-green-text text-darken-3">Log In</a></li>
