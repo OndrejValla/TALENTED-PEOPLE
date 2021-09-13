@@ -7,22 +7,9 @@
 <h4 class="center-align light-green-text text-darken-4 text-shadow">ADD MODEL
 </h4><br>
 {% if session.user %}
-<div class="container add-photographer-container"><br>
+<div class="container add-model-container"><br>
     <form class="col s12" method="POST" action="{{ url_for('add_model') }}">
-        <!-- SELECT STYLE -->
-        <div class="row">
-            <div class="input-field col s8 offset-s2 light-green-text
-            text-darken-2">
-                <i class="fas fa-camera-retro prefix"></i>
-                <select id="category_name" name="category_name" class="validate" required>
-                    <option value="" disabled selected>Style</option>
-                    {% for category in categories %}
-                    <option value="{{ category.category_name }}">{{ category.category_name }}</option>
-                    {% endfor %}
-                </select>
-            </div>
-        </div>
-        <!-- PHOTOGRAPHER NAME -->
+        <!-- Model Name -->
         <div class="row">
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
@@ -32,7 +19,7 @@
                 <label for="model_name">Model Name:</label>
             </div>
         </div>
-        <!-- COUNTRY -->
+        <!-- Country -->
         <div class="row">
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
@@ -42,7 +29,7 @@
                 <label for="model_country">Country:</label>
             </div>
         </div>
-        <!-- EXPERIENCE -->
+        <!-- Experience -->
         <div class="row">
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
@@ -52,7 +39,7 @@
                 <label for="model_experience">Experience:</label>
             </div>
         </div>
-        <!-- ABOUT -->
+        <!-- About -->
         <div class="row">
             <div class="input-field col s8 offset-s2 light-green-text
                     text-darken-2">
@@ -62,7 +49,7 @@
                 <label for="model_about">Something about you:</label>
             </div>
         </div>
-        <!-- INSTAGRAM -->
+        <!-- Instagram -->
         <div class="row">
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
@@ -72,7 +59,7 @@
                 <label for="model_instagram">Instagram:</label>
             </div>
         </div>
-        <!-- WEBSITE -->
+        <!-- Website -->
         <div class="row">
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
@@ -82,7 +69,7 @@
                 <label for="model_website">Website:</label>
             </div>
         </div>
-        <!-- PROFILE PHOTO -->
+        <!-- Profile Photo -->
         <div class="row">
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
@@ -92,7 +79,7 @@
                 <label for="model_profile_image_URL">Profile picture URL:</label>
             </div>
         </div>
-        <!-- ADDITIONAL PHOTOS -->
+        <!-- Additional Photos -->
         <div class="row">
             <div class="input-field col s8 offset-s2 light-green-text
                     text-darken-2">
@@ -120,7 +107,7 @@
                 <label for="model_image_URL4">Your favourite image URL:</label>
             </div>
         </div>
-        <!-- ADD PROFILE BUTTON -->
+        <!-- Add Profile Button -->
         <div class="row">
             <div class="col s8 offset-s2 center-align light-green-text
             text-darken-2">

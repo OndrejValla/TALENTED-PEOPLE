@@ -9,26 +9,9 @@
 <h4 class="center-align light-green-text text-darken-4 text-shadow">{{ model["model_name"] }}
 </h4><br>
 
-<div class="container add-photographer-container"><br>
+<div class="container add-model-container"><br>
     <form class="col s12" method="POST" action="{{ url_for('edit_model', model_id=model._id) }}">
-        <!-- SELECT STYLE -->
-        <div class="row">
-            <div class="input-field col s8 offset-s2 light-green-text
-            text-darken-2">
-                <i class="fas fa-camera-retro prefix"></i>
-                <select id="category_name" name="category_name" class="validate" required>
-                    <option value="" disabled>Style</option>
-                    {% for category in categories %}
-                    {% if category.category_name == category.category_name %}
-                    <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
-                    {% else %}
-                    <option value="{{ category.category_name }}">{{ category.category_name }}</option>
-                    {% endif %}
-                    {% endfor %}
-                </select>
-            </div>
-        </div>
-        <!-- PHOTOGRAPHER NAME -->
+        <!-- Model Name -->
         <div class="row">
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
@@ -38,7 +21,7 @@
                 <label for="model_name">Model Name:</label>
             </div>
         </div>
-        <!-- COUNTRY -->
+        <!-- Country -->
         <div class="row">
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
@@ -49,7 +32,7 @@
                 <label for="model_country">Country:</label>
             </div>
         </div>
-        <!-- EXPERIENCE -->
+        <!-- Experience -->
         <div class="row">
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
@@ -60,7 +43,7 @@
                 <label for="model_experience">Experience:</label>
             </div>
         </div>
-        <!-- ABOUT -->
+        <!-- About -->
         <div class="row">
             <div class="input-field col s8 offset-s2 light-green-text
                     text-darken-2">
@@ -70,7 +53,7 @@
                 <label for="model_about">Something about you:</label>
             </div>
         </div>
-        <!-- INSTAGRAM -->
+        <!-- Instagram -->
         <div class="row">
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
@@ -81,7 +64,7 @@
                 <label for="model_instagram">Instagram:</label>
             </div>
         </div>
-        <!-- WEBSITE -->
+        <!-- Website -->
         <div class="row">
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
@@ -92,7 +75,7 @@
                 <label for="model_website">Website:</label>
             </div>
         </div>
-        <!-- PROFILE PHOTO -->
+        <!-- Profile Photo -->
         <div class="row">
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
@@ -103,7 +86,7 @@
                 <label for="model_profile_image_URL">Profile picture URL:</label>
             </div>
         </div>
-        <!-- ADDITIONAL PHOTOS -->
+        <!-- Additional Photos -->
         <div class="row">
             <div class="input-field col s8 offset-s2 light-green-text
                     text-darken-2">
@@ -131,7 +114,7 @@
                 <label for="model_image_URL4">Your favourite image URL:</label>
             </div>
         </div>
-        <!--CANCEL / SAVE PROFILE BUTTONS -->
+        <!--Cancel / Save Profile Buttons -->
         <div class="row">
             <div class="col s12 center-align light-green-text
             text-darken-2">

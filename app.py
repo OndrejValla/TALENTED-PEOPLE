@@ -201,7 +201,6 @@ def get_models():
 def add_model():
     if request.method == "POST":
         model = {
-            "category_name": request.form.get("category_name"),
             "model_name": request.form.get("model_name"),
             "model_experience": request.form.get(
                 "model_experience"),
@@ -226,8 +225,7 @@ def add_model():
         flash("Profile Successfully Created!")
         return redirect(url_for("get_models"))
 
-    categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("add_model.html", categories=categories)
+    return render_template("add_model.html")
 
 
 # VIEW MODEL FUNCTION
@@ -243,7 +241,6 @@ def modelprofile(model_id):
 def edit_model(model_id):
     if request.method == "POST":
         submit = {
-            "category_name": request.form.get("category_name"),
             "model_name": request.form.get("model_name"),
             "model_experience": request.form.get(
                 "model_experience"),
@@ -269,8 +266,7 @@ def edit_model(model_id):
         return redirect(url_for("get_models"))
 
     model = mongo.db.models.find_one({"_id": ObjectId(model_id)})
-    categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("edit_model.html", model=model, categories=categories)
+    return render_template("edit_model.html", model=model)
 
 
 # DELETE MODEL FUNCTION

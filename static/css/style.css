@@ -173,10 +173,21 @@ u {
     display: inline-flex;
 }
 
+/* ADD MODEL.HTML */
+.add-model-container {
+    background-color: rgb(243, 247, 241);
+    border: 3px solid rgb(108, 143, 88);
+}
+
+/* MODEL.HTML */
+.model-image {
+    width: 42vh;
+    height: auto;
+}
+
 /* CATEGORIES.HTML */
 
 /* FOOTER BASE.HTML */
-
 .page-footer {
     clear: both;
     position: relative;

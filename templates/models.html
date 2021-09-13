@@ -8,7 +8,7 @@
     </h3>
     {% if session.user %}
     <div class="col s10 offset-s1 m6 offset-m3">
-        <!--- if user add pmodel button -->
+        <!--- if user add model button -->
         <a href="{{ url_for('add_model') }}" class="light-green darken-3
         waves-effect waves-light btn-small add-profile-btn-1">
             <i class="fas fa-plus-square left"></i>
@@ -38,8 +38,8 @@
                     <img src="{{ model.model_profile_image_URL }}">
                 </div>
                 <div class="card-content">
-                    <p>{{ model.category_name }}</p>
                     <h5><strong>{{ model.model_name }}</strong></h5>
+                    <br>
                     <p><strong>Instagram:</strong> {{ model.model_instagram }}</p><br>
 
                 </div>
