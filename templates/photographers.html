@@ -2,20 +2,33 @@
 {% block main_content %}
 
 <div class="row center-align">
+    <!---  page header -->
     <h3 class="center-align light-green-text text-darken-4 text-shadow">
         Photographers
-    </h3><br>
+    </h3>
+    {% if session.user %}
     <div class="col s10 offset-s1 m6 offset-m3">
-        {% if session.user %}
+        <!--- if user add photographer button -->
         <a href="{{ url_for('add_photographer') }}" class="light-green darken-3
         waves-effect waves-light btn-small add-profile-btn-1">
             <i class="fas fa-plus-square left"></i>
             Add Photographer
         </a>
-        {% endif %}
     </div>
+    <!--- if no user join us -->
+    {% else %}
+    <div class="col s10 offset-s1 l8 offset-l2">
+        <h5 class="light-green-text text-darken-4 text-shadow">
+            JOIN OUR COMMUNITY
+        </h5>
+        <h5 class="white-text text-shadow light-green darken-4">
+            To add your Profile, REGISTER NOW!
+        </h5>
+    </div>
+    {% endif %}
 </div>
 <!--- materializecss.com-cards -->
+<!--- all photographers from db -->
 <div class="container">
     <div class="row center-align">
         {% for photographer in photographers %}
@@ -28,7 +41,6 @@
                     <p>{{ photographer.category_name }}</p>
                     <h5><strong>{{ photographer.photographer_name }}</strong></h5>
                     <p><strong>Instagram:</strong> {{ photographer.photographer_instagram }}</p><br>
-
                 </div>
                 <div class="card-action">
                     <a href="{{ url_for('photographerprofile', photographer_id=photographer._id) }}"

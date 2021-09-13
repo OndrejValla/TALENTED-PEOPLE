@@ -1,39 +1,28 @@
 {% extends "base.html" %}
 {% block main_content %}
 
-<!-- PROFILE -->
+<!--  user's profile -->
 <div class="row center-align">
     <h3 class="center-align light-green-text text-darken-4 text-shadow">
         My Profile
     </h3>
-    {% if models|length >= 1 %}
-    <div class="col s10 offset-s1 m6 offset-m3">
-        <a href="{{ url_for('add_model') }}" class="light-green darken-3
-        waves-effect waves-light btn-small add-profile-btn-1">
-            <i class="fas fa-plus-square left"></i>Add Model
-        </a>
-    </div>
-    {% endif %}
-
-    <div class="col l4">
-    </div>
-
-    {% if photographers|length >= 1 %}
-    <div class="col s10 offset-s1 m6 offset-m3">
-        <a href="{{ url_for('add_photographer') }}" class="light-green darken-3
-        waves-effect waves-light btn-small add-profile-btn-1">
-            <i class="fas fa-plus-square left"></i>Add Photographer
-        </a>
-    </div>
-    {% endif %}
-    <br>
 </div>
-<br>
 <!--- materializecss.com-cards -->
 <div class="container">
+    <!--- user's photographer profile -->
     <div class="row center-align">
+        <h4 class="light-green-text text-darken-4 text-shadow">Your Photography Profiles</h4>
+        <!--- if 1 and more profiles add more button -->
+        {% if photographers|length >= 1 %}
+        <div class="col s10 offset-s1 m6 offset-m3">
+            <a href="{{ url_for('add_photographer') }}" class="light-green darken-3
+        waves-effect waves-light btn-small add-profile-btn-1">
+                <i class="fas fa-plus-square left"></i>Add Photographer
+            </a>
+        </div>
+        {% endif %}
         {% for photographer in photographers %}
-        <div class="col s10 m4 offset-s1">
+        <div class="col s10 m4 offset-s1 offset-m4">
             <div class="card large">
                 <div class="card-image">
                     <img src="{{ photographer.photographer_profile_image_URL }}">
@@ -46,19 +35,19 @@
                 </div>
                 <div class="card-action center">
                     {% if session.user|lower == photographer.created_by|lower %}
-                    <!-- Delete Button -->
+                    <!-- delete button -->
                     <a href="#delete-modal-{{ photographer._id }}"
                         class="red darken-3 waves-effect waves-light btn-small back-btn-1 center modal-trigger"
                         title="Delete">
                         <i class="fas fa-trash"></i>
                     </a>
-                    <!-- Edit Button -->
+                    <!-- edit button -->
                     <a href="{{ url_for('edit_photographer', photographer_id=photographer._id) }}"
                         class="light-green darken-3 waves-effect waves-light btn-small back-btn-1 center" title="Edit">
                         <i class="fas fa-edit"></i>
                     </a>
 
-                    <!-- Delete Modal -->
+                    <!-- delete modal -->
                     <div id="delete-modal-{{ photographer._id }}" class="modal light-green-text text-darken-3">
                         <div class="modal-content center-align">
                             <h5>Profile will be <strong>permanently</strong> deleted!!</h5>
@@ -75,11 +64,42 @@
             </div>
         </div>
         {% endfor %}
+        <br>
+        <div class="row">
+            <div class="col s10 offset-s1 m6 offset-m3">
+                <!--- if no photographer profile -->
+                {% if photographers|length == 0 %}
+                <b>
+                    <p class="center-align light-green-text text-darken-3">
+                        You don't have any Photographer's Profile created yet!
+                    </p>
+                </b>
+                <strong>
+                    <h6 class="light-green-text text-darken-3"><strong>If You wish, <b>create one</b> here</strong>
+                    </h6>
+                    <a href="{{ url_for('add_photographer') }}" class="light-green darken-3
+                    waves-effect waves-light btn-small add-profile-btn-1">
+                        <i class="fas fa-plus-square left"></i>Add Photographer
+                    </a>
+                    {% endif %}
+            </div>
+        </div>
+        <br>
     </div>
-
+    <!--- user's modelling profile -->
     <div class="row center-align">
+        <h4 class="light-green-text text-darken-4 text-shadow">Your Modelling Profiles</h4>
+        <!--- if 1 and more profiles add more button -->
+        {% if models|length >= 1 %}
+        <div class="col s10 offset-s1 m6 offset-m3">
+            <a href="{{ url_for('add_model') }}" class="light-green darken-3
+            waves-effect waves-light btn-small add-profile-btn-1">
+                <i class="fas fa-plus-square left"></i>Add Model
+            </a>
+        </div>
+        {% endif %}
         {% for model in models %}
-        <div class="col s10 m4 offset-s1">
+        <div class="col s10 m4 offset-s1 offset-m4">
             <div class="card large">
                 <div class="card-image">
                     <img src="{{ model.model_profile_image_URL }}">
@@ -121,31 +141,10 @@
             </div>
         </div>
         {% endfor %}
-
+        <br>
         <div class="row">
             <div class="col s10 offset-s1 m6 offset-m3">
-                {% if photographers|length == 0 %}
-                <b>
-                    <p class="center-align light-green-text text-darken-3">
-                        You don't have any Photographer's Profile created yet!
-                    </p>
-                </b>
-                <strong>
-                    <h6 class="light-green-text text-darken-3"><strong>If You wish, <b>create one</b> here</strong>
-                    </h6>
-                    <a href="{{ url_for('add_photographer') }}" class="light-green darken-3
-                    waves-effect waves-light btn-small add-profile-btn-1">
-                        <i class="fas fa-plus-square left"></i>Add Photographer
-                    </a>
-                    {% endif %}
-            </div>
-        </div>
-
-        <br>
-        <br>
-
-        <div class="row">
-            <div class="col s10 offset-s1 m6 offset-m3">
+                <!--- if no modelling profile -->
                 {% if models|length == 0 %}
                 <b>
                     <p class="center-align light-green-text text-darken-3">
