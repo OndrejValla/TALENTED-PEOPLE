@@ -5,7 +5,7 @@ body {
     /* IMG from www.teahub.io */
     background: url(../images/talented-people-background-colour.jpg);
     background-repeat: repeat;
-    background-position: 44% 24%;
+    background-position: 50% 16%;
 }
 
 header {
@@ -130,6 +130,10 @@ u {
     margin-top: 10px;
     line-height: 30px;
     vertical-align: text-bottom;
+}
+
+.h5-highlight {
+    line-height: 150%;
 }
 
 @media only screen and (max-width: 600px) {

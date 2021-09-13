@@ -15,7 +15,12 @@
 
 <div class="row center-align no-margin-bottom light-green darken-2">
     <div class="col s12 home-page-headers">
-        <h5 class="center-align text-shadow home-page-headers-h5">PHOTOGRAPHERS</h5>
+        <a href="{{ url_for('get_photographers') }}" class="center-align
+                    text-shadow home-page-headers">
+            <h5 class="center-align text-shadow home-page-headers-h5">
+                PHOTOGRAPHERS
+            </h5>
+        </a>
     </div>
 </div>
 
@@ -35,12 +40,12 @@
 <div class="slider main-slider">
     <ul class="slides main-slides">
         <li>
-            <img src="{{url_for('static', filename='images/model-faces-page.jpg')}}" alt="Models">
+            <img src="{{url_for('static', filename='images/photographers-faces-1.jpg')}}" alt="Models">
             <div class="caption center-align white-text slider-text-shadow">
             </div>
         </li>
         <li>
-            <img src="{{url_for('static', filename='images/model-faces-page.jpg')}}" alt="Models">
+            <img src="{{url_for('static', filename='images/photographers-faces-2.jpg')}}" alt="Models">
             <div class="caption center-align white-text slider-text-shadow">
             </div>
         </li>
@@ -61,7 +66,10 @@
 
 <div class="row center-align no-margin-bottom light-green darken-2">
     <div class="col s12 home-page-headers">
-        <h5 class="center-align text-shadow home-page-headers-h5">MODELS</h5>
+        <a href="{{ url_for('get_models') }}" class="center-align
+                    text-shadow home-page-headers">
+            <h5 class="center-align text-shadow home-page-headers-h5">MODELS</h5>
+        </a>
     </div>
 </div>
 
@@ -73,7 +81,8 @@
         <p class="light-green darken-1 text-shadow page-underline-middle"></p>
     </div>
     <div class="col s10 m8 offset-s1 offset-m2">
-        <p class="light-green darken-1 text-shadow page-underline-bottom slider-text-shadow"></p>
+        <p class="light-green darken-1 text-shadow page-underline-bottom
+        slider-text-shadow"></p>
     </div>
 </div>
 
@@ -82,12 +91,12 @@
 <div class="slider main-slider">
     <ul class="slides main-slides">
         <li>
-            <img src="{{url_for('static', filename='images/model-faces-page.jpg')}}" alt="Models">
+            <img src="{{url_for('static', filename='images/model-faces-1.jpg')}}" alt="Models">
             <div class="caption center-align white-text slider-text-shadow">
             </div>
         </li>
         <li>
-            <img src="{{url_for('static', filename='images/model-faces-page.jpg')}}" alt="Models">
+            <img src="{{url_for('static', filename='images/model-faces-2.jpg')}}" alt="Models">
             <div class="caption center-align white-text slider-text-shadow">
             </div>
         </li>
@@ -108,7 +117,9 @@
 
 <div class="row center-align no-margin-bottom light-green darken-2">
     <div class="col s12 home-page-headers">
-        <h5 class="center-align text-shadow home-page-headers-h5">COLLABORATIONS</h5>
+        <h5 class="center-align text-shadow home-page-headers-h5">
+            COLLABORATIONS
+        </h5>
     </div>
 </div>
 
@@ -120,7 +131,8 @@
         <p class="light-green darken-1 text-shadow page-underline-middle"></p>
     </div>
     <div class="col s10 m8 offset-s1 offset-m2">
-        <p class="light-green darken-1 text-shadow page-underline-bottom slider-text-shadow"></p>
+        <p class="light-green darken-1 text-shadow page-underline-bottom
+        slider-text-shadow"></p>
     </div>
 </div>
 
@@ -156,9 +168,15 @@
 <div class="row center-align no-margin-bottom light-green darken-2">
     <div class="col s12 home-page-headers">
         {% if session.user %}
-        <h5 class="center-align text-shadow home-page-headers-h5">AND YOU!</h5>
+        <a href="{{ url_for('profile', username=session['user']) }}" class="
+        center-aligntext-shadow home-page-headers">
+            <h5 class="center-align text-shadow home-page-headers-h5">
+                AND YOU!
+            </h5>
+        </a>
         {% else %}
-        <a href="{{ url_for('register') }}" class="center-align text-shadow home-page-headers">
+        <a href="{{ url_for('register') }}" class="center-align
+                    text-shadow home-page-headers">
             <h5>JOIN NOW!
             </h5>
         </a>
@@ -174,14 +192,16 @@
         <p class="light-green darken-1 text-shadow page-underline-middle"></p>
     </div>
     <div class="col s10 m8 offset-s1 offset-m2">
-        <p class="light-green darken-1 text-shadow page-underline-bottom slider-text-shadow"></p>
+        <p class="light-green darken-1 text-shadow page-underline-bottom
+        slider-text-shadow"></p>
     </div>
 </div>
 <div class="row center-align">
     <div class="col s8 l4 offset-s2 offset-l4 home-page-headers">
         {% if session.user %}
-        <a href="{{ url_for('profile', username=session['user']) }}" class="light-green darken-3
-        waves-effect waves-light btn-small add-profile-btn-1">See Your Profile
+        <a href="{{ url_for('profile', username=session['user']) }}" class="
+        light-green darken-3 waves-effect waves-light btn-small add-profile-btn-1">
+            See Your Profile
         </a>
     </div>
     <div class="col s8 l4 offset-s2 offset-l4 home-page-headers">
