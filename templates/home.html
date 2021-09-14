@@ -12,7 +12,7 @@
         <p class="light-green darken-1 text-shadow page-underline"></p>
     </div>
 </div>
-
+<!-- Photographers Section -->
 <div class="row center-align no-margin-bottom light-green darken-2">
     <div class="col s12 home-page-headers">
         <a href="{{ url_for('get_photographers') }}" class="center-align
@@ -23,7 +23,6 @@
         </a>
     </div>
 </div>
-
 <div class="row no-margin-bottom">
     <div class="col s6 m4 offset-s3 offset-m4">
         <p class="light-green darken-1 text-shadow page-underline"></p>
@@ -35,23 +34,22 @@
         <p class="light-green darken-1 text-shadow page-underline-bottom slider-text-shadow"></p>
     </div>
 </div>
-<!-- Slider Section -->
+<!-- Slider Photographers Section -->
 <!-- materializecss.com slider -->
 <div class="slider main-slider">
     <ul class="slides main-slides">
         <li>
-            <img src="{{url_for('static', filename='images/photographers-faces-1.jpg')}}" alt="Models">
+            <img src="{{url_for('static', filename='images/photographers-1.jpg')}}" alt="Models">
             <div class="caption center-align white-text slider-text-shadow">
             </div>
         </li>
         <li>
-            <img src="{{url_for('static', filename='images/photographers-faces-2.jpg')}}" alt="Models">
+            <img src="{{url_for('static', filename='images/photographers-2.jpg')}}" alt="Models">
             <div class="caption center-align white-text slider-text-shadow">
             </div>
         </li>
     </ul>
 </div>
-
 <div class="row no-margin-bottom">
     <div class="col s10 m8 offset-s1 offset-m2">
         <p class="light-green darken-1 page-underline-bottom"></p>
@@ -63,7 +61,7 @@
         <p class="light-green darken-1 text-shadow page-underline"></p>
     </div>
 </div>
-
+<!-- Models Section -->
 <div class="row center-align no-margin-bottom light-green darken-2">
     <div class="col s12 home-page-headers">
         <a href="{{ url_for('get_models') }}" class="center-align
@@ -72,7 +70,6 @@
         </a>
     </div>
 </div>
-
 <div class="row no-margin-bottom">
     <div class="col s6 m4 offset-s3 offset-m4">
         <p class="light-green darken-1 text-shadow page-underline"></p>
@@ -85,8 +82,7 @@
         slider-text-shadow"></p>
     </div>
 </div>
-
-<!-- Slider Section -->
+<!-- Slider Models Section -->
 <!-- materializecss.com slider -->
 <div class="slider main-slider">
     <ul class="slides main-slides">
@@ -102,7 +98,6 @@
         </li>
     </ul>
 </div>
-
 <div class="row no-margin-bottom">
     <div class="col s10 m8 offset-s1 offset-m2">
         <p class="light-green darken-1 page-underline-bottom"></p>
@@ -114,7 +109,7 @@
         <p class="light-green darken-1 text-shadow page-underline"></p>
     </div>
 </div>
-
+<!-- Collaboration Section -->
 <div class="row center-align no-margin-bottom light-green darken-2">
     <div class="col s12 home-page-headers">
         <h5 class="center-align text-shadow home-page-headers-h5">
@@ -122,7 +117,6 @@
         </h5>
     </div>
 </div>
-
 <div class="row no-margin-bottom">
     <div class="col s6 m4 offset-s3 offset-m4">
         <p class="light-green darken-1 text-shadow page-underline"></p>
@@ -135,24 +129,22 @@
         slider-text-shadow"></p>
     </div>
 </div>
-
-<!-- Slider Section -->
+<!-- Slider Collaboration Section -->
 <!-- materializecss.com slider -->
 <div class="slider main-slider">
     <ul class="slides main-slides">
         <li>
-            <img src="{{url_for('static', filename='images/model-faces-page.jpg')}}" alt="Models">
+            <img src="{{url_for('static', filename='images/collaborations-1.jpg')}}" alt="Models">
             <div class="caption center-align white-text slider-text-shadow">
             </div>
         </li>
         <li>
-            <img src="{{url_for('static', filename='images/model-faces-page.jpg')}}" alt="Models">
+            <img src="{{url_for('static', filename='images/collaborations-2.jpg')}}" alt="Models">
             <div class="caption center-align white-text slider-text-shadow">
             </div>
         </li>
     </ul>
 </div>
-
 <div class="row no-margin-bottom">
     <div class="col s10 m8 offset-s1 offset-m2">
         <p class="light-green darken-1 page-underline-bottom"></p>
@@ -164,9 +156,10 @@
         <p class="light-green darken-1 text-shadow page-underline"></p>
     </div>
 </div>
-
+<!-- Users Section -->
 <div class="row center-align no-margin-bottom light-green darken-2">
     <div class="col s12 home-page-headers">
+        <!-- If User Logged In -->
         {% if session.user %}
         <a href="{{ url_for('profile', username=session['user']) }}" class="
         center-aligntext-shadow home-page-headers">
@@ -174,6 +167,7 @@
                 AND YOU!
             </h5>
         </a>
+        <!-- If User Not Registered Nor Logged In -->
         {% else %}
         <a href="{{ url_for('register') }}" class="center-align
                     text-shadow home-page-headers">
@@ -183,7 +177,6 @@
         {% endif %}
     </div>
 </div>
-
 <div class="row no-margin-bottom">
     <div class="col s6 m4 offset-s3 offset-m4">
         <p class="light-green darken-1 text-shadow page-underline"></p>
@@ -196,6 +189,7 @@
         slider-text-shadow"></p>
     </div>
 </div>
+<!-- If User Logged In -->
 <div class="row center-align">
     <div class="col s8 l4 offset-s2 offset-l4 home-page-headers">
         {% if session.user %}
@@ -204,6 +198,7 @@
             See Your Profile
         </a>
     </div>
+    <!-- If User Not Registered Nor Logged In -->
     <div class="col s8 l4 offset-s2 offset-l4 home-page-headers">
         {% else %}
         <a href="{{ url_for('login') }}" class="light-green darken-3
