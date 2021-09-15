@@ -90,15 +90,21 @@
     </div>
     <!-- Model extra Images -->
     <div class="row">
+        {% if model.model_image_URL2 %}
         <div class="col s4 m2 l2">
             <img class="materialboxed img-thumbnails" width="110" src="{{ model.model_image_URL2 }}" alt="model image">
         </div>
+        {% endif %}
+        {% if model.model_image_URL3 %}
         <div class="col s4 m2 l2">
             <img class="materialboxed img-thumbnails" width="110" src="{{ model.model_image_URL3 }}" alt="model image">
         </div>
+        {% endif %}
+        {% if model.model_image_URL4 %}
         <div class="col s4 m2 l2">
             <img class="materialboxed img-thumbnails" width="110" src="{{ model.model_image_URL4 }}" alt="model image">
         </div>
+        {% endif %}
     </div>
 </div>
 
