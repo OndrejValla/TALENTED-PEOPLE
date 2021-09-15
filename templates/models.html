@@ -2,20 +2,20 @@
 {% block main_content %}
 
 <div class="row center-align">
-    <!---  page header -->
+    <!---  Page Header -->
     <h3 class="light-green-text text-darken-4 text-shadow">
         Models
     </h3>
     {% if session.user %}
     <div class="col s10 offset-s1 m6 offset-m3">
-        <!--- if user add model button -->
+        <!--- If User Add Model Button -->
         <a href="{{ url_for('add_model') }}" class="light-green darken-3
         waves-effect waves-light btn-small add-profile-btn-1">
             <i class="fas fa-plus-square left"></i>
             Add Model
         </a>
     </div>
-    <!--- if no user join us -->
+    <!--- If No User Join Us -->
     {% else %}
     <div class="col s10 offset-s1 l8 offset-l2">
         <h5 class="light-green-text text-darken-4 text-shadow">
@@ -27,8 +27,8 @@
     </div>
     {% endif %}
 </div>
-<!--- materializecss.com-cards -->
-<!--- all models from db -->
+<!--- Materializecss.com-cards -->
+<!--- All Models From the Database -->
 <div class="container">
     <div class="row center-align">
         {% for model in models %}
@@ -40,8 +40,8 @@
                 <div class="card-content">
                     <h5><strong>{{ model.model_name }}</strong></h5>
                     <br>
-                    <p><strong>Instagram:</strong> {{ model.model_instagram }}</p><br>
-
+                    <p><strong>Instagram:</strong> {{ model.model_instagram }}</p>
+                    <br>
                 </div>
                 <div class="card-action">
                     <a href="{{ url_for('modelprofile', model_id=model._id) }}"

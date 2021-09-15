@@ -2,20 +2,20 @@
 {% block main_content %}
 
 <div class="row center-align">
-    <!---  page header -->
+    <!---  Page Header -->
     <h3 class="center-align light-green-text text-darken-4 text-shadow">
         Photographers
     </h3>
     {% if session.user %}
     <div class="col s10 offset-s1 m6 offset-m3">
-        <!--- if user add photographer button -->
+        <!--- If User Add Photographer Button -->
         <a href="{{ url_for('add_photographer') }}" class="light-green darken-3
         waves-effect waves-light btn-small add-profile-btn-1">
             <i class="fas fa-plus-square left"></i>
             Add Photographer
         </a>
     </div>
-    <!--- if no user join us -->
+    <!--- If No User Join Us -->
     {% else %}
     <div class="col s10 offset-s1 l8 offset-l2">
         <h5 class="light-green-text text-darken-4 text-shadow">
@@ -27,8 +27,8 @@
     </div>
     {% endif %}
 </div>
-<!--- materializecss.com-cards -->
-<!--- all photographers from db -->
+<!--- Materializecss.com-cards -->
+<!--- All Photographers From the Database -->
 <div class="container">
     <div class="row center-align">
         {% for photographer in photographers %}

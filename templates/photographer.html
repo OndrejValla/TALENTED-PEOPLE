@@ -33,13 +33,11 @@
             </div>
         </div>
         {% endif %}
-
         <h4 class="center-align light-green-text text-darken-4 text-shadow">
             {{ photographer["photographer_name"] }}'s Profile
         </h4>
     </div>
 </div>
-
 <br>
 <br>
 <!-- Photographer Profile -->
@@ -109,13 +107,16 @@
     <!-- Photographer extra Images -->
     <div class="row">
         <div class="col s4 m2 l2">
-            <img class="materialboxed img-thumbnails" width="110" src="{{ photographer.photographer_image_URL2 }}">
+            <img class="materialboxed img-thumbnails" width="110" src="{{ photographer.photographer_image_URL2 }}"
+                alt="photographer image">
         </div>
         <div class="col s4 m2 l2">
-            <img class="materialboxed img-thumbnails" width="110" src="{{ photographer.photographer_image_URL3 }}">
+            <img class="materialboxed img-thumbnails" width="110" src="{{ photographer.photographer_image_URL3 }}"
+                alt="photographer image">
         </div>
         <div class="col s4 m2 l2">
-            <img class="materialboxed img-thumbnails" width="110" src="{{ photographer.photographer_image_URL4 }}">
+            <img class="materialboxed img-thumbnails" width="110" src="{{ photographer.photographer_image_URL4 }}"
+                alt="photographer image">
         </div>
     </div>
 </div>

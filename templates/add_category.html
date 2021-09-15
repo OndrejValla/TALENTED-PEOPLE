@@ -5,11 +5,13 @@
     <i class="fas fa-angle-double-left"></i>
 </a>
 <h4 class="center-align light-green-text text-darken-3 text-shadow">ADD CATEGORY
-</h4><br>
-{% if session.user|lower == "admin"|lower %}
-<div class="container add-photographer-container"><br>
+</h4>
+<br>
+<div class="container add-category-container">
+    {% if session.user|lower == "admin"|lower %}
+    <br>
     <form class="col s12" method="POST" action="{{ url_for('add_category') }}">
-        <!-- CATEGORY NAME -->
+        <!-- Category Name -->
         <div class="row">
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
@@ -19,8 +21,7 @@
                 <label for="category_name">Category Name:</label>
             </div>
         </div>
-
-        <!-- ADD CATEGORY BUTTON -->
+        <!-- Add Category Button -->
         <div class="row">
             <div class="col s8 offset-s2 center-align light-green-text
             text-darken-2">
@@ -30,8 +31,12 @@
             </div>
         </div>
     </form>
+    {% else %}
+    <h5 class="center-align light-green-text text-darken-3 text-shadow">
+        Admin only access!!
+    </h5>
+    {% endif %}
 </div>
-{% endif %}
 <br>
 
 {% endblock %}

@@ -19,7 +19,6 @@
             class="light-green darken-4 waves-effect waves-light btn-small back-btn-1 right" title="Edit">
             <i class="fas fa-edit"></i>
         </a>
-
         <!-- Delete Modal -->
         <div id="delete-modal-{{ model._id }}" class="modal light-green-text text-darken-3">
             <div class="modal-content center-align">
@@ -33,13 +32,11 @@
             </div>
         </div>
         {% endif %}
-
         <h4 class="center-align light-green-text text-darken-4 text-shadow">
             {{ model["model_name"] }}'s Profile
         </h4>
     </div>
 </div>
-
 <br>
 <br>
 <!-- Model Profile -->
@@ -94,13 +91,13 @@
     <!-- Model extra Images -->
     <div class="row">
         <div class="col s4 m2 l2">
-            <img class="materialboxed img-thumbnails" width="110" src="{{ model.model_image_URL2 }}">
+            <img class="materialboxed img-thumbnails" width="110" src="{{ model.model_image_URL2 }}" alt="model image">
         </div>
         <div class="col s4 m2 l2">
-            <img class="materialboxed img-thumbnails" width="110" src="{{ model.model_image_URL3 }}">
+            <img class="materialboxed img-thumbnails" width="110" src="{{ model.model_image_URL3 }}" alt="model image">
         </div>
         <div class="col s4 m2 l2">
-            <img class="materialboxed img-thumbnails" width="110" src="{{ model.model_image_URL4 }}">
+            <img class="materialboxed img-thumbnails" width="110" src="{{ model.model_image_URL4 }}" alt="model image">
         </div>
     </div>
 </div>

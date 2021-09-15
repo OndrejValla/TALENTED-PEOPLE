@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 {% block main_content %}
-<!-- REGISTER FORM -->
-<h4 class="center-align light-green-text text-darken-4 text-shadow">REGISTER</h4>
 
+<h4 class="center-align light-green-text text-darken-4 text-shadow">REGISTER</h4>
 <div class="row">
+    <!-- Register Form -->
     <form class="col s12 m6 offset-m3" method="POST" action="{{ url_for('register') }}">
         <div class="card-panel">
-            <!-- FIRST NAME -->
+            <!-- First Name -->
             <div class="row">
                 <div class="input-field col s9 offset-s1">
                     <i class="fas fa-user-plus prefix light-green-text text-darken-3"></i>
@@ -15,7 +15,7 @@
                     <label for="firstname">Your First Name</label>
                 </div>
             </div>
-            <!-- USERNAME -->
+            <!-- Username -->
             <div class="row">
                 <div class="input-field col s9 offset-s1">
                     <i class="fas fa-user-plus prefix light-green-text text-darken-3"></i>
@@ -25,7 +25,7 @@
                     <label for="username">Your Username</label>
                 </div>
             </div>
-            <!-- PASSWORD -->
+            <!-- Password -->
             <div class="row">
                 <div class="input-field col s9 offset-s1">
                     <i class="fas fa-lock prefix light-green-text text-darken-3"></i>
@@ -35,7 +35,7 @@
                     <label for="password">Password</label>
                 </div>
             </div>
-            <!-- REGISTER -->
+            <!-- Register Button -->
             <div class="row">
                 <button type="submit" class="col s8 offset-s2 btn-large light-green darken-4 text-shadow"
                     title="Click to register">
@@ -45,7 +45,7 @@
         </div>
     </form>
 </div>
-
+<!-- Log In -->
 <div class="row">
     <div class="col s8 offset-s2">
         <h6 class="center-align">

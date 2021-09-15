@@ -7,11 +7,11 @@
     <i class="fas fa-angle-double-left"></i>
 </a>
 <h4 class="center-align light-green-text text-darken-4 text-shadow">{{ photographer["photographer_name"] }}
-</h4><br>
-
+</h4>
+<br>
 <div class="container add-photographer-container"><br>
     <form class="col s12" method="POST" action="{{ url_for('edit_photographer', photographer_id=photographer._id) }}">
-        <!-- SELECT STYLE -->
+        <!-- Select Style -->
         <div class="row">
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
@@ -28,7 +28,7 @@
                 </select>
             </div>
         </div>
-        <!-- PHOTOGRAPHER NAME -->
+        <!-- Photographer Name -->
         <div class="row">
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
@@ -39,7 +39,7 @@
                 <label for="photographer_name">Photographer Name:</label>
             </div>
         </div>
-        <!-- COUNTRY -->
+        <!-- Country -->
         <div class="row">
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
@@ -50,7 +50,7 @@
                 <label for="photographer_country">Country:</label>
             </div>
         </div>
-        <!-- EXPERIENCE -->
+        <!-- Experience -->
         <div class="row">
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
@@ -61,7 +61,7 @@
                 <label for="photographer_experience">Experience:</label>
             </div>
         </div>
-        <!-- EQUIPMENT -->
+        <!-- Equipment -->
         <div class="row">
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
@@ -72,7 +72,7 @@
                 <label for="photographer_equipment">Camera:</label>
             </div>
         </div>
-        <!-- ABOUT -->
+        <!-- About -->
         <div class="row">
             <div class="input-field col s8 offset-s2 light-green-text
                     text-darken-2">
@@ -83,7 +83,7 @@
                 <label for="photographer_about">Something about you:</label>
             </div>
         </div>
-        <!-- INSTAGRAM -->
+        <!-- Instagram -->
         <div class="row">
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
@@ -94,7 +94,7 @@
                 <label for="photographer_instagram">Instagram:</label>
             </div>
         </div>
-        <!-- WEBSITE -->
+        <!-- Website -->
         <div class="row">
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
@@ -105,7 +105,7 @@
                 <label for="photographer_website">Website:</label>
             </div>
         </div>
-        <!-- PROFILE PHOTO -->
+        <!-- Profile Photo -->
         <div class="row">
             <div class="input-field col s8 offset-s2 light-green-text
             text-darken-2">
@@ -116,7 +116,7 @@
                 <label for="photographer_profile_image_URL">Profile picture URL:</label>
             </div>
         </div>
-        <!-- ADDITIONAL PHOTOS -->
+        <!-- Additional Photos -->
         <div class="row">
             <div class="input-field col s8 offset-s2 light-green-text
                     text-darken-2">
@@ -124,7 +124,7 @@
                 <input id="photographer_image_URL2" name="photographer_image_URL2"
                     value="{{ photographer.photographer_image_URL2 }}" type="text"
                     class="validate light-green-text text-darken-4" title="Optional">
-                <label for="photographer_image_URL2">Your favourite image URL:</label>
+                <label for="photographer_image_URL2">1st favourite image URL:</label>
             </div>
         </div>
         <div class="row">
@@ -134,7 +134,7 @@
                 <input id="photographer_image_URL3" name="photographer_image_URL3"
                     value="{{ photographer.photographer_image_URL3 }}" type="text"
                     class="validate light-green-text text-darken-4" title="Optional">
-                <label for="photographer_image_URL3">Your favourite image URL:</label>
+                <label for="photographer_image_URL3">2nd favourite image URL:</label>
             </div>
         </div>
         <div class="row">
@@ -144,10 +144,10 @@
                 <input id="photographer_image_URL4" name="photographer_image_URL4"
                     value="{{ photographer.photographer_image_URL4 }}" type="text"
                     class="validate light-green-text text-darken-4" title="Optional">
-                <label for="photographer_image_URL4">Your favourite image URL:</label>
+                <label for="photographer_image_URL4">3rd favourite image URL:</label>
             </div>
         </div>
-        <!--CANCEL / SAVE PROFILE BUTTONS -->
+        <!--Cancel / Save Profile Buttons -->
         <div class="row">
             <div class="col s12 center-align light-green-text
             text-darken-2">

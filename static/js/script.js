@@ -12,14 +12,14 @@ $(document).ready(function () {
     });
     // Images in Photographers profile
     $('.materialboxed').materialbox();
-    // Modal for Delete Profile
+    // Modal for Delete Functions
     $('.modal').modal();
     // Dropdown Navbar
     $(".dropdown-trigger").dropdown();
     // Category Select
     $('select').formSelect();
     // Category Select REQUIRED FUNCTION
-    // CODE INSTITUTE CODE Materialize Select Validation Lesson
+    // CODE INSTITUTE Code Materialize Select Validation Lesson
     validateMaterializeSelect();
 
     function validateMaterializeSelect() {

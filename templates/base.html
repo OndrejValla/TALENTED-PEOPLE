@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Font-Awesome -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" type="text/css" />
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="16x16" href="static/images/favicon-32x32.png">
-    <!-- MATERIALIZE CSS -->
+    <!-- Materialize css -->
     <link rel=" stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
         type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
@@ -29,13 +29,14 @@
                     <a href="{{ url_for('get_home') }}" class="brand-logo">
                         <h4 class="brand-logo-h4">TALENTED PEOPLE</h4>
                     </a>
-                    <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger right">
+                        <i class="fas fa-bars"></i></a>
                     <ul class="right hide-on-med-and-down">
                         <li><a href="{{ url_for('get_home') }}">Home</a></li>
                         <li><a href="{{ url_for('get_photographers') }}">Photographers</a></li>
                         <li><a href="{{ url_for('get_models') }}">Models</a></li>
                         {% if session.user %}
-                        <li><a href="{{ url_for('profile', username=session['user']) }}">My Profile</a></li>
+                        <li><a href="{{ url_for('profile', username=session['user']) }}">Profiles</a></li>
                         {% if session.user|lower == "admin"|lower %}
                         <li><a href="{{ url_for('get_categories') }}">Categories</a></li>
                         {% endif %}
@@ -47,7 +48,6 @@
                     </ul>
                 </div>
             </nav>
-
             <!-- Mobile Navbar -->
             <ul class="sidenav" id="mobile-demo">
                 <li>
@@ -59,7 +59,7 @@
                 <li><a href="{{ url_for('get_models') }}" class="light-green-text text-darken-3">Models</a></li>
                 {% if session.user %}
                 <li><a href="{{ url_for('profile', username=session['user']) }}"
-                        class="light-green-text text-darken-3">My Profile</a></li>
+                        class="light-green-text text-darken-3">Profiles</a></li>
                 {% if session.user|lower == "admin"|lower %}
                 <li><a href="{{ url_for('get_categories') }}" class="light-green-text text-darken-3">Categories</a></li>
                 {% endif %}
@@ -122,7 +122,7 @@
                                 aria-label="See this page on the GitHub" class="white-text">
                                 <i class="fab fa-github footer-socials" aria-hidden="true" title="GitHub"></i>
                             </a>
-                            <span class="sr-only">Find us on Linkedin</span>
+                            <span class="sr-only">See this page on GitHub</span>
                         </li>
                     </ul>
                 </div>
@@ -133,7 +133,7 @@
     <!-- jQuery minified version -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <!-- MATERIALIZE JavaScript -->
+    <!-- MAaterialize JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     {% block scripts %}

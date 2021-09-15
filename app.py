@@ -171,13 +171,16 @@ def edit_photographer(photographer_id):
                 "photographer_image_URL4"),
             "created_by": session["user"]
         }
-        mongo.db.photographers.update({"_id": ObjectId(photographer_id)}, submit)
+        mongo.db.photographers.update({"_id": ObjectId(
+                                        photographer_id)}, submit)
         flash("Profile Successfully Updated!")
         return redirect(url_for("get_photographers"))
 
-    photographer = mongo.db.photographers.find_one({"_id": ObjectId(photographer_id)})
+    photographer = mongo.db.photographers.find_one({"_id": ObjectId(
+                                                    photographer_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("edit_photographer.html", photographer=photographer, categories=categories)
+    return render_template("edit_photographer.html",
+                        photographer=photographer, categories=categories)
 
 
 # DELETE PHOTOGRAPHER FUNCTION

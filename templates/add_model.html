@@ -1,13 +1,16 @@
 {% extends "base.html" %}
 {% block main_content %}
-
-<a href="{{ url_for('get_models') }}" class=" light-green darken-4 waves-effect waves-light btn-small back-btn-1">
+<!-- Back Button -->
+<a href="{{ url_for('get_models') }}" class="light-green darken-4 waves-effect waves-light btn-small back-btn-1">
     <i class="fas fa-angle-double-left"></i>
 </a>
-<h4 class="center-align light-green-text text-darken-4 text-shadow">ADD MODEL
-</h4><br>
+<h4 class="center-align light-green-text text-darken-4 text-shadow">
+    ADD MODEL
+</h4>
+<br>
 {% if session.user %}
-<div class="container add-model-container"><br>
+<div class="container add-model-container">
+    <br>
     <form class="col s12" method="POST" action="{{ url_for('add_model') }}">
         <!-- Model Name -->
         <div class="row">
@@ -79,14 +82,14 @@
                 <label for="model_profile_image_URL">Profile picture URL:</label>
             </div>
         </div>
-        <!-- Additional Photos -->
+        <!-- Favourite Photos -->
         <div class="row">
             <div class="input-field col s8 offset-s2 light-green-text
                     text-darken-2">
                 <i class="fas fa-image prefix"></i>
                 <input id="model_image_URL2" name="model_image_URL2" type="text"
                     class="validate light-green-text text-darken-4" title="Optional">
-                <label for="model_image_URL2">Your favourite image URL:</label>
+                <label for="model_image_URL2">1st favourite image URL:</label>
             </div>
         </div>
         <div class="row">
@@ -95,7 +98,7 @@
                 <i class="fas fa-image prefix"></i>
                 <input id="model_image_URL3" name="model_image_URL3" type="text"
                     class="validate light-green-text text-darken-4" title="Optional">
-                <label for="model_image_URL3">Your favourite image URL:</label>
+                <label for="model_image_URL3">2nd favourite image URL:</label>
             </div>
         </div>
         <div class="row">
@@ -104,7 +107,7 @@
                 <i class="fas fa-image prefix"></i>
                 <input id="model_image_URL4" name="model_image_URL4" type="text"
                     class="validate light-green-text text-darken-4" title="Optional">
-                <label for="model_image_URL4">Your favourite image URL:</label>
+                <label for="model_image_URL4">3rd favourite image URL:</label>
             </div>
         </div>
         <!-- Add Profile Button -->
