@@ -7,7 +7,7 @@
     <!--- User's Photographer Profile -->
     <div class="row center-align">
         <h4 class="light-green-text text-darken-4 text-shadow">
-            Your Photography Profiles
+            My Photography Profiles
         </h4>
         <br>
         <!--- If 1 or More Profiles Found, Add More Button -->
@@ -22,9 +22,11 @@
         {% endif %}
         {% for photographer in photographers %}
         <div class="col s10 m4 offset-s1 offset-m4">
-            <div class="card large">
+            <div class="card large hoverable">
                 <div class="card-image">
-                    <img src="{{ photographer.photographer_profile_image_URL }}">
+                    <a href="{{ url_for('photographerprofile', photographer_id=photographer._id) }}" title="View">
+                        <img src="{{ photographer.photographer_profile_image_URL }}">
+                    </a>
                 </div>
                 <div class="card-content">
                     <p>{{ photographer.category_name }}</p>
@@ -86,7 +88,7 @@
     <!--- User's Modelling Profile -->
     <div class="row center-align">
         <h4 class="light-green-text text-darken-4 text-shadow">
-            Your Modelling Profiles
+            My Modelling Profiles
         </h4>
         <br>
         <!--- If 1 or More Profiles Found, Add More Button -->
@@ -100,9 +102,11 @@
         {% endif %}
         {% for model in models %}
         <div class="col s10 m4 offset-s1 offset-m4">
-            <div class="card large">
+            <div class="card large hoverable">
                 <div class="card-image">
-                    <img src="{{ model.model_profile_image_URL }}">
+                    <a href="{{ url_for('modelprofile', model_id=model._id) }}" title="View">
+                        <img src="{{ model.model_profile_image_URL }}">
+                    </a>
                 </div>
                 <div class="card-content">
                     <h5><strong>{{ model.model_name }}</strong></h5>

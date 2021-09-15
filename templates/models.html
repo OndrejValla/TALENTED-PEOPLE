@@ -33,9 +33,11 @@
     <div class="row center-align">
         {% for model in models %}
         <div class="col s10 m6 l3 offset-s1">
-            <div class="card large">
+            <div class="card large hoverable">
                 <div class="card-image">
-                    <img src="{{ model.model_profile_image_URL }}">
+                    <a href="{{ url_for('modelprofile', model_id=model._id) }}" title="View">
+                        <img src="{{ model.model_profile_image_URL }}">
+                    </a>
                 </div>
                 <div class="card-content">
                     <h5><strong>{{ model.model_name }}</strong></h5>
@@ -43,10 +45,11 @@
                     <p><strong>Instagram:</strong> {{ model.model_instagram }}</p>
                     <br>
                 </div>
-                <div class="card-action">
-                    <a href="{{ url_for('modelprofile', model_id=model._id) }}"
-                        class="light-green-text text-darken-3"><strong>View Profile</strong></a>
-                </div>
+                <a href="{{ url_for('modelprofile', model_id=model._id) }}" class="light-green-text text-darken-3">
+                    <div class="card-action">
+                        <strong>VIEW</strong>
+                    </div>
+                </a>
             </div>
         </div>
         {% endfor %}
