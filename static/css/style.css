@@ -122,7 +122,7 @@ u {
     margin-bottom: 0px;
 }
 
-/* PHOTOGRAPHERS.HTML */
+/* PHOTOGRAPHERS.HTML MODELS.HTML */
 .add-profile-btn-1 {
     width: 70%;
     border: 2px solid rgb(232, 247, 223);
@@ -134,6 +134,15 @@ u {
 
 .h5-highlight {
     line-height: 150%;
+}
+
+.search-row {
+    height: 80px;
+    padding-top: 1px;
+}
+
+.search-results {
+    height: 300px;
 }
 
 @media only screen and (max-width: 600px) {

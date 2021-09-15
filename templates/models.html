@@ -21,15 +21,39 @@
         <h5 class="light-green-text text-darken-4 text-shadow">
             JOIN OUR COMMUNITY
         </h5>
-        <h5 class="white-text text-shadow light-green darken-4 h5-highlight">
-            To add your Profile, REGISTER NOW!
-        </h5>
+        <a href="{{ url_for('register') }}" title="Register Now">
+            <h5 class="white-text text-shadow light-green darken-3 h5-highlight">
+                To add your Profile, REGISTER NOW!
+            </h5>
+        </a>
     </div>
     {% endif %}
 </div>
+<!--- Search Models -->
+<div class="row card-panel light-green darken-3 search-row">
+    <form action="{{ url_for('search_models') }}" method="POST" class="col s12 m8 offset-m2">
+        <div class="row valign-wrapper center-align">
+            <div class="input-field col s12 m8 offset-m2">
+                <i class="fas fa-search prefix white-text"></i>
+                <input type="text" name="query_models" id="query_models" minlength="3" class="validate white-text"
+                    required>
+                <label for="query_models">Search</label>
+            </div>
+            <div class="col s10 m8">
+                <a href="{{ url_for('get_models') }}" class="red btn-small">Reset</a>
+                <button type="submit" class="light-green btn-small">
+                    <i class="fas fa-search white-text"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+<br>
 <!--- Materializecss.com-cards -->
 <!--- All Models From the Database -->
 <div class="container">
+    <!--- If Profile Found -->
+    {% if models|length > 0 %}
     <div class="row center-align">
         {% for model in models %}
         <div class="col s10 m6 l3 offset-s1">
@@ -53,6 +77,21 @@
             </div>
         </div>
         {% endfor %}
+    </div>
+    <!--- If No Models Found -->
+    {% else %}
+    <div class="row">
+        <div class="col s12 center-align search-results">
+            <h4 class="light-green-text text-darken-4">
+                No Models Found!
+            </h4>
+            <br>
+            <p class="light-green-text text-darken-4">
+                Try to search a different phrase.
+            </p>
+            <br>
+            {% endif %}
+        </div>
     </div>
 </div>
 

@@ -191,6 +191,15 @@ def delete_photographer(photographer_id):
     return redirect(url_for("get_photographers"))
 
 
+# SEARCH PHOTOGRAPHERS FUNCTION
+@app.route("/search_photographers", methods=["GET", "POST"])
+def search_photographers():
+    query_photographers = request.form.get("query_photographers")
+    photographers = list(mongo.db.photographers.find(
+        {"$text": {"$search": query_photographers}}))
+    return render_template("photographers.html", photographers=photographers)
+
+
 # GET MODELS FUNCTION
 @app.route("/")
 @app.route("/models")
@@ -278,6 +287,15 @@ def delete_model(model_id):
     mongo.db.models.remove({"_id": ObjectId(model_id)})
     flash("Profile Deleted!")
     return redirect(url_for("get_models"))
+
+
+# SEARCH MODELS FUNCTION
+@app.route("/search_models", methods=["GET", "POST"])
+def search_models():
+    query_models = request.form.get("query_models")
+    models = list(mongo.db.models.find(
+        {"$text": {"$search": query_models}}))
+    return render_template("models.html", models=models)
 
 
 # PROFILE FUNCTION
