@@ -10,7 +10,7 @@
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" type="text/css" />
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="static/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/images/favicon-16x16.png">
     <!-- Materialize css -->
     <link rel=" stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
         type="text/css">
@@ -36,7 +36,7 @@
                         <li><a href="{{ url_for('get_photographers') }}">Photographers</a></li>
                         <li><a href="{{ url_for('get_models') }}">Models</a></li>
                         {% if session.user %}
-                        <li><a href="{{ url_for('profile', username=session['user']) }}">Profiles</a></li>
+                        <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                         {% if session.user|lower == "admin"|lower %}
                         <li><a href="{{ url_for('get_categories') }}">Categories</a></li>
                         {% endif %}
@@ -59,7 +59,7 @@
                 <li><a href="{{ url_for('get_models') }}" class="light-green-text text-darken-3">Models</a></li>
                 {% if session.user %}
                 <li><a href="{{ url_for('profile', username=session['user']) }}"
-                        class="light-green-text text-darken-3">Profiles</a></li>
+                        class="light-green-text text-darken-3">Profile</a></li>
                 {% if session.user|lower == "admin"|lower %}
                 <li><a href="{{ url_for('get_categories') }}" class="light-green-text text-darken-3">Categories</a></li>
                 {% endif %}

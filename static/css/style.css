@@ -88,6 +88,11 @@ u {
     }
 }
 
+/* LOGIN.HTML */
+.login-row {
+    height: 450px;
+}
+
 /* HOME.HTML */
 .home-page-headers {
     color: white;
