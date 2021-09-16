@@ -371,6 +371,13 @@ def delete_category(category_id):
     return redirect(url_for("get_categories"))
 
 
+# 404 PAGE
+@app.errorhandler(404)
+def page_not_found(error):
+    flash("Page was NOT found!")
+    return render_template("404.html"), 404
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block main_content %}
+
+<div class="container">
+    <!---404 Page -->
+    <div class="row center-align">
+        <h1 class="light-green-text text-darken-4 text-shadow">
+            4 0 4
+        </h1>
+        <br>
+        <h3 class="light-green-text text-darken-4 text-shadow">
+            Page NOT Found
+        </h3>
+        <br>
+        <div class="col s10 offset-s1 m6 offset-m3">
+            <a href="{{ url_for('get_home') }}" class="light-green darken-3
+                        waves-effect waves-light btn-small add-profile-btn-1">
+                Back Home
+            </a>
+        </div>
+        <br>
+    </div>
+</div>
+
+{% endblock %}
