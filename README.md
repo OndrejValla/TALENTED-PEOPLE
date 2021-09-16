@@ -195,8 +195,10 @@ Once the Model profile(s) added, the Materialize cards with Model's portfolio, E
 
 ### Colors
 
-- The website's color theme is MOSTLY the combination of different shades of Light green darken 1-4 class of [Materialize Color Palette](https://materializecss.com/color.html) and white-text class.
+- The website's color theme is MOSTLY the combination of different shades of Light green darken 1-4 class of Materialize Color Palette and white-text class.
 ![](static/images/readme-files/materialize-color-palette.png)
+
+- [Materialize Color Palette](https://materializecss.com/color.html)
 
 
 ### Icons
@@ -220,13 +222,55 @@ Once the Model profile(s) added, the Materialize cards with Model's portfolio, E
 
 
 ---
+
+
 # Features
 
 ### Existing Features
 
+* CRUD functionality
+
+* The website will load and display the Home page (home.html). With the navbar and footer.
+* User can browse most of the content, including: Home Page, Photographers Page, Models Page, Log In Page and Register Page without registering or logging in.
+* As User is not yet registered or logged in, home page, photographers page and models page are showing hints: Join Us Now, and Register Now, to prompt unregistered / unsigned user to register or log in.
+* Once registered and logged in, Profile page comes up and displays flash message: Welcome {user's First name}.
+* For active users, Add Photographer and Add Model buttons are displayed in users profiles same as at the top of the photographer.html and the models.html.
+* When Portfolio(s) added, Profile page will display all portfolios created by the user, sorted into two groups: Photographers and Models. 
+* Existing portfolio(s) card(s), created by the user have two buttons: Edit Button and Delete Button.
+* When Edit Button clicked, user is transferred to edit_photographer.html or edit_model.html.
+* When Delete Button clicked, delete modal pops up to ensure the user wants to proceed. Yes to delete, No to return.
+* photographers.html and models.html displays profiles of Photographers and/or Models stored in the database to all users, regardless whether or not they are registered / logged in. For unregistered users, Join us and Register now headings are displayed. For active users, Add Photographer and Add Model buttons are displayed.
+* When individual portfolio card is clicked, the page of photographer.html or model.html is loaded, displaying selected/clicked portfolio (found by the id in the database) with additional informations, filled in during the add_photographer or add_model methods.
+* When individual portfolio is being displayed, to the user, if the current user is the same user as created by for selected portfolio, Edit Button and Delete Button are displayed. Once clicked (same as described above).
+* Search portfolio feature is available for all users, on photographers.html and models.html.
+
+    photographers.html search bar is searching for photography category and photographer's name.
+
+    models.html search bar is searching for model's name.
+Reset button next to search button(magnifying glass icon) reloads both photographers.html and models.html and displays all portfolios again.
+* The categories page is only available to the 'admin' user. This page displays all currently created categories in the database. 
+The Admin can add, edit and delete the category/categories. 
+* Log Out button will log out current user and login.html page will display.
+
+
+
+### Features left to implement
+
+* Contact Form
+* Uploading image files, directly from the PC or Mobile Phone
+* Add the favourite Photographer or the Model to the Favourite list displayed as a favourite group in profile.html
+
 
 ---
 # Used Technologies
+
+* [GitHub](https://github.com/) The platform to write the code of this website.
+* [Materialize](https://materializecss.com/) My first ever use of this great library to improve grid layout and colors. 
+* [MongoDB](https://www.mongodb.com/) Used this database to store user's data.
+* [Fask](https://flask.palletsprojects.com/en/2.0.x/) Used Flask framework
+* [Font awesome](https://fontawesome.com/) To feature lovely icons, to boost appearance of the website.
+* [Favicon](https://favicon.io/) To create TP favicon.
+* [Balsamiq](https://balsamiq.com/) Used to create my wireframes.
 
 
 ---
