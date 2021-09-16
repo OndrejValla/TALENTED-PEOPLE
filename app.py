@@ -374,7 +374,7 @@ def delete_category(category_id):
 # 404 PAGE
 @app.errorhandler(404)
 def page_not_found(error):
-    flash("Page was NOT found!")
+    flash("Page NOT found!")
     return render_template("404.html"), 404
 
 
