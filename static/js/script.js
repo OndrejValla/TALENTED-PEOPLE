@@ -1,3 +1,5 @@
+// Inspired by CODE INSTITUTE
+// Most of the code is from Materialize Initialization
 $(document).ready(function () {
     // Mobile Burger menu
     $('.sidenav').sidenav({

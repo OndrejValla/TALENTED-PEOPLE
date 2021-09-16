@@ -64,7 +64,7 @@ Users are able to register and create photographer's or model's profile for all 
 
 ### Developer/Admin goals:
 1. Have a well designed / responsive website.
-2. Get lots of registered users with plenty of photographers / models profiles created.
+2. Get lots of registered users with plenty of photographers / models portfolios created.
 3. To be able to create / manage photography categories.
 4. Use MongoDb database effectively.
 ---
@@ -234,15 +234,19 @@ Once the Model profile(s) added, the Materialize cards with Model's portfolio, E
 * User can browse most of the content, including: Home Page, Photographers Page, Models Page, Log In Page and Register Page without registering or logging in.
 * As User is not yet registered or logged in, home page, photographers page and models page are showing hints: Join Us Now, and Register Now, to prompt unregistered / unsigned user to register or log in.
 * Once registered and logged in, Profile page comes up and displays flash message: Welcome {user's First name}.
+[Screenshot](static/images/readme-files/welcome-username.png)
+
 * For active users, Add Photographer and Add Model buttons are displayed in users profiles same as at the top of the photographer.html and the models.html.
-* When Portfolio(s) added, Profile page will display all portfolios created by the user, sorted into two groups: Photographers and Models. 
-* Existing portfolio(s) card(s), created by the user have two buttons: Edit Button and Delete Button.
-* When Edit Button clicked, user is transferred to edit_photographer.html or edit_model.html.
-* When Delete Button clicked, delete modal pops up to ensure the user wants to proceed. Yes to delete, No to return.
-* photographers.html and models.html displays profiles of Photographers and/or Models stored in the database to all users, regardless whether or not they are registered / logged in. For unregistered users, Join us and Register now headings are displayed. For active users, Add Photographer and Add Model buttons are displayed.
-* When individual portfolio card is clicked, the page of photographer.html or model.html is loaded, displaying selected/clicked portfolio (found by the id in the database) with additional informations, filled in during the add_photographer or add_model methods.
+[Screenshot](static/images/readme-files/add-photographer-model-1.png)
+
+* When Portfolio(s) added, Profile page will display all portfolios created by the user, sorted into two groups: Photographers and Models. [Screenshot](static/images/readme-files/user-profile-2.png)
+* Existing portfolio(s) card(s), created by the user have two buttons: Edit Button and Delete Button. [Screenshot](static/images/readme-files/edit-delete-buttons.png)
+* When Edit Button clicked, user is transferred to edit_photographer.html or edit_model.html. [Screenshot](static/images/readme-files/edit-photographer.png)
+* When Delete Button clicked, delete modal pops up to ensure the user wants to proceed. Yes to delete, No to return. [Screenshot](static/images/readme-files/delete-modal.png)
+* photographers.html and models.html displays profiles of Photographers and/or Models stored in the database to all users, regardless whether or not they are registered / logged in. For unregistered users, Join us and Register now headings are displayed. For active users, Add Photographer and Add Model buttons are displayed. [Screenshot 1](static/images/readme-files/join-our-community.png)   [Screenshot 2](static/images/readme-files/add-photographer-2.png)
+* When individual portfolio card is clicked, the page of photographer.html or model.html is loaded, displaying selected/clicked portfolio (found by the id in the database) with additional informations, filled in during the add_photographer or add_model methods. [Screenshot](static/images/readme-files/portfolio-page.png)
 * When individual portfolio is being displayed, to the user, if the current user is the same user as created by for selected portfolio, Edit Button and Delete Button are displayed. Once clicked (same as described above).
-* Search portfolio feature is available for all users, on photographers.html and models.html.
+* Search portfolio feature is available for all users, on photographers.html and models.html. [Screenshot](static/images/readme-files/add-photographer-2.png)
 
     photographers.html search bar is searching for photography category and photographer's name.
 
@@ -276,6 +280,42 @@ The Admin can add, edit and delete the category/categories.
 ---
 # Testing
 
+### HTML Validation
+The [W3C Markup Validator](https://validator.w3.org/) was used to validate the HTML language.
+Click below to see individual results:
+* [Home](static/images/readme-files/home-html-check.png)
+* [Add_Photographer](static/images/readme-files/add-photographer-html-check.png)
+* [Edit_Photographer](static/images/readme-files/edit-photographer-html-check.png)
+* [Photographer](static/images/readme-files/photographer-html-check.png)
+* [Add_Model](static/images/readme-files/add-model-html-check.png)
+* [Edit_Model](static/images/readme-files/edit-model-html-check.png)
+* [Model](static/images/readme-files/model-html-check.png)
+* [Profile](static/images/readme-files/profile-html-check.png)
+* [Categories](static/images/readme-files/categories-html-check.png)
+* [Add_Category](static/images/readme-files/add-category-html-check.png)
+* [Edit_Category](static/images/readme-files/edit-category-html-check.png)
+* [Register](static/images/readme-files/register-html-check.png)
+* [Login](static/images/readme-files/login-html-check.png)
+
+
+### CSS Validation
+The [W3C Validator](https://jigsaw.w3.org/css-validator/) was used to validate the CSS language.
+* Click [here](static/images/readme-files/css-validator.png) to see the result.
+
+
+### Javascript
+The [JS Hint](https://jshint.com/) was used to test JavaScript language.
+* Click [here](static/images/readme-files/javascript-validation.png) to see the result.
+
+
+### Python
+The [Pep 8](http://pep8online.com/) was used to check Python language.
+* Click [here](static/images/readme-files/pep8-check.png) to see result.
+
+
+### Performance
+The [Google Lighthouse](https://developers.google.com/web/tools/lighthouse) was used to test the performance, accessibility, best practice and SEO of the website.
+* Click [here](static/images/readme-files/lighthouse.png) to see result.
 
 ---
 # Bugs
