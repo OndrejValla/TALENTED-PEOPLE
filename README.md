@@ -18,7 +18,7 @@ Created by Ondrej Valla
     2. [Website Structure](#website-structure)
     3. [Website Design](#website-design)
     4. [Images](#images)
-    5. [Colours](#colours)
+    5. [Colors](#colors)
     6. [Icons](#icons)
 
 4. [Wireframes](#wireframes)
@@ -71,7 +71,7 @@ Users are able to register and create photographer's or model's profile for all 
 
 # User Experience
 
-## User Stories
+### User Stories
 
 #### General Site Users 
 
@@ -101,7 +101,7 @@ Users are able to register and create photographer's or model's profile for all 
 
 ---
 
-## Website Structure
+### Website Structure
 
 **Top Navbar** Navbar displays different navigation buttons, depending on the user:
 -  Navbar buttons *Displaying to not signed in users* : Home, Photographers, Models, Log In, Register
@@ -157,7 +157,6 @@ Once the Model profile(s) added, the Materialize cards with Model's portfolio, E
 
 - *Not signed in users*: Profile page does not allow access to unregistered / not signed in users. 
 
-
 **Categories page**
 - *Displaying to all users*: If no admin user get access to the Categories page, Categories page displays all photography categories currently existing in the database. With no Add, Edit or Delete functions.
 - *Displaying to Admin user ONLY*: For Admin user, Add Category button displays, Edit and Delete buttons on each category card are also displayed / available to use by Admin.
@@ -173,13 +172,41 @@ Once the Model profile(s) added, the Materialize cards with Model's portfolio, E
     Underneath of the Log In form is the link to register.html for not yet registered users.
 ---
 
-## Website Design
+### Website Design
+
+- The main reason, why I did choose the green theme is because I think the green color is relaxing, therefore believe it could help to deliver good User Experience to website visitors. 
+- I have chosen combination of different shades of Green and White background colors, together with Dark green, White and Black text colors.
+- Home page image collages together with profile portfolio's images are boosting the whole feel of the website.
+- As more users will be adding more images, the variety of colors and images will get bigger and bigger.
+
+### Images
+
+- Website's background image is downloaded from:
+[www.teahub.io](https://teahub.io/photos/full/1-19165_full-hd-background-colour.jpg)
+
+- Home Page PHOTOGRAPHERS collages are created from images downloaded from:
+[www.google.co.uk/photographers search](https://www.google.co.uk/search?q=photographers&tbm=isch&tbs=rimg:CQ_1ry5nTRpYlYZjmYz63RJa9sgIGCgIIABAA&hl=en&sa=X&ved=0CBwQuIIBahgKEwioqP6Eg_3yAhUAAAAAHQAAAAAQlQE&biw=1519&bih=696)
+
+- Home Page MODELS collages are created from images downloaded from:
+[www.models.com/newfaces](https://models.com/newfaces/tag/uk)
+
+- Home Page COLLABORATIONS collages are created from images downloaded from:
+[www.google.co.uk/photoshoot behind the scenes search](https://www.google.co.uk/search?q=photoshoot+behind+the+scenes&tbm=isch&ved=2ahUKEwib6cum-oPzAhWP8IUKHb2FBO0Q2-cCegQIABAA&oq=photoshoot&gs_lcp=CgNpbWcQARgAMgcIIxDvAxAnMggIABCABBCxAzIFCAAQgAQyCAgAEIAEELEDMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEOgQIABBDOgsIABCABBCxAxCDAVDktQ1YzdYNYNLvDWgAcAB4AIABTogBvQaSAQIxM5gBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=XHZDYZvLNo_hlwS9i5LoDg&bih=696&biw=1519&hl=en)
+
+### Colors
+
+- The website's color theme is MOSTLY the combination of different shades of Light green darken 1-4 class of [Materialize Color Palette](https://materializecss.com/color.html) and white-text class.
+![](static/images/readme-files/materialize-color-palette.png)
 
 
+### Icons
 
+- To achieve better appearance and user experience, icons are used in this website.
+- The source: [Font Awesome](https://fontawesome.com/)
 
 ---
-## Wireframes
+
+# Wireframes
 
 * [Home Page](static/wireframes/home-page.png)
 * [Register](static/wireframes/register.png)
@@ -193,19 +220,21 @@ Once the Model profile(s) added, the Materialize cards with Model's portfolio, E
 
 
 ---
-## Features
+# Features
+
+### Existing Features
 
 
 ---
-## Used Technologies
+# Used Technologies
 
 
 ---
-## Testing
+# Testing
 
 
 ---
-## Bugs
+# Bugs
 
 1. Navbar buttons for Categories and Models did not work and also were not aligned properly.
    After some investigation, I realized that I have written the code with mistake.  
@@ -215,11 +244,11 @@ Once the Model profile(s) added, the Materialize cards with Model's portfolio, E
    
 
 ---
-## Deployment
+# Deployment
 
 
 ---
-## Credits
+# Credits
 
 
 ---
