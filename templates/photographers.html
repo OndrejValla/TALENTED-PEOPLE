@@ -66,8 +66,10 @@
                 <div class="card-content">
                     <p><strong>{{ photographer.category_name }}</strong></p>
                     <h5><strong>{{ photographer.photographer_name }}</strong></h5>
+                    <p><strong>Instagram:</strong> {{ photographer.photographer_instagram }}</p>
                     <br>
                 </div>
+                <br>
                 <a href="{{ url_for('photographerprofile', photographer_id=photographer._id) }}"
                     class="light-green-text text-darken-3">
                     <div class="card-action">

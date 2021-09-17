@@ -33,6 +33,7 @@
                     <h5><strong>{{ photographer.photographer_name }}</strong></h5>
                     <p><strong>Instagram:</strong> {{ photographer.photographer_instagram }}</p><br>
                 </div>
+                <br>
                 <div class="card-action center">
                     {% if session.user|lower == photographer.created_by|lower %}
                     <!-- Delete Button -->
