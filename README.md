@@ -96,7 +96,7 @@ The TALENTED PEOPLE website is here to allow all users to browse between profile
 1. I would like to be able to create new categories.
 2. Edit existing categories.
 3. Delete categories no longer needed.
-4. Be able to manage MongoDb database content.
+4. MongoDb database to store page content effectively and safely.
 
 ---
 
@@ -270,7 +270,7 @@ The Admin can add, edit and delete the category/categories.
 * [GitHub](https://github.com/) The platform to write the code of this website.
 * [Materialize](https://materializecss.com/) My first ever use of this great library to improve grid layout and colors. 
 * [MongoDB](https://www.mongodb.com/) Used this database to store user's data.
-* [Fask](https://flask.palletsprojects.com/en/2.0.x/) Used Flask framework
+* [Flask](https://flask.palletsprojects.com/en/2.0.x/) Used Flask framework
 * [Font awesome](https://fontawesome.com/) To feature lovely icons, to boost appearance of the website.
 * [Favicon](https://favicon.io/) To create TP favicon.
 * [Balsamiq](https://balsamiq.com/) Used to create my wireframes.
@@ -319,6 +319,277 @@ The [Google Lighthouse](https://developers.google.com/web/tools/lighthouse) was 
 
 ### Testing User Stories
 
+### General Site Users
+
+#### 1. I would like to see the content of the page before I decide whether or not to register.
+
+| Feature |
+|---------|
+All users are able to browse through all photographers portfolios, same as all models portfolios.
+
+| Action | 
+|--------|
+When user decide to add his portfolio, just click the Register button. 
+
+| Expected Result |
+|-----------------|
+Once clicked, The Register page is loaded. User can register.
+
+| Actual Result |
+|---------------|
+All working correctly.
+
+
+#### 2. I would like to see the content, be able to browse photographers' and models' profiles.
+
+| Feature |
+|---------|
+Photographers.html same as Models.html has card layout, displaying all created portfolios of photographers and models.
+
+| Action | 
+|--------|
+Portfolios displayed in two categories Photographers and Models.
+
+| Expected Result |
+|-----------------|
+All portfolios displaying to all users, regardless of being logged in or registered.
+
+
+| Actual Result |
+|---------------|
+All working correctly.
+
+
+#### 3. It would be great if I could search through all profiles, to see if my friends photographers / models are already here.
+
+| Feature |
+|---------|
+Search bar available for both categories.
+
+| Action | 
+|--------|
+photographers.html search bar is searching category and name. models.html is searching name only.
+
+| Expected Result |
+|-----------------|
+Search bar will filter portfolios matching search phrase.
+
+| Actual Result |
+|---------------|
+All working correctly.
+
+
+#### 4. I would like to find out more through social media.
+
+| Feature |
+|---------|
+Footer has social section with social media links.
+
+| Action | 
+|--------|
+After clicking each icon, new tap opens.
+
+| Expected Result |
+|-----------------|
+User will be taken to social media websites.
+
+| Actual Result |
+|---------------|
+All working correctly.
+
+
+#### 5. I like programming and would like to see this website's repositories.
+
+| Feature |
+|---------|
+GitHub link in the Footer.
+
+| Action | 
+|--------|
+Taking user to https://github.com/OndrejValla/TALENTED-PEOPLE
+
+| Expected Result |
+|-----------------|
+User can scroll through Talented People repositories.
+
+| Actual Result |
+|---------------|
+All working correctly.
+
+
+### Registered Users
+
+#### 1. I would like to be able to easily register, login, and also log out.
+
+| Feature |
+|---------|
+Register page, Login page available. Once logged in, Log Out button available to session user.
+
+| Action | 
+|--------|
+User does register with the first name and unique username, which must not be used yet, and password 5-15 characters.
+
+| Expected Result |
+|-----------------|
+Easy Register and Log In process. Once in the session, able to Log Out by clicking Log Out button.
+
+| Actual Result |
+|---------------|
+All working correctly.
+
+
+#### 2. I would like to create my profile as a photographer.
+
+| Feature |
+|---------|
+Add Photographer button available to session user. Accessible from photographers.html and profile.html
+
+| Action | 
+|--------|
+Click Add Photographer button and fill up requested form. Click add profile button.
+
+| Expected Result |
+|-----------------|
+Users are able to add as many photographers profiles as they likes. Whether it is their own profile or profile of another photographer, which they like to show to the community. 
+
+| Actual Result |
+|---------------|
+All working correctly.
+
+
+#### 3. I would like to create my profile as a model.
+
+| Feature |
+|---------|
+Add Model button available to session user. Accessible from models.html and profile.html
+
+| Action | 
+|--------|
+Click Add PModel button and fill up requested form. Click add profile button.
+
+| Expected Result |
+|-----------------|
+Users are able to add as many models profiles as they likes. Whether it is their own profile or profile of another model, which they like to show to the community. 
+
+| Actual Result |
+|---------------|
+All working correctly.
+
+
+#### 4. If I have forgotten to add some pieces of information while creating my profile, I would like to add them later on.
+
+| Feature |
+|---------|
+Edit buttons available to the user by who the portfolio was created. 
+
+| Action | 
+|--------|
+Click one of edit buttons in photographer.html model.html or profile.html
+
+| Expected Result |
+|-----------------|
+Users are able to edit / modify profiles created by them.
+
+| Actual Result |
+|---------------|
+All working correctly.
+
+
+#### 5. I would like to add some extra images to my portfolio.
+
+| Feature |
+|---------|
+Favorite img url 1, 2, and 3 in Add photographer and Add model forms. 
+
+| Action | 
+|--------|
+Simply copy URLs of your favorite images and add them individually to your portfolio. 
+
+| Expected Result |
+|-----------------|
+Users are adding up to three additional image URLs. These images are displlayed underneath the profile image.
+
+| Actual Result |
+|---------------|
+All working correctly.
+
+
+### Admin User
+
+#### 1. I would like to be able to create new categories.
+
+| Feature |
+|---------|
+For Admin's access only, there is Navbar button Categories. Once in categories.html, Admin has an option to create new category.
+
+| Action | 
+|--------|
+In categories.html, click on the button Add Category. Once in add_category.html fill up form asking for the new category name and then submit the form by clicking Add Category button.
+
+| Expected Result |
+|-----------------|
+Admin is creating more categories, which are available to be all users, creating new portfolios.
+
+| Actual Result |
+|---------------|
+All working correctly.
+
+
+#### 2. Edit existing categories.
+
+| Feature |
+|---------|
+For Admin's access only, in categories.html there is edit button at the bottom of each category card.
+
+| Action | 
+|--------|
+By clicking Edit button at the bottom of the category card, admin is redirected to edit_category.html. In edit_category.html, Admin can edit the name of selected category and submit the change by clicking button Save Category. Admin has also option to click the button Cancel, which takes Admin to categories.html.
+
+| Expected Result |
+|-----------------|
+Only Admin is able to edit category names of the existing categories.
+
+| Actual Result |
+|---------------|
+All working correctly.
+
+
+#### 3. Delete categories no longer needed.
+
+| Feature |
+|---------|
+For Admin's access only, in categories.html there is delete button at the bottom of each category card.
+
+| Action | 
+|--------|
+By clicking Delete button at the bottom of the category card, admin is redirected to delete modal, Admin can select Yes, to delete category or No to return back to categories.html.
+
+| Expected Result |
+|-----------------|
+Once Yes button click on the Delete Modal, category is permanently deleted from the Database.
+
+| Actual Result |
+|---------------|
+All working correctly.
+
+
+#### 4. MongoDb database to store page content effectively and safely.
+| Feature |
+|---------|
+All informations are stored safely and effectively in MongoDB database.
+
+| Action | 
+|--------|
+All users are able to READ photographers and models data. Users are able to Register, Log In, CREATE portfolio, UPDATE their portfolio and DELETE their portfolio.
+
+| Expected Result |
+|-----------------|
+Talented People website allows users to CREATE, READ, UPDATE and DELETE the data stored in the MongoDB database. 
+
+| Actual Result |
+|---------------|
+All working correctly.
+
 ---
 # Bugs
 
@@ -331,6 +602,7 @@ The [Google Lighthouse](https://developers.google.com/web/tools/lighthouse) was 
 *
 *
 *
+
 ---
 2. All Cards Images was not aligned well and did not fit cards properly. After doing some Googling I found some ideas on www.W3Schools.com
    CSS
@@ -344,6 +616,7 @@ The [Google Lighthouse](https://developers.google.com/web/tools/lighthouse) was 
 *
 *
 *
+
 ---
 3. On Mobile devices, there was alignment issue of all .col classes. Please see screenshot image for more details:
 *
@@ -352,6 +625,7 @@ The [Google Lighthouse](https://developers.google.com/web/tools/lighthouse) was 
 *
 *
 *
+
 ---
 4. Another alignment issue. This time class .photographer-img{} Please see screenshot image for more details:
 *
@@ -360,6 +634,7 @@ The [Google Lighthouse](https://developers.google.com/web/tools/lighthouse) was 
 *
 *
 *
+
 ---
 5. Problem when calling @app.route("/add_photographer" Add Photographer function. Please see screenshot image for more details:
 *
@@ -368,9 +643,15 @@ The [Google Lighthouse](https://developers.google.com/web/tools/lighthouse) was 
 *
 *
 *
----
-6. Dropdown menu to Select Photography Style was not working as expected. I used code from Code Institute Lesson [Task Manager Auth Tutorial](https://github.com/Code-Institute-Solutions/TaskManagerAuth/blob/main/04-AddingATask-WritingToTheDatabase/02-materialize-select-validation/static/js/script.js) Which fixed this issue. Thank You The Code Institute!
 
+---
+6. Dropdown menu to Select Photography Category was not working as expected. I used code from Code Institute Lesson [Task Manager Auth Tutorial](https://github.com/Code-Institute-Solutions/TaskManagerAuth/blob/main/04-AddingATask-WritingToTheDatabase/02-materialize-select-validation/static/js/script.js) Which fixed this issue. Thank You The Code Institute!
+
+*
+*
+*
+
+---
 
 # Deployment
 
