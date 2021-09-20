@@ -317,9 +317,9 @@ The [Google Lighthouse](https://developers.google.com/web/tools/lighthouse) was 
 * Click [here](static/images/readme-files/lighthouse.png) to see result.
 
 
-### Testing User Stories
+## Testing User Stories
 
-### General Site Users
+### General Site Users:
 
 #### 1. I would like to see the content of the page before I decide whether or not to register.
 
@@ -348,12 +348,11 @@ Photographers.html same as Models.html has card layout, displaying all created p
 
 | Action | 
 |--------|
-Portfolios displayed in two categories Photographers and Models.
+Portfolios displayed in two categories Photographers and Models. Each portfolio card can be clicked on to open separate page with more informations of each portfolio.
 
 | Expected Result |
 |-----------------|
-All portfolios displaying to all users, regardless of being logged in or registered.
-
+All portfolios displaying to all users, regardless of being logged in or registered. Users are able to open each portfolio by clicking on it and see more information about selected photographer or model. If creator of the portfolio profile filled in all input fields, users are able to also see three additional images.
 
 | Actual Result |
 |---------------|
@@ -379,11 +378,11 @@ Search bar will filter portfolios matching search phrase.
 All working correctly.
 
 
-#### 4. I would like to find out more through social media.
+#### 4. I would like to find out more through the social media.
 
 | Feature |
 |---------|
-Footer has social section with social media links.
+The Footer has a social section with social media links.
 
 | Action | 
 |--------|
@@ -398,7 +397,7 @@ User will be taken to social media websites.
 All working correctly.
 
 
-#### 5. I like programming and would like to see this website's repositories.
+#### 5. I like programming and I would like to see this website's repositories.
 
 | Feature |
 |---------|
@@ -417,7 +416,7 @@ User can scroll through Talented People repositories.
 All working correctly.
 
 
-### Registered Users
+### Registered Users:
 
 #### 1. I would like to be able to easily register, login, and also log out.
 
@@ -427,11 +426,11 @@ Register page, Login page available. Once logged in, Log Out button available to
 
 | Action | 
 |--------|
-User does register with the first name and unique username, which must not be used yet, and password 5-15 characters.
+User does register with the first name and unique username, which must not be used yet, and password 5-15 characters long.
 
 | Expected Result |
 |-----------------|
-Easy Register and Log In process. Once in the session, able to Log Out by clicking Log Out button.
+Easy Registration and Log In process. Once in the session, able to Log Out by clicking Log Out button.
 
 | Actual Result |
 |---------------|
@@ -446,11 +445,11 @@ Add Photographer button available to session user. Accessible from photographers
 
 | Action | 
 |--------|
-Click Add Photographer button and fill up requested form. Click add profile button.
+Click Add Photographer button and fill up requested form. Click add profile button to submit your input into MongoDB database.
 
 | Expected Result |
 |-----------------|
-Users are able to add as many photographers profiles as they likes. Whether it is their own profile or profile of another photographer, which they like to show to the community. 
+Users are able to add as many photographers profiles as they like. Whether it is their own profile or profile of another photographer, which they like to show to the community. 
 
 | Actual Result |
 |---------------|
@@ -465,11 +464,11 @@ Add Model button available to session user. Accessible from models.html and prof
 
 | Action | 
 |--------|
-Click Add PModel button and fill up requested form. Click add profile button.
+Click Add Model button and fill up requested form. Click add profile button to submit your input into MongoDB database.
 
 | Expected Result |
 |-----------------|
-Users are able to add as many models profiles as they likes. Whether it is their own profile or profile of another model, which they like to show to the community. 
+Users are able to add as many models profiles as they like. Whether it is their own profile or profile of another model, which they like to show to the community. 
 
 | Actual Result |
 |---------------|
@@ -480,11 +479,11 @@ All working correctly.
 
 | Feature |
 |---------|
-Edit buttons available to the user by who the portfolio was created. 
+Edit buttons available to the user by whom the portfolio was created. 
 
 | Action | 
 |--------|
-Click one of edit buttons in photographer.html model.html or profile.html
+Click one of edit buttons in photographer.html, model.html or profile.html
 
 | Expected Result |
 |-----------------|
@@ -507,28 +506,29 @@ Simply copy URLs of your favorite images and add them individually to your portf
 
 | Expected Result |
 |-----------------|
-Users are adding up to three additional image URLs. These images are displlayed underneath the profile image.
+Users are adding up to three additional image URLs. These images are displayed underneath the profile image.
 
 | Actual Result |
 |---------------|
 All working correctly.
 
 
-### Admin User
+### Admin User:
+### Myself as an Admin user, I would like to be able to:
 
-#### 1. I would like to be able to create new categories.
+#### 1. Create new categories.
 
 | Feature |
 |---------|
-For Admin's access only, there is Navbar button Categories. Once in categories.html, Admin has an option to create new category.
+For Admin's access only, there is Navbar button named Categories. Once in categories.html, the Admin has an option to create new category.
 
 | Action | 
 |--------|
-In categories.html, click on the button Add Category. Once in add_category.html fill up form asking for the new category name and then submit the form by clicking Add Category button.
+In categories.html, click the button Add Category. Once in add_category.html fill up form asking for the new category name and then submit the form by clicking Add Category button.
 
 | Expected Result |
 |-----------------|
-Admin is creating more categories, which are available to be all users, creating new portfolios.
+Admin is able to create new categories, which are available to all registered users, when creating / managing their portfolios.
 
 | Actual Result |
 |---------------|
@@ -543,7 +543,7 @@ For Admin's access only, in categories.html there is edit button at the bottom o
 
 | Action | 
 |--------|
-By clicking Edit button at the bottom of the category card, admin is redirected to edit_category.html. In edit_category.html, Admin can edit the name of selected category and submit the change by clicking button Save Category. Admin has also option to click the button Cancel, which takes Admin to categories.html.
+By clicking Edit button at the bottom of the category card, admin is redirected to edit_category.html. In edit_category.html, Admin can edit the name of selected category and submit the change by clicking button Save Category. Admin has also an option to click the button Cancel, which takes Admin to categories.html.
 
 | Expected Result |
 |-----------------|
@@ -554,7 +554,7 @@ Only Admin is able to edit category names of the existing categories.
 All working correctly.
 
 
-#### 3. Delete categories no longer needed.
+#### 3. Delete categories which are no longer needed.
 
 | Feature |
 |---------|
@@ -562,25 +562,25 @@ For Admin's access only, in categories.html there is delete button at the bottom
 
 | Action | 
 |--------|
-By clicking Delete button at the bottom of the category card, admin is redirected to delete modal, Admin can select Yes, to delete category or No to return back to categories.html.
+By clicking Delete button at the bottom of the category card, admin is redirected to the delete modal, where Admin can select Yes, to delete category or No to return back to categories.html.
 
 | Expected Result |
 |-----------------|
-Once Yes button click on the Delete Modal, category is permanently deleted from the Database.
+Once the Yes button in the Delete Modal is clicked, category is permanently deleted from the MongoDB database.
 
 | Actual Result |
 |---------------|
 All working correctly.
 
 
-#### 4. MongoDb database to store page content effectively and safely.
+#### 4. MongoDb database to store all page data effectively and safely.
 | Feature |
 |---------|
 All informations are stored safely and effectively in MongoDB database.
 
 | Action | 
 |--------|
-All users are able to READ photographers and models data. Users are able to Register, Log In, CREATE portfolio, UPDATE their portfolio and DELETE their portfolio.
+All users are able to READ photographers and models data. Users are able to Register, Log In, CREATE portfolios, UPDATE their portfolios and DELETE their portfolios.
 
 | Expected Result |
 |-----------------|
@@ -600,8 +600,6 @@ All working correctly.
 ![](static/images/readme-files/navbar-issue-1.jpg)
 
 *
-*
-*
 
 ---
 2. All Cards Images was not aligned well and did not fit cards properly. After doing some Googling I found some ideas on www.W3Schools.com
@@ -614,16 +612,12 @@ All working correctly.
 ![](static/images/readme-files/cards-bug-1.png)
 
 *
-*
-*
 
 ---
 3. On Mobile devices, there was alignment issue of all .col classes. Please see screenshot image for more details:
 *
 ![](static/images/readme-files/alignmen-issue-mobile-1.png)
 
-*
-*
 *
 
 ---
@@ -632,8 +626,6 @@ All working correctly.
 ![](static/images/readme-files/photographer-img-alignment-issue-1.jpg)
 
 *
-*
-*
 
 ---
 5. Problem when calling @app.route("/add_photographer" Add Photographer function. Please see screenshot image for more details:
@@ -641,23 +633,107 @@ All working correctly.
 ![](static/images/readme-files/requst-form-issue-1.jpg)
 
 *
-*
-*
 
 ---
-6. Dropdown menu to Select Photography Category was not working as expected. I used code from Code Institute Lesson [Task Manager Auth Tutorial](https://github.com/Code-Institute-Solutions/TaskManagerAuth/blob/main/04-AddingATask-WritingToTheDatabase/02-materialize-select-validation/static/js/script.js) Which fixed this issue. Thank You The Code Institute!
+6. Dropdown menu to Select Photography Category was not working as expected. I used code from Code Institute Lesson [Task Manager Auth Tutorial](https://github.com/Code-Institute-Solutions/TaskManagerAuth/blob/main/04-AddingATask-WritingToTheDatabase/02-materialize-select-validation/static/js/script.js) Which fixed this issue. Big Thanks to The Code Institute!
 
-*
-*
 *
 
 ---
 
 # Deployment
 
+### Requirements:
+
+1. Python3 to run applications.
+2. Gitpod or another integrated development environment
+3. MongoDB Atlas account for the database development.
+4. PIP to install all application requirements.
+
+### How to run this project locally:
+
+1. Click the green clone or download button in [Github](https://github.com/OndrejValla/TALENTED-PEOPLE)
+2. Select clipboard button on the right of the link provided.
+3. In your terminal, type git clone, paste in the previously copied link and press enter.
+4. Create a file .flaskenv and include 'FLASK_APP=run.py' and 'FLASK_ENV=development'
+5. Install the pip3 with the command 'pip -r requirements.txt' in the terminal.
+6. Create a free [MongoDB account](https://cloud.mongodb.com/) and create your database.
+7. Create this database collections:
+    1. categories
+        * _id: '<ObjectId()>'
+        * category_name: '<string>'
+    
+    2. models
+        * _id: '<ObjectId()>'
+        * model_name:
+        * model_experience:
+        * model_country:
+        * model_about:
+        * model_instagram:
+        * model_website:
+        * model_profile_image_URL:
+        * model_image_URL2:
+        * model_image_URL3:
+        * model_image_URL4:
+        * created_by:
+    
+    3. photographers
+        * _id: '<ObjectId()>'
+        * category_name:
+        * photographer_name:
+        * photographer_experience:
+        * photographer_country:
+        * photographer_equipment:
+        * photographer_about:
+        * photographer_instagram:
+        * photographer_website:
+        * photographer_profile_image_URL:
+        * photographer_image_URL2:
+        * photographer_image_URL3:
+        * photographer_image_URL4:
+        * created_by:
+    
+    4. users
+        * _id: '<ObjectId()>'
+        * first_name:
+        * user_name:
+        * password:
+
+8. You should now be able to run this application using flask run.
+
+
+### Deployment to Heroku
+1. Create a requirements.txt file by `typing pip3 freeze --local > requirements.txt` into the terminal line.
+2. Create a Procfile by typing `echo web: python app.py > Procfile`.
+3. `git add -A`, `git commit -m ""` and  `git push`.
+4. Navigate to heroku.com and register.
+5. Create new app in Heroku and give it a name of your choice.
+6. Choose the region that is closest to you.
+7. Go to Deploy tab and choose Github (if you are using GitHub).
+8. Search the correct repository and click connect.
+9. Go to Heroku settings and navigate to Config Vars and set the following:
+    * IP = 0.0.0.0
+    * MONGO_DBNAME = [Name of MongoDB]
+    * MONGO_URI = `mongodb+srv://:@<cluster_name>-qtxun.mongodb.net <database_name>?retryWrites=true&w=majority `
+    * PORT = 5000
+    * SECRET_KEY = [Secret key] 
+10. Go to the Deploy tab and Deploy Branch, ensuring that the master branch is selected.
+
+Enjoy
+
 
 ---
 # Credits
 
+### HTML
 
+### CSS
+
+### Javascript
+
+### Python
+
+### Media
+
+### Acknowledgements
 ---
