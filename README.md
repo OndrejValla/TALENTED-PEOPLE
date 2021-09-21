@@ -1,6 +1,5 @@
-
-## Code Institute: Milestone Project 3 
-## TALENTED PEOPLE
+# TALENTED PEOPLE
+## Code Institute: Milestone Project 3
 
 ![](static/images/readme-files/am-i-responsive-talented-people.png)
 Created by Ondrej Valla
@@ -47,7 +46,7 @@ Created by Ondrej Valla
 
 # Overview
 
-The TALENTED PEOPLE website is here to allow all users to browse between profiles of Talented Photographers and Talented Models. The primary target audience should be photographers and models of all ages. The secondary audience is all talented people from different industries, planning their projects and looking for photographers and models for collaboration. Whether they are a make-up artist, hairstyle artist, etc., everybody is welcomed and able to browse through profiles. Users are able to register and create photographer's or model's portfolios for all users to view.
+The TALENTED PEOPLE website is here to allow all users to browse between profiles of Talented Photographers and Talented Models. The primary target audience should be photographers and models of all ages. The secondary audience is all talented people from different industries, planning their projects and looking for photographers and models for collaboration. Whether they are a make-up artists, hairstyle artists, etc., everybody is welcomed and able to browse through profiles. Users are able to register and create photographer's or model's portfolios for all users to view.
 
 ---
 
@@ -84,7 +83,7 @@ The TALENTED PEOPLE website is here to allow all users to browse between profile
 #### Registered Users  
 
    As a registered user,
-1. I would like to be able to easily register, login, and also log out.
+1. I would like to be able to easily login and log out.
 2. I would like to create my profile as a photographer.
 3. I would like to create my profile as a model.
 4. If I have forgotten to add some pieces of information while creating my profile, I would like to add them later on.
@@ -112,9 +111,9 @@ The TALENTED PEOPLE website is here to allow all users to browse between profile
 - Models: *Displaying to All users*: h5 heading and Materialize Slider with images of random models.
 - Collaborations: *Displaying to All users*: h5 heading and Materialize Slider with images of random behind the scene collaborations.
 -  
-    And You: *Displaying to signed-inin users*: h5 heading with anchor link "AND YOU" taking the user to profile.html. Underneath one button See Your Profile.
+    And You: *Displaying to signed-in users*: h5 heading with anchor link "AND YOU" taking the user to profile.html. Underneath, is the button See Your Profile also linked to profile.html.
     
-    Join Now: *Displaying to not signed in users*: h5 heading with anchor link "JOIN NOW" taking the user to register.html. Underneath two buttons Login and Register. 
+    Join Now: *Displaying to not signed in users*: h5 heading with anchor link "JOIN NOW" taking the user to register.html. Underneath, are two buttons Login and Register linked to login.html and register.html. 
 
 **Photographers page** 
 - *Displaying to All users*: Photographers page displays Search Bar and Materialize Cards with portfolios of all Photographers in the database.
@@ -130,7 +129,7 @@ The TALENTED PEOPLE website is here to allow all users to browse between profile
 - *Displaying to not signed in users*: If not signed in user gets the access, the header "No Access" is shown. The Edit Photographer form disappears.
 
 **Models page** 
-- *Displaying to All users*: PModels page displays Search Bar and Materialize Cards with portfolios of all Models in the database.
+- *Displaying to All users*: Models page displays Search Bar and Materialize Cards with portfolios of all Models in the database.
 - *Displaying to not signed in users*: On top of the page is the heading "JOIN OUR COMMUNITY" and anchor link "REGISTER NOW" taking the user to register.html.
 - *Displaying to signed-in users*: On top of the page is the button Add Model linked to add_model.html.
 
@@ -150,23 +149,24 @@ The TALENTED PEOPLE website is here to allow all users to browse between profile
 Once the Photographer profile(s) are added, the Materialize cards with Photographer's portfolio, Edit, and Delete buttons are shown.
     
 -My Modelling Profiles
-    At the beginning, when user has no Photographer Profile created, page shows the message: You don't have any Model's Profile created yet! If You wish, create one here. Followed by the button Add Model linked to add_model.html.
+    At the beginning, when user has no Model Profile created, page shows the message: You don't have any Model's Profile created yet! If You wish, create one here. Followed by the button Add Model linked to add_model.html.
 
 Once the Model profile(s) are added, the Materialize cards with Model's portfolio, Edit and Delete buttons are shown.
 
 - *Not signed in users*: The profile page does not allow access to unregistered / not signed-in users. 
 
 **Categories page**
+- *Displaying to Admin user ONLY*: For the Admin user, Add Category button is displayed. Edit and Delete buttons at the bottom of each category card are also displayed and available to be used by the Admin.
+
 - *Displaying to all users*: If no admin user gets access to the Categories page, The categories page displays all photography categories currently existing in the database. With no Add, Edit, or Delete functions.
-- *Displaying to Admin user ONLY*: For Admin user, Add Category button displays, Edit and Delete buttons on each category card are also displayed / available to use by Admin.
 
 **Register page**
-- The register page has three input fields: Your First Name, Your Username, Password.
+- The register page has three input fields: Your First Name, Your Username and Password.
     If the username already exists, a flash message show up.
     Underneath the Register form is the link to login.html for already registered users.
 
 **Log In page**
-- Log In page has two input fields: Your Username, Password. 
+- Log In page has two input fields: Your Username and Password. 
     If incorrect username or password, a flash message shows up.
     Underneath the login form is the link to register.html for not yet registered users.
 ---
@@ -195,14 +195,14 @@ Once the Model profile(s) are added, the Materialize cards with Model's portfoli
 ### Colors
 
 - The website's color theme is MOSTLY the combination of different shades of Light green darken 1-4 class of Materialize Color Palette and white-text class.
-![](static/images/readme-files/materialize-color-palette.png)
 
 - [Materialize Color Palette](https://materializecss.com/color.html)
 
+- ![](static/images/readme-files/materialize-color-palette.png)
 
 ### Icons
 
-- To achieve better appearance and user experience, icons are used in this website.
+- To achieve better appearance and user experience, Font Awesome icons are used in this website.
 - The source: [Font Awesome](https://fontawesome.com/)
 
 ---
@@ -230,29 +230,41 @@ Once the Model profile(s) are added, the Materialize cards with Model's portfoli
 * CRUD functionality
 
 * The website will load and display the Home page (home.html). With the navbar and footer.
+
 * Users can browse most of the content, including Home Page, Photographers Page, Models Page, Log In Page, and Register Page without registering or logging in.
+
 * As the user is not yet registered or logged in, the home page, photographers page, and models page are showing hints: Join Us Now, and Register Now, to prompt unregistered / unsigned users to register or log in.
+
 * Once registered and logged in, the Profile page comes up and displays the flash message: Welcome {user's First name}.
 [Screenshot](static/images/readme-files/welcome-username.png)
 
-* For active users, Add Photographer and Add Model buttons are displayed in users' profiles same as at the top of the photographer.html and the models.html.
+* For active users, Add Photographer and Add Model buttons are displayed in users' profiles same as at the top of the photographers.html and the models.html.
 [Screenshot](static/images/readme-files/add-photographer-model-1.png)
 
-* When Portfolio(s) are added, the Profile page will display all portfolios created by the user, sorted into two groups: Photographers and Models. [Screenshot](static/images/readme-files/user-profile-2.png)
+* When Portfolio(s) are added, the Profile page will display all portfolios created by the user, sorted into two groups: My Photography profiles and My Modelling profiles. [Screenshot](static/images/readme-files/user-profile-2.png)
+
 * Existing portfolio(s) card(s), created by the user have two buttons: Edit Button and Delete Button. [Screenshot](static/images/readme-files/edit-delete-buttons.png)
+
 * When Edit Button is clicked, the user is transferred to edit_photographer.html or edit_model.html. [Screenshot](static/images/readme-files/edit-photographer.png)
+
 * When Delete Button is clicked, the delete modal pops up to ensure the user wants to proceed. Yes to delete, No to return. [Screenshot](static/images/readme-files/delete-modal.png)
-* photographers.html and models.html displays profiles of Photographers and/or Models stored in the database to all users, regardless of whether or not they are registered / logged in. For unregistered users, Join us and Register now headings are displayed. For active users, Add Photographer and Add Model buttons are displayed. [Screenshot 1](static/images/readme-files/join-our-community.png)   [Screenshot 2](static/images/readme-files/add-photographer-2.png)
+
+* photographers.html and models.html displays profiles of Photographers and Models stored in the database to all users, regardless of whether or not they are registered / logged in. For unregistered users, Join us and Register now headings are displayed. For active users, Add Photographer and Add Model buttons are displayed. [Screenshot 1](static/images/readme-files/join-our-community.png)   [Screenshot 2](static/images/readme-files/add-photographer-2.png)
+
 * When an individual portfolio card is clicked, the page of photographer.html or model.html is loaded, displaying selected/clicked portfolio (found by the id in the database) with additional information, filled in during the add_photographer or add_model methods. [Screenshot](static/images/readme-files/portfolio-page.png)
+
 * When the individual portfolio is being displayed, to the user, if the current user is the same user as created by for selected portfolio, Edit Button and Delete Button are displayed. Once clicked (same as described above).
+
 * Search portfolio feature is available for all users, on photographers.html and models.html. [Screenshot](static/images/readme-files/add-photographer-2.png)
 
     photographers.html search bar is searching for photography category and photographer's name.
 
     models.html search bar is searching for the model's name.
-The reset button next to the search button(magnifying glass icon) reloads both photographers.html and models.html and displays all portfolios again.
+The red reset button reloads both photographers.html and models.html and displays all portfolios again.
+
 * The categories page is only available to the 'admin' user. This page displays all currently created categories in the database. 
 The Admin can add, edit and delete the category/categories. 
+
 * Log Out button will log out the current user and the login.html page will display.
 
 
@@ -260,7 +272,7 @@ The Admin can add, edit and delete the category/categories.
 ### Features left to implement
 
 * Contact Form
-* Uploading image files, directly from the PC or Mobile Phone
+* Uploading image files, directly from the PC or Mobile Phone, if possible.
 * Add the favorite Photographer or the Model to the Favourite list displayed as a favorite group in profile.html
 
 
@@ -268,7 +280,8 @@ The Admin can add, edit and delete the category/categories.
 # Used Technologies
 
 * [GitHub](https://github.com/) The platform to write the code of this website.
-* [Materialize](https://materializecss.com/) My first ever use of this great library to improve grid layout and colors. 
+* [Materialize](https://materializecss.com/) My first ever use of this great library to improve grid layout and colors.
+* [jQuery](https://code.jquery.com/) To Initialize Materialize templates
 * [MongoDB](https://www.mongodb.com/) Used this database to store user's data.
 * [Flask](https://flask.palletsprojects.com/en/2.0.x/) Used Flask framework
 * [Font awesome](https://fontawesome.com/) To feature lovely icons, to boost appearance of the website.
@@ -367,7 +380,7 @@ Search bar available for both categories.
 
 | Action | 
 |--------|
-photographers.html search bar is searching category and name. models.html is searching name only.
+User types the search phrase into the search bar. photographers.html search bar is searching category and name. models.html is searching name only.
 
 | Expected Result |
 |-----------------|
@@ -418,19 +431,19 @@ All working correctly.
 
 ### Registered Users:
 
-#### 1. I would like to be able to easily register, login, and also log out.
+#### 1. I would like to be able to easily login and log out.
 
 | Feature |
 |---------|
-Register page, Login page available. Once logged in, Log Out button available to session user.
+Login page available. Once logged in, Log Out button available to session user.
 
 | Action | 
 |--------|
-User does register with the first name and unique username, which must not be used yet, and password 5-15 characters long.
+Once user is registered with the first name and unique username, which was not used yet by other user, and password 5-15 characters long, then can perform login and log out process whenever fancy to visit Talented People website.
 
 | Expected Result |
 |-----------------|
-Easy Registration and Log In process. Once in the session, able to Log Out by clicking Log Out button.
+Same as easy first time Registration, same easy Log In process. Once in the session, user is able to Log Out by clicking Log Out button.
 
 | Actual Result |
 |---------------|
@@ -441,15 +454,15 @@ All working correctly.
 
 | Feature |
 |---------|
-Add Photographer button available to session user. Accessible from photographers.html and profile.html
+Add Photographer button available to the session user. Accessible from photographers.html and profile.html
 
 | Action | 
 |--------|
-Click Add Photographer button and fill up requested form. Click add profile button to submit your input into MongoDB database.
+Click Add Photographer button and fill up requested form. Click add profile button to submit your input into the MongoDB database.
 
 | Expected Result |
 |-----------------|
-Users are able to add as many photographers profiles as they like. Whether it is their own profile or profile of another photographer, which they like to show to the community. 
+Users are able to add as many photographers profiles as they like. Whether it is their own profile or profile of another photographer, which they like to share with the community. 
 
 | Actual Result |
 |---------------|
@@ -460,15 +473,15 @@ All working correctly.
 
 | Feature |
 |---------|
-Add Model button available to session user. Accessible from models.html and profile.html
+Add Model button available to the session user. Accessible from models.html and profile.html
 
 | Action | 
 |--------|
-Click Add Model button and fill up requested form. Click add profile button to submit your input into MongoDB database.
+Click Add Model button and fill up requested form. Click add profile button to submit your input into the MongoDB database.
 
 | Expected Result |
 |-----------------|
-Users are able to add as many models profiles as they like. Whether it is their own profile or profile of another model, which they like to show to the community. 
+Users are able to add as many models profiles as they like. Whether it is their own profile or profile of another model, which they like to share with the community. 
 
 | Actual Result |
 |---------------|
@@ -506,7 +519,7 @@ Simply copy URLs of your favorite images and add them individually to your portf
 
 | Expected Result |
 |-----------------|
-Users are adding up to three additional image URLs. These images are displayed underneath the profile image.
+Users are adding up to three additional image URLs. These images are displayed underneath the profile image in photographer.html and model.html.
 
 | Actual Result |
 |---------------|
@@ -514,7 +527,7 @@ All working correctly.
 
 
 ### Admin User:
-### Myself as an Admin user, I would like to be able to:
+### Myself as the Admin user, like to be able to:
 
 #### 1. Create new categories.
 
@@ -524,7 +537,7 @@ For Admin's access only, there is Navbar button named Categories. Once in catego
 
 | Action | 
 |--------|
-In categories.html, click the button Add Category. Once in add_category.html fill up form asking for the new category name and then submit the form by clicking Add Category button.
+In categories.html, click the button Add Category. Once in add_category.html fill up form asking for the new category name and then submit the form by clicking the Add Category button.
 
 | Expected Result |
 |-----------------|
@@ -539,15 +552,15 @@ All working correctly.
 
 | Feature |
 |---------|
-For Admin's access only, in categories.html there is edit button at the bottom of each category card.
+For Admin's access only, in categories.html there is the edit button at the bottom of each category card.
 
 | Action | 
 |--------|
-By clicking Edit button at the bottom of the category card, admin is redirected to edit_category.html. In edit_category.html, Admin can edit the name of selected category and submit the change by clicking button Save Category. Admin has also an option to click the button Cancel, which takes Admin to categories.html.
+By clicking the Edit button at the bottom of the category card, the admin is redirected to edit_category.html. In edit_category.html, the Admin can edit the name of selected category and submit the change by clicking the Save Category button.The Admin has also an option to click the Cancel button, which takes the Admin back to categories.html.
 
 | Expected Result |
 |-----------------|
-Only Admin is able to edit category names of the existing categories.
+Only the Admin is able to edit category names of the existing categories.
 
 | Actual Result |
 |---------------|
@@ -558,15 +571,15 @@ All working correctly.
 
 | Feature |
 |---------|
-For Admin's access only, in categories.html there is delete button at the bottom of each category card.
+For Admin's access only, in categories.html there is a delete button at the bottom of each category card.
 
 | Action | 
 |--------|
-By clicking Delete button at the bottom of the category card, admin is redirected to the delete modal, where Admin can select Yes, to delete category or No to return back to categories.html.
+By clicking the Delete button at the bottom of the category card, the admin is redirected to the delete modal, where Admin can select Yes, to delete category or No to return back to categories.html.
 
 | Expected Result |
 |-----------------|
-Once the Yes button in the Delete Modal is clicked, category is permanently deleted from the MongoDB database.
+Once the Yes button in the Delete Modal is clicked, the selected category is permanently deleted from the MongoDB database.
 
 | Actual Result |
 |---------------|
@@ -576,7 +589,7 @@ All working correctly.
 #### 4. MongoDb database to store all page data effectively and safely.
 | Feature |
 |---------|
-All informations are stored safely and effectively in MongoDB database.
+All informations are stored safely and effectively in the MongoDB database.
 
 | Action | 
 |--------|
@@ -584,7 +597,7 @@ All users are able to READ photographers and models data. Users are able to Regi
 
 | Expected Result |
 |-----------------|
-Talented People website allows users to CREATE, READ, UPDATE and DELETE the data stored in the MongoDB database. 
+TALENTED PEOPLE website allows users to CREATE, READ, UPDATE and DELETE the data stored in the MongoDB database. 
 
 | Actual Result |
 |---------------|
@@ -594,7 +607,7 @@ All working correctly.
 # Bugs
 
 1. Navbar buttons for Categories and Models did not work and also were not aligned properly.
-   After some investigation, I realized that I have written the code including mistakes.  
+   After some investigation, I realized that my code does contain some structural coding mistakes. 
    When I moved the Anchor closing tags after Categories and Models, the issue was sorted.
 *
 ![](static/images/readme-files/navbar-issue-1.jpg)
@@ -602,7 +615,7 @@ All working correctly.
 *
 
 ---
-2. All Cards Images was not aligned well and did not fit cards properly. After doing some Googling I found some ideas on www.W3Schools.com
+2. All Cards Images was not aligned well and did not fit cards properly. After doing some Google search I found some ideas on www.W3Schools.com
    CSS
 * .card .card-image img {
 * object-fit: contain;
@@ -617,7 +630,7 @@ All working correctly.
 *
 
 ---
-3. On Mobile devices, there was alignment issue of all .col classes. Please see screenshot image for more details:
+3. On Mobile devices, there was an alignment issue of all .col classes. Please see screenshot image for more details:
 *
 ![](static/images/readme-files/alignmen-issue-mobile-1.png)
 
@@ -638,7 +651,7 @@ All working correctly.
 *
 
 ---
-6. Dropdown menu to Select Photography Category was not working as expected. I used code from Code Institute Lesson [Task Manager Auth Tutorial](https://github.com/Code-Institute-Solutions/TaskManagerAuth/blob/main/04-AddingATask-WritingToTheDatabase/02-materialize-select-validation/static/js/script.js) Which fixed this issue. Big Thanks to The Code Institute!
+6. The Dropdown menu to Select Photography Category was not working as expected. I used code from Code Institute Lesson [Task Manager Auth Tutorial](https://github.com/Code-Institute-Solutions/TaskManagerAuth/blob/main/04-AddingATask-WritingToTheDatabase/02-materialize-select-validation/static/js/script.js) Which fixed this issue. Big Thanks to Mr. Tim Nelson and The Code Institute Team!
 
 *
 
@@ -649,7 +662,7 @@ All working correctly.
 ### Requirements:
 
 1. Python3 to run application.
-2. Gitpod or another integrated development environment
+2. Gitpod or another integrated development environment.
 3. MongoDB Atlas account for the database development.
 4. PIP to install all application requirements.
 
@@ -729,30 +742,30 @@ Enjoy
 ---
 # Credits
 
-## MY DECLARATION STATEMENT:
-### I, Ondrej Valla declare, that all the code in this project, TALENTED PEOPLE was written by me. None of the code (Except MATERIALIZE.COM Templates) was directly copied and pasted from someone elses project. However, as I am still just the student, I have to admit that The BIGGEST help sources was:
+## MY DECLARATION:
+### I, Ondrej Valla declare, that all the code in this project, TALENTED PEOPLE I have written / typed by myself. The code (Except MATERIALIZE.COM Templates) WAS NOT COPIED and PASTED from someone elses project. However, as I am currently the student, I have to admit that The BIG sources of help and motivation were:
 
-### The Code Institute learning programme
+### [The Code Institute learning programme](https://codeinstitute.net/full-stack-software-development-diploma-uk/)
 
 ### [Code Institute-Task Manager mini project](https://github.com/Code-Institute-Solutions/TaskManagerAuth)
-All Tutorial videos are such a fantastic inspiration. Thanks to it I created CRUD functions in app.py for the most of my project's pages.
+All Tutorial videos are such a fantastic inspiration. Thanks to these, I created CRUD functions in app.py for the most of my project's pages.
 
 ### [Code Institute Submissions](https://github.com/orgs/Code-Institute-Submissions/repositories?page=1) 
-I always find it very motivational to look on other student's projects. I love browsing this Code Institute Submissions page and look deeper into interesting projects. There is by my opinion a lots of great projects and ideas. Some of these projects functions I have tried to apply and had applied into my project BY ADAPTING IT TO HOW I WANTED MY WEBSITE TO LOOK AND PERFORM. I am glad to be a part of this community and I hope that also my project will inspire someone out there.
+I always find it very motivational to look on other student's projects. I love browsing the Code Institute Submissions page and look deeper into interesting projects. There is by my opinion a lots of great projects and ideas. Some of these projects functions I have tried to apply and I had successfully applied into my project BY ADAPTING IT to how I wanted the TALENTED PEOPLE website to appear and perform. I am glad to be a part of this community and I hope that also my project will inspire someone out there.
 
 ## Additional Credits:
 
 ### HTML5
-- As I used the [Materializecss.com](https://materializecss.com/) front-end framework for this project, some of HTML code was already written as a Template. For example: Materialize Slider (home.html) , Materialize Cards (photographers.html, models.html, profile.html, categories.html)
+- I used the [Materializecss.com](https://materializecss.com/) front-end framework for this project, therefore some of the HTML code was already written as a Template. For example: Materialize Navbar / Mobile Navbar (base.html) , Materialize Slider (home.html) , Materialize Cards (photographers.html, models.html, profile.html, categories.html) and the most of the Input Forms. 
 
-- Also very helpful websites : [W3-SCHOOLS](https://www.w3schools.com/) and [Stack Over Flow](https://stackoverflow.com/)
+- Other helpful websites : [W3-SCHOOLS](https://www.w3schools.com/) and [Stack Over Flow](https://stackoverflow.com/)
 
 ### CSS
 - The [Materializecss.com](https://materializecss.com/) played a big role in CSS styling of this website. Including the Grid and Color Pallete. 
 - Some CSS was also used after research on [Google](https://www.google.co.uk/) and the websites [W3-SCHOOLS](https://www.w3schools.com/) and  [Stack Over Flow](https://stackoverflow.com/)
 
 ### Javascript
-- The [Materializecss.com](https://materializecss.com/) Initialization jQery applied in this project.
+- The [Materializecss.com](https://materializecss.com/) Initialization of the [jQuery](https://code.jquery.com/) applied in this project.
 - The code for 'Select Categories' dropdown menu taken from [Task Manager Mini Project / Auth Tutorial](https://github.com/Code-Institute-Solutions/TaskManagerAuth/blob/main/04-AddingATask-WritingToTheDatabase/02-materialize-select-validation/static/js/script.js)
 
 ### Python
@@ -776,4 +789,12 @@ I always find it very motivational to look on other student's projects. I love b
 [zuzuvalla.com](https://zuzuvalla.com/)
 
 ### Acknowledgements
+
+- My BIG Thanks goes again to my loved wife Zuzana, for all her support and understanding.
+- BIG motivation element for this project was my GREAT Mentor, **Nishant Kumar** [Nishant Kumar Github](https://github.com/nishant8BITS), Thank You Nishant, You Are the Best!
+- **The Code Institute** for creating this learning program. THANKS especially to Mr Matt Rudge and Mr Tim Nelson, what a wonderful coaching skills.
+- Thank You All!
 ---
+---
+---
+T Y G
