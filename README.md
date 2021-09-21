@@ -604,10 +604,13 @@ All working correctly.
 ---
 2. All Cards Images was not aligned well and did not fit cards properly. After doing some Googling I found some ideas on www.W3Schools.com
    CSS
-* .card .card-image img 
+* .card .card-image img {
 * object-fit: contain;
 * width: 100%;
 * height: 280px;
+}
+
+*
 
 ![](static/images/readme-files/cards-bug-1.png)
 
@@ -621,7 +624,7 @@ All working correctly.
 *
 
 ---
-4. Another alignment issue. This time class .photographer-img{} Please see screenshot image for more details:
+4. Another alignment issue. This time class .photographer-img Please see screenshot image for more details:
 *
 ![](static/images/readme-files/photographer-img-alignment-issue-1.jpg)
 
@@ -645,20 +648,21 @@ All working correctly.
 
 ### Requirements:
 
-1. Python3 to run applications.
+1. Python3 to run application.
 2. Gitpod or another integrated development environment
 3. MongoDB Atlas account for the database development.
 4. PIP to install all application requirements.
 
 ### How to run this project locally:
 
-1. Click the green clone or download button in [Github](https://github.com/OndrejValla/TALENTED-PEOPLE)
+1. Click the green clone or download button in [Github](https://github.com/OndrejValla/TALENTED-PEOPLE).
 2. Select clipboard button on the right of the link provided.
-3. In your terminal, type git clone, paste in the previously copied link and press enter.
-4. Create a file .flaskenv and include 'FLASK_APP=run.py' and 'FLASK_ENV=development'
+3. In your terminal, type git clone, paste in the previously copied link and press Enter.
+4. Create a file .flaskenv and include 'FLASK_APP=run.py' and 'FLASK_ENV=development'.
 5. Install the pip3 with the command 'pip -r requirements.txt' in the terminal.
 6. Create a free [MongoDB account](https://cloud.mongodb.com/) and create your database.
 7. Create this database collections:
+
     1. categories
         * _id: '<ObjectId()>'
         * category_name: '<string>'
@@ -725,15 +729,51 @@ Enjoy
 ---
 # Credits
 
-### HTML
+## MY DECLARATION STATEMENT:
+### I, Ondrej Valla declare, that all the code in this project, TALENTED PEOPLE was written by me. None of the code (Except MATERIALIZE.COM Templates) was directly copied and pasted from someone elses project. However, as I am still just the student, I have to admit that The BIGGEST help sources was:
+
+### The Code Institute learning programme
+
+### [Code Institute-Task Manager mini project](https://github.com/Code-Institute-Solutions/TaskManagerAuth)
+All Tutorial videos are such a fantastic inspiration. Thanks to it I created CRUD functions in app.py for the most of my project's pages.
+
+### [Code Institute Submissions](https://github.com/orgs/Code-Institute-Submissions/repositories?page=1) 
+I always find it very motivational to look on other student's projects. I love browsing this Code Institute Submissions page and look deeper into interesting projects. There is by my opinion a lots of great projects and ideas. Some of these projects functions I have tried to apply and had applied into my project BY ADAPTING IT TO HOW I WANTED MY WEBSITE TO LOOK AND PERFORM. I am glad to be a part of this community and I hope that also my project will inspire someone out there.
+
+## Additional Credits:
+
+### HTML5
+- As I used the [Materializecss.com](https://materializecss.com/) front-end framework for this project, some of HTML code was already written as a Template. For example: Materialize Slider (home.html) , Materialize Cards (photographers.html, models.html, profile.html, categories.html)
+
+- Also very helpful websites : [W3-SCHOOLS](https://www.w3schools.com/) and [Stack Over Flow](https://stackoverflow.com/)
 
 ### CSS
+- The [Materializecss.com](https://materializecss.com/) played a big role in CSS styling of this website. Including the Grid and Color Pallete. 
+- Some CSS was also used after research on [Google](https://www.google.co.uk/) and the websites [W3-SCHOOLS](https://www.w3schools.com/) and  [Stack Over Flow](https://stackoverflow.com/)
 
 ### Javascript
+- The [Materializecss.com](https://materializecss.com/) Initialization jQery applied in this project.
+- The code for 'Select Categories' dropdown menu taken from [Task Manager Mini Project / Auth Tutorial](https://github.com/Code-Institute-Solutions/TaskManagerAuth/blob/main/04-AddingATask-WritingToTheDatabase/02-materialize-select-validation/static/js/script.js)
 
 ### Python
+- The code for this project, edited to fit this project needs from [Code Institute, Task Manager Mini Project](https://github.com/Code-Institute-Solutions/TaskManagerAuth).
+
+- [Code Institute Submissions](https://github.com/orgs/Code-Institute-Submissions/repositories?page=1) As mentioned above.
 
 ### Media
+- All images searched and URL copied from [Google Images](https://www.google.co.uk/imghp?hl=en&authuser=0&ogbl)
+
+- Website Green theme background from [teahub.io](www.teahub.io/photos/full/1-19165_full-hd-background-colour.jpg)
+
+- Faces / selfies of Models from  [Models.com](https://models.com/newfaces/tag/uk)
+
+- And more images from several different pages:
+[masterpics.in](https://masterpics.in/)
+[theconversation.com](https://theconversation.com/)
+[www.pinterest.nz](https://www.pinterest.nz/)
+
+- Some images used are property of Zuzu Valla Photography (my spouse)
+[zuzuvalla.com](https://zuzuvalla.com/)
 
 ### Acknowledgements
 ---
