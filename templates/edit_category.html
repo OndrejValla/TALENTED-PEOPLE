@@ -8,6 +8,7 @@
 </h4>
 <br>
 {% if session.user|lower == "admin"|lower %}
+<!-- Inspired by C.I. Task Manager Mini Project -->
 <div class="container add-photographer-container"><br>
     <form class="col s12" method="POST" action="{{ url_for('edit_category', category_id=category._id) }}">
         <!-- Category Name -->

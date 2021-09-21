@@ -328,6 +328,7 @@ The [Pep 8](http://pep8online.com/) was used to check Python language.
 ### Performance
 The [Google Lighthouse](https://developers.google.com/web/tools/lighthouse) was used to test the performance, accessibility, best practice and SEO of the website.
 * Click [here](static/images/readme-files/lighthouse.png) to see result.
+* Home page collages images are kept in a higher quality for better visual outcome. This is slightly effecting Mobile loading performance.
 
 
 ## Testing User Stories
