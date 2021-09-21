@@ -744,7 +744,7 @@ Enjoy
 # Credits
 
 ## MY DECLARATION:
-### I, Ondrej Valla declare, that all the code in this project, TALENTED PEOPLE I have written / typed by myself. The code (Except MATERIALIZE.COM Templates) WAS NOT COPIED and PASTED from someone elses project. However, as I am currently the student, I have to admit that The BIG sources of help and motivation were:
+### I, Ondrej Valla declare, that all the code in this project, TALENTED PEOPLE I have written / typed by myself. The code (Except MATERIALIZE.COM Templates) WAS NOT COPIED and PASTED from someone elses project. However, as I am currently the student, I do admit that The BIG sources of help and inspiration were:
 
 ### [The Code Institute learning programme](https://codeinstitute.net/full-stack-software-development-diploma-uk/)
 
@@ -752,7 +752,7 @@ Enjoy
 All Tutorial videos are such a fantastic inspiration. Thanks to these, I created CRUD functions in app.py for the most of my project's pages.
 
 ### [Code Institute Submissions](https://github.com/orgs/Code-Institute-Submissions/repositories?page=1) 
-I always find it very motivational to look on other student's projects. I love browsing the Code Institute Submissions page and look deeper into interesting projects. There is by my opinion a lots of great projects and ideas. Some of these projects functions I have tried to apply and I had successfully applied into my project BY ADAPTING IT to how I wanted the TALENTED PEOPLE website to appear and perform. I am glad to be a part of this community and I hope that also my project will inspire someone out there.
+I always find it very motivational to look on other student's projects. I like to browse the Code Institute Submissions page and look deeper into interesting projects. There is by my opinion a lots of great projects and ideas. Some of these projects functions I have unsuccessfully tried to apply, and some I have successfully applied into my project BY ADAPTING IT to how I wanted the TALENTED PEOPLE website to appear and perform. It is a good learning curve. I am glad to be a part of this community learning the code. I hope that also my project will inspire someone out there.
 
 ## Additional Credits:
 
@@ -798,4 +798,5 @@ I always find it very motivational to look on other student's projects. I love b
 ---
 ---
 ---
+21.09.2021
 T Y G
