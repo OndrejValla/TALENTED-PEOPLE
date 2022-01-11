@@ -46,7 +46,7 @@
         <!-- Photographer Profile Images -->
         <div class="col s12 m12 l6 center-align">
             <img src="{{ photographer.photographer_profile_image_URL }}" class="photographer-image"
-                alt="photographer image">
+                alt="{{ photographer.photographer_name }} profile image">
         </div>
         <!-- Photographer Info -->
         <div class="col s12 m12 l5">
@@ -109,19 +109,19 @@
         {% if photographer.photographer_image_URL2 %}
         <div class="col s4 m2 l2">
             <img class="materialboxed img-thumbnails" width="110" src="{{ photographer.photographer_image_URL2 }}"
-                alt="photographer image">
+                alt="{{ photographer.photographer_name }} portfolio image">
         </div>
         {% endif %}
         {% if photographer.photographer_image_URL3 %}
         <div class="col s4 m2 l2">
             <img class="materialboxed img-thumbnails" width="110" src="{{ photographer.photographer_image_URL3 }}"
-                alt="photographer image">
+                alt="{{ photographer.photographer_name }} portfolio image">
         </div>
         {% endif %}
         {% if photographer.photographer_image_URL4 %}
         <div class="col s4 m2 l2">
             <img class="materialboxed img-thumbnails" width="110" src="{{ photographer.photographer_image_URL4 }}"
-                alt="photographer image">
+                alt="{{ photographer.photographer_name }} portfolio image">
         </div>
         {% endif %}
     </div>

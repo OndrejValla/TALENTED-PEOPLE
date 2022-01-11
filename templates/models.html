@@ -60,7 +60,7 @@
             <div class="card large hoverable">
                 <div class="card-image">
                     <a href="{{ url_for('modelprofile', model_id=model._id) }}" title="View">
-                        <img src="{{ model.model_profile_image_URL }}">
+                        <img src="{{ model.model_profile_image_URL }}" alt="{{ model.model_name }} profile image">
                     </a>
                 </div>
                 <div class="card-content">

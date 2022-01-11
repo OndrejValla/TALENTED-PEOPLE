@@ -17,6 +17,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
+
 # HOME PAGE FUNCTION
 @app.route("/")
 @app.route("/get_home")

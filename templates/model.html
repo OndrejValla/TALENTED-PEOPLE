@@ -44,7 +44,7 @@
     <div class="row">
         <!-- Model Profile Images -->
         <div class="col s12 m12 l6 center-align">
-            <img src="{{ model.model_profile_image_URL }}" class="model-image" alt="model image">
+            <img src="{{ model.model_profile_image_URL }}" class="model-image" alt="{{ model.model_name }} profile image">
         </div>
         <!-- Model Info -->
         <div class="col s12 m12 l5">
@@ -92,17 +92,17 @@
     <div class="row">
         {% if model.model_image_URL2 %}
         <div class="col s4 m2 l2">
-            <img class="materialboxed img-thumbnails" width="110" src="{{ model.model_image_URL2 }}" alt="model image">
+            <img class="materialboxed img-thumbnails" width="110" src="{{ model.model_image_URL2 }}" alt="{{ model.model_name }} portfolio image">
         </div>
         {% endif %}
         {% if model.model_image_URL3 %}
         <div class="col s4 m2 l2">
-            <img class="materialboxed img-thumbnails" width="110" src="{{ model.model_image_URL3 }}" alt="model image">
+            <img class="materialboxed img-thumbnails" width="110" src="{{ model.model_image_URL3 }}" alt="{{ model.model_name }} portfolio image">
         </div>
         {% endif %}
         {% if model.model_image_URL4 %}
         <div class="col s4 m2 l2">
-            <img class="materialboxed img-thumbnails" width="110" src="{{ model.model_image_URL4 }}" alt="model image">
+            <img class="materialboxed img-thumbnails" width="110" src="{{ model.model_image_URL4 }}" alt="{{ model.model_name }} portfolio image">
         </div>
         {% endif %}
     </div>
