@@ -173,7 +173,7 @@ def edit_photographer(photographer_id):
             "created_by": session["user"]
         }
         mongo.db.photographers.update({"_id": ObjectId(
-                                        photographer_id)}, submit)
+            photographer_id)}, submit)
         flash("Profile Successfully Updated!")
         return redirect(url_for("get_photographers"))
 
@@ -181,7 +181,7 @@ def edit_photographer(photographer_id):
                                                     photographer_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_photographer.html",
-                        photographer=photographer, categories=categories)
+                           photographer=photographer, categories=categories)
 
 
 # DELETE PHOTOGRAPHER FUNCTION
@@ -310,19 +310,19 @@ def profile(username):
             if "user" in session and (user["username"] == session["user"]):
                 user_profile.append(user)
     # the session user's username from the database
-        username= mongo.db.users.find_one(
+        username = mongo.db.users.find_one(
             {"username": session["user"]})["username"]
         photographers = list(mongo.db.photographers.find(
-                            {"created_by": session["user"]}))
+            {"created_by": session["user"]}))
         models = list(mongo.db.models.find(
-                            {"created_by": session["user"]}))
+            {"created_by": session["user"]}))
         return render_template("profile.html", username=username,
-                                photographers=photographers,
-                                models=models)
+                               photographers=photographers,
+                               models=models)
 
         if session["user"]:
             return render_template("profile.html", username=username,
-                                    user_profile=user_profile)
+                                   user_profile=user_profile)
     else:
         flash("Please log in for access")
         return redirect(url_for("login", ))

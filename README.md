@@ -29,12 +29,13 @@ Created by Ondrej Valla
 6. [Used Technologies](#used-technologies)
 
 7. [Testing](#testing)
-    1. [HTML Validation](#html-validation)
-    2. [CSS Validation](#css-validation)
-    3. [JavaScript](#javascript)
-    4. [Python](#python)
-    5. [Performance](#performance)
-    6. [Testing User Stories](#testing-user-stories)
+    1. [UPDATED TESTING JANUARY 2022](#updated-testing)
+    2. [HTML Validation](#html-validation)
+    3. [CSS Validation](#css-validation)
+    4. [JavaScript](#javascript)
+    5. [Python](#python)
+    6. [Performance](#performance)
+    7. [Testing User Stories](#testing-user-stories)
 
 8. [Bugs](#bugs)
 
@@ -292,16 +293,36 @@ The Admin can add, edit and delete the category/categories.
 ---
 # Testing
 
+---
+### Updated Testing
+In January 2022 I have done changes to this project:
+* Added ALT attributes for all images on this website in: 
+  models.html, model.html, photographers.html, photographer.html, profile.html
+
+[Screenshot](static/images/readme-files/models-img-alt-attribute.png)
+[Screenshot](static/images/readme-files/photographer-img-alt.png)
+
+* Additionaly I added missing screenshots for HTML testing for photographers.html and models.html
+* Also Python pep8 compliance test screenshots was added for app.py and env.py.
+All of these are visible below.
+
+---
+
 ### HTML Validation
 The [W3C Markup Validator](https://validator.w3.org/) was used to validate the HTML language.
+No major issues found.
 Click below to see individual results:
 * [Home](static/images/readme-files/home-html-check.png)
 * [Add_Photographer](static/images/readme-files/add-photographer-html-check.png)
 * [Edit_Photographer](static/images/readme-files/edit-photographer-html-check.png)
 * [Photographer](static/images/readme-files/photographer-html-check.png)
+**(Updated Testing January 2022)**
+* [Photographers](static/images/readme-files/test-photographers.png)
 * [Add_Model](static/images/readme-files/add-model-html-check.png)
 * [Edit_Model](static/images/readme-files/edit-model-html-check.png)
 * [Model](static/images/readme-files/model-html-check.png)
+**(Updated Testing January 2022)**
+* [Models](static/images/readme-files/test-models.png)
 * [Profile](static/images/readme-files/profile-html-check.png)
 * [Categories](static/images/readme-files/categories-html-check.png)
 * [Add_Category](static/images/readme-files/add-category-html-check.png)
@@ -322,7 +343,21 @@ The [JS Hint](https://jshint.com/) was used to test JavaScript language.
 
 ### Python
 The [Pep 8](http://pep8online.com/) was used to check Python language.
-* Click [here](static/images/readme-files/pep8-check.png) to see result.
+**(Updated Testing January 2022)**
+* app.py check Click [here](static/images/readme-files/pep8-check.png) to see result.
+* env.py check Click [here](static/images/readme-files/env-py-pep-8.png) to see result.
+The file env.py has still E501 even after using Autopep8 function by running command autopep8 --in-place -a -a env.py in the terminal.
+
+---
+### Updated Testing
+In January 2022 I have done changes to this project:
+* Added ALT attributes for all images on this website in: 
+  models.html, model.html, photographers.html, photographer.html, profile.html
+
+[Screenshot](static/images/readme-files/models-img-alt-attribute.png)
+[Screenshot](static/images/readme-files/photographer-img-alt.png)
+
+---
 
 
 ### Performance
