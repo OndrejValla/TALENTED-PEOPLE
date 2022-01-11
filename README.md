@@ -316,13 +316,13 @@ Click below to see individual results:
 * [Add_Photographer](static/images/readme-files/add-photographer-html-check.png)
 * [Edit_Photographer](static/images/readme-files/edit-photographer-html-check.png)
 * [Photographer](static/images/readme-files/photographer-html-check.png)
-**(Updated Testing January 2022)**
 * [Photographers](static/images/readme-files/test-photographers.png)
+**(Updated Testing January 2022)**
 * [Add_Model](static/images/readme-files/add-model-html-check.png)
 * [Edit_Model](static/images/readme-files/edit-model-html-check.png)
 * [Model](static/images/readme-files/model-html-check.png)
-**(Updated Testing January 2022)**
 * [Models](static/images/readme-files/test-models.png)
+**(Updated Testing January 2022)**
 * [Profile](static/images/readme-files/profile-html-check.png)
 * [Categories](static/images/readme-files/categories-html-check.png)
 * [Add_Category](static/images/readme-files/add-category-html-check.png)
